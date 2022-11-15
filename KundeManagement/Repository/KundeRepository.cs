@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataHandling.Model
+namespace KundeManagement.Repository
 {
-    internal class Kunde
+    internal class KundeRepository
     {
-        public int KundeId { get; set; }
-
     }
 }
