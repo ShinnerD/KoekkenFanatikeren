@@ -15,6 +15,16 @@ namespace KF_UserInterface
         public MainWindow()
         {
             InitializeComponent();
+            LockProgram();
+        }
+
+        private void LogOffButton_Click(object sender, EventArgs e)
+        {
+            LockProgram();
+        }
+
+        private void LockProgram()
+        {
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
