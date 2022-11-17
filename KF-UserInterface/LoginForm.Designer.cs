@@ -32,12 +32,12 @@
             this.TitleLabel = new System.Windows.Forms.Label();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.RootPanel = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.Button();
-            this.MinimizeButton = new System.Windows.Forms.Button();
             this.HeaderLabel = new System.Windows.Forms.Label();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.MinimizeButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
+            this.RootPanel = new System.Windows.Forms.Panel();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.HeaderPanel.SuspendLayout();
             this.RootPanel.SuspendLayout();
             this.SuspendLayout();
@@ -78,36 +78,19 @@
             this.HeaderPanel.Size = new System.Drawing.Size(311, 36);
             this.HeaderPanel.TabIndex = 2;
             // 
-            // RootPanel
+            // HeaderLabel
             // 
-            this.RootPanel.BackColor = System.Drawing.Color.White;
-            this.RootPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RootPanel.Controls.Add(this.LoginButton);
-            this.RootPanel.Controls.Add(this.PasswordTextBox);
-            this.RootPanel.Controls.Add(this.TitleLabel);
-            this.RootPanel.Controls.Add(this.PasswordLabel);
-            this.RootPanel.Controls.Add(this.HeaderPanel);
-            this.RootPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RootPanel.Location = new System.Drawing.Point(0, 0);
-            this.RootPanel.Name = "RootPanel";
-            this.RootPanel.Size = new System.Drawing.Size(313, 423);
-            this.RootPanel.TabIndex = 3;
-            // 
-            // ExitButton
-            // 
-            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.ExitButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitButton.Location = new System.Drawing.Point(266, 0);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(45, 36);
-            this.ExitButton.TabIndex = 2;
-            this.ExitButton.Text = "X";
-            this.ExitButton.UseVisualStyleBackColor = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.HeaderLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.Location = new System.Drawing.Point(0, 0);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(221, 36);
+            this.HeaderLabel.TabIndex = 4;
+            this.HeaderLabel.Text = "Login";
+            this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.HeaderLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseDown);
+            this.HeaderLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseMove);
+            this.HeaderLabel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HeaderLabel_MouseUp);
             // 
             // MinimizeButton
             // 
@@ -125,27 +108,36 @@
             this.MinimizeButton.UseVisualStyleBackColor = false;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
-            // HeaderLabel
+            // ExitButton
             // 
-            this.HeaderLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.HeaderLabel.AutoSize = true;
-            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeaderLabel.Location = new System.Drawing.Point(3, 8);
-            this.HeaderLabel.Name = "HeaderLabel";
-            this.HeaderLabel.Size = new System.Drawing.Size(49, 21);
-            this.HeaderLabel.TabIndex = 4;
-            this.HeaderLabel.Text = "Login";
+            this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.ExitButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Location = new System.Drawing.Point(266, 0);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(45, 36);
+            this.ExitButton.TabIndex = 2;
+            this.ExitButton.Text = "X";
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // PasswordTextBox
+            // RootPanel
             // 
-            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PasswordTextBox.Location = new System.Drawing.Point(35, 264);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.PasswordChar = '*';
-            this.PasswordTextBox.Size = new System.Drawing.Size(250, 29);
-            this.PasswordTextBox.TabIndex = 3;
-            this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.PasswordTextBox.WordWrap = false;
+            this.RootPanel.BackColor = System.Drawing.Color.White;
+            this.RootPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.RootPanel.Controls.Add(this.LoginButton);
+            this.RootPanel.Controls.Add(this.PasswordTextBox);
+            this.RootPanel.Controls.Add(this.TitleLabel);
+            this.RootPanel.Controls.Add(this.PasswordLabel);
+            this.RootPanel.Controls.Add(this.HeaderPanel);
+            this.RootPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RootPanel.Location = new System.Drawing.Point(0, 0);
+            this.RootPanel.Name = "RootPanel";
+            this.RootPanel.Size = new System.Drawing.Size(313, 423);
+            this.RootPanel.TabIndex = 3;
             // 
             // LoginButton
             // 
@@ -162,6 +154,17 @@
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordTextBox.Location = new System.Drawing.Point(35, 264);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
+            this.PasswordTextBox.Size = new System.Drawing.Size(250, 29);
+            this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.PasswordTextBox.WordWrap = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -177,7 +180,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.HeaderPanel.ResumeLayout(false);
-            this.HeaderPanel.PerformLayout();
             this.RootPanel.ResumeLayout(false);
             this.RootPanel.PerformLayout();
             this.ResumeLayout(false);
