@@ -36,7 +36,7 @@ namespace KF_UserInterface
         }
 
         //Login button click event
-        private void button1_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             ValidateLogin(PasswordTextBox.Text);
         }
