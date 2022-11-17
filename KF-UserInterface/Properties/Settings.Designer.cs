@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DataHandling.Properties
+namespace KF_UserInterface.Properties
 {
 
 

@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace KundeManagement.Repository
 {
-    internal class KundeRepository
+    internal class VareGruppeRepository
     {
-
     }
 }

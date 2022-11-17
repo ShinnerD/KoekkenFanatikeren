@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KundeManagement.Service
+namespace KundeManagement.Repository
 {
-    internal class Test
+    internal class VareRepository
     {
     }
 }

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KundeManagement.Repository
+namespace KundeManagement.Model
 {
-    internal class KundeRepository
+    internal class Varegruppe
     {
-
     }
 }
