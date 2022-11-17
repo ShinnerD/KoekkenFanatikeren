@@ -15,6 +15,17 @@ namespace KF_UserInterface
         public LoginForm()
         {
             InitializeComponent();
+            PasswordTextBox.Select();
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

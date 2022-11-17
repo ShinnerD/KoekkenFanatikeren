@@ -15,6 +15,9 @@ namespace KF_UserInterface
         public MainWindow()
         {
             InitializeComponent();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }
