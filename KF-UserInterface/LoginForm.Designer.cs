@@ -37,7 +37,7 @@
             this.MinimizeButton = new System.Windows.Forms.Button();
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
             this.RootPanel.SuspendLayout();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.RootPanel.BackColor = System.Drawing.Color.White;
             this.RootPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RootPanel.Controls.Add(this.button1);
+            this.RootPanel.Controls.Add(this.LoginButton);
             this.RootPanel.Controls.Add(this.PasswordTextBox);
             this.RootPanel.Controls.Add(this.TitleLabel);
             this.RootPanel.Controls.Add(this.PasswordLabel);
@@ -147,19 +147,20 @@
             this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.PasswordTextBox.WordWrap = false;
             // 
-            // button1
+            // LoginButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(199)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(113, 334);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(199)))));
+            this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.Location = new System.Drawing.Point(113, 334);
+            this.LoginButton.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(84, 36);
+            this.LoginButton.TabIndex = 4;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginForm
             // 
@@ -193,6 +194,6 @@
         private System.Windows.Forms.Button MinimizeButton;
         private System.Windows.Forms.Label HeaderLabel;
         private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginButton;
     }
 }

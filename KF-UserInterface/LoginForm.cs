@@ -27,5 +27,28 @@ namespace KF_UserInterface
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ValidateLogin(PasswordTextBox.Text);
+        }
+
+        private void ValidateLogin(string password)
+        {
+            if (password == "123")
+            {
+                this.Close();
+            }
+            else
+            {
+                WrongPasswordError();
+            }
+        }
+
+        private void WrongPasswordError()
+        {
+            PasswordLabel.Text = "Forkert kodeord";
+            PasswordLabel.ForeColor = Color.DarkRed;
+        }
     }
 }
