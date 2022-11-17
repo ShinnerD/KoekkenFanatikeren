@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KundeManagement.Service
+﻿namespace KundeManagement.Service
 {
-    internal class KundeService
+    public class KundeService
     {
     }
 }

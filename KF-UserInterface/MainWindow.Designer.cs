@@ -1,6 +1,6 @@
 ﻿namespace KF_UserInterface
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
