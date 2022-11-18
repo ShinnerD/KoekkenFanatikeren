@@ -30,50 +30,50 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KundeModulForm));
             this.HeaderPanel = new System.Windows.Forms.Panel();
-            this.BottomPanel = new System.Windows.Forms.Panel();
             this.LukModulButton = new System.Windows.Forms.Button();
-            this.MainPanel = new System.Windows.Forms.Panel();
-            this.HeaderImageLabel = new System.Windows.Forms.Label();
             this.HeaderLabel = new System.Windows.Forms.Label();
-            this.KundeListeGridView = new System.Windows.Forms.DataGridView();
+            this.HeaderImageLabel = new System.Windows.Forms.Label();
+            this.BottomPanel = new System.Windows.Forms.Panel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.KundeListeGrpBox = new System.Windows.Forms.GroupBox();
+            this.KundeListeGridView = new System.Windows.Forms.DataGridView();
             this.Navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TlfNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FindKundeGrpBox = new System.Windows.Forms.GroupBox();
-            this.LeftMainPanel = new System.Windows.Forms.Panel();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.SearchFieldTextBox = new System.Windows.Forms.TextBox();
             this.RightMainPanel = new System.Windows.Forms.Panel();
-            this.KundeInfoGrpBox = new System.Windows.Forms.GroupBox();
-            this.NameTxtLbl = new System.Windows.Forms.Label();
-            this.TlfTxtLbl = new System.Windows.Forms.Label();
-            this.EmailTxtLbl = new System.Windows.Forms.Label();
-            this.NameContentLabel = new System.Windows.Forms.Label();
-            this.TlfContentLabel = new System.Windows.Forms.Label();
-            this.EmailContentLabel = new System.Windows.Forms.Label();
-            this.AdresseTxtLbl = new System.Windows.Forms.Label();
-            this.AdresseContentLabel = new System.Windows.Forms.Label();
+            this.BottomRightPanel = new System.Windows.Forms.Panel();
+            this.OpretOrdreButton = new System.Windows.Forms.Button();
+            this.RedigerKundeButton = new System.Windows.Forms.Button();
+            this.NyKundeButton = new System.Windows.Forms.Button();
             this.OrdreGrpBox = new System.Windows.Forms.GroupBox();
             this.KundeOrdreGridView = new System.Windows.Forms.DataGridView();
             this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BottomRightPanel = new System.Windows.Forms.Panel();
-            this.NyKundeButton = new System.Windows.Forms.Button();
-            this.RedigerKundeButton = new System.Windows.Forms.Button();
-            this.SearchButton = new System.Windows.Forms.Button();
-            this.OpretOrdreButton = new System.Windows.Forms.Button();
+            this.KundeInfoGrpBox = new System.Windows.Forms.GroupBox();
+            this.EmailTxtLbl = new System.Windows.Forms.Label();
+            this.TlfTxtLbl = new System.Windows.Forms.Label();
+            this.EmailContentLabel = new System.Windows.Forms.Label();
+            this.TlfContentLabel = new System.Windows.Forms.Label();
+            this.NameContentLabel = new System.Windows.Forms.Label();
+            this.AdresseContentLabel = new System.Windows.Forms.Label();
+            this.AdresseTxtLbl = new System.Windows.Forms.Label();
+            this.NameTxtLbl = new System.Windows.Forms.Label();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.KundeListeGridView)).BeginInit();
-            this.KundeListeGrpBox.SuspendLayout();
-            this.FindKundeGrpBox.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
+            this.KundeListeGrpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.KundeListeGridView)).BeginInit();
+            this.FindKundeGrpBox.SuspendLayout();
             this.RightMainPanel.SuspendLayout();
-            this.KundeInfoGrpBox.SuspendLayout();
+            this.BottomRightPanel.SuspendLayout();
             this.OrdreGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KundeOrdreGridView)).BeginInit();
-            this.BottomRightPanel.SuspendLayout();
+            this.KundeInfoGrpBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -87,15 +87,6 @@
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(1284, 80);
             this.HeaderPanel.TabIndex = 0;
-            // 
-            // BottomPanel
-            // 
-            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomPanel.Location = new System.Drawing.Point(0, 681);
-            this.BottomPanel.Name = "BottomPanel";
-            this.BottomPanel.Size = new System.Drawing.Size(1284, 80);
-            this.BottomPanel.TabIndex = 1;
             // 
             // LukModulButton
             // 
@@ -113,15 +104,17 @@
             this.LukModulButton.UseVisualStyleBackColor = false;
             this.LukModulButton.Click += new System.EventHandler(this.LukModulButton_Click);
             // 
-            // MainPanel
+            // HeaderLabel
             // 
-            this.MainPanel.Controls.Add(this.LeftMainPanel);
-            this.MainPanel.Controls.Add(this.RightMainPanel);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 80);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1284, 601);
-            this.MainPanel.TabIndex = 2;
+            this.HeaderLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HeaderLabel.ForeColor = System.Drawing.Color.White;
+            this.HeaderLabel.Location = new System.Drawing.Point(146, 0);
+            this.HeaderLabel.Name = "HeaderLabel";
+            this.HeaderLabel.Size = new System.Drawing.Size(142, 80);
+            this.HeaderLabel.TabIndex = 1;
+            this.HeaderLabel.Text = "Kunde Modul";
+            this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // HeaderImageLabel
             // 
@@ -137,17 +130,48 @@
             this.HeaderImageLabel.TabIndex = 0;
             this.HeaderImageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // HeaderLabel
+            // BottomPanel
             // 
-            this.HeaderLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.HeaderLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeaderLabel.ForeColor = System.Drawing.Color.White;
-            this.HeaderLabel.Location = new System.Drawing.Point(146, 0);
-            this.HeaderLabel.Name = "HeaderLabel";
-            this.HeaderLabel.Size = new System.Drawing.Size(142, 80);
-            this.HeaderLabel.TabIndex = 1;
-            this.HeaderLabel.Text = "Kunde Modul";
-            this.HeaderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomPanel.Location = new System.Drawing.Point(0, 681);
+            this.BottomPanel.Name = "BottomPanel";
+            this.BottomPanel.Size = new System.Drawing.Size(1284, 80);
+            this.BottomPanel.TabIndex = 1;
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.LeftMainPanel);
+            this.MainPanel.Controls.Add(this.RightMainPanel);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 80);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1284, 601);
+            this.MainPanel.TabIndex = 2;
+            // 
+            // LeftMainPanel
+            // 
+            this.LeftMainPanel.Controls.Add(this.KundeListeGrpBox);
+            this.LeftMainPanel.Controls.Add(this.FindKundeGrpBox);
+            this.LeftMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LeftMainPanel.Location = new System.Drawing.Point(0, 0);
+            this.LeftMainPanel.Name = "LeftMainPanel";
+            this.LeftMainPanel.Size = new System.Drawing.Size(636, 601);
+            this.LeftMainPanel.TabIndex = 5;
+            // 
+            // KundeListeGrpBox
+            // 
+            this.KundeListeGrpBox.Controls.Add(this.KundeListeGridView);
+            this.KundeListeGrpBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KundeListeGrpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KundeListeGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KundeListeGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.KundeListeGrpBox.Location = new System.Drawing.Point(0, 66);
+            this.KundeListeGrpBox.Name = "KundeListeGrpBox";
+            this.KundeListeGrpBox.Size = new System.Drawing.Size(636, 535);
+            this.KundeListeGrpBox.TabIndex = 3;
+            this.KundeListeGrpBox.TabStop = false;
+            this.KundeListeGrpBox.Text = "Kunde Liste";
             // 
             // KundeListeGridView
             // 
@@ -171,20 +195,6 @@
             this.KundeListeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundeListeGridView.Size = new System.Drawing.Size(630, 507);
             this.KundeListeGridView.TabIndex = 2;
-            // 
-            // KundeListeGrpBox
-            // 
-            this.KundeListeGrpBox.Controls.Add(this.KundeListeGridView);
-            this.KundeListeGrpBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KundeListeGrpBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KundeListeGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KundeListeGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.KundeListeGrpBox.Location = new System.Drawing.Point(0, 66);
-            this.KundeListeGrpBox.Name = "KundeListeGrpBox";
-            this.KundeListeGrpBox.Size = new System.Drawing.Size(636, 535);
-            this.KundeListeGrpBox.TabIndex = 3;
-            this.KundeListeGrpBox.TabStop = false;
-            this.KundeListeGrpBox.Text = "Kunde Liste";
             // 
             // Navn
             // 
@@ -224,15 +234,20 @@
             this.FindKundeGrpBox.TabStop = false;
             this.FindKundeGrpBox.Text = "Find Kunde";
             // 
-            // LeftMainPanel
+            // SearchButton
             // 
-            this.LeftMainPanel.Controls.Add(this.KundeListeGrpBox);
-            this.LeftMainPanel.Controls.Add(this.FindKundeGrpBox);
-            this.LeftMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LeftMainPanel.Location = new System.Drawing.Point(0, 0);
-            this.LeftMainPanel.Name = "LeftMainPanel";
-            this.LeftMainPanel.Size = new System.Drawing.Size(636, 601);
-            this.LeftMainPanel.TabIndex = 5;
+            this.SearchButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchButton.ForeColor = System.Drawing.Color.White;
+            this.SearchButton.Location = new System.Drawing.Point(476, 19);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(154, 37);
+            this.SearchButton.TabIndex = 1;
+            this.SearchButton.Text = "Søg";
+            this.SearchButton.UseVisualStyleBackColor = false;
             // 
             // SearchFieldTextBox
             // 
@@ -257,101 +272,61 @@
             this.RightMainPanel.Size = new System.Drawing.Size(648, 601);
             this.RightMainPanel.TabIndex = 6;
             // 
-            // KundeInfoGrpBox
+            // BottomRightPanel
             // 
-            this.KundeInfoGrpBox.Controls.Add(this.EmailTxtLbl);
-            this.KundeInfoGrpBox.Controls.Add(this.TlfTxtLbl);
-            this.KundeInfoGrpBox.Controls.Add(this.EmailContentLabel);
-            this.KundeInfoGrpBox.Controls.Add(this.TlfContentLabel);
-            this.KundeInfoGrpBox.Controls.Add(this.NameContentLabel);
-            this.KundeInfoGrpBox.Controls.Add(this.AdresseContentLabel);
-            this.KundeInfoGrpBox.Controls.Add(this.AdresseTxtLbl);
-            this.KundeInfoGrpBox.Controls.Add(this.NameTxtLbl);
-            this.KundeInfoGrpBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.KundeInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.KundeInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.KundeInfoGrpBox.Location = new System.Drawing.Point(0, 0);
-            this.KundeInfoGrpBox.Name = "KundeInfoGrpBox";
-            this.KundeInfoGrpBox.Size = new System.Drawing.Size(648, 122);
-            this.KundeInfoGrpBox.TabIndex = 0;
-            this.KundeInfoGrpBox.TabStop = false;
-            this.KundeInfoGrpBox.Text = "Kunde Information";
+            this.BottomRightPanel.Controls.Add(this.OpretOrdreButton);
+            this.BottomRightPanel.Controls.Add(this.RedigerKundeButton);
+            this.BottomRightPanel.Controls.Add(this.NyKundeButton);
+            this.BottomRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BottomRightPanel.Location = new System.Drawing.Point(0, 538);
+            this.BottomRightPanel.Name = "BottomRightPanel";
+            this.BottomRightPanel.Size = new System.Drawing.Size(648, 63);
+            this.BottomRightPanel.TabIndex = 2;
             // 
-            // NameTxtLbl
+            // OpretOrdreButton
             // 
-            this.NameTxtLbl.AutoSize = true;
-            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
-            this.NameTxtLbl.Name = "NameTxtLbl";
-            this.NameTxtLbl.Size = new System.Drawing.Size(50, 21);
-            this.NameTxtLbl.TabIndex = 0;
-            this.NameTxtLbl.Text = "Navn:";
+            this.OpretOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.OpretOrdreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.OpretOrdreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.OpretOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpretOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpretOrdreButton.ForeColor = System.Drawing.Color.White;
+            this.OpretOrdreButton.Location = new System.Drawing.Point(62, 15);
+            this.OpretOrdreButton.Name = "OpretOrdreButton";
+            this.OpretOrdreButton.Size = new System.Drawing.Size(154, 37);
+            this.OpretOrdreButton.TabIndex = 1;
+            this.OpretOrdreButton.Text = "Opret Ordre";
+            this.OpretOrdreButton.UseVisualStyleBackColor = false;
             // 
-            // TlfTxtLbl
+            // RedigerKundeButton
             // 
-            this.TlfTxtLbl.AutoSize = true;
-            this.TlfTxtLbl.Location = new System.Drawing.Point(16, 51);
-            this.TlfTxtLbl.Name = "TlfTxtLbl";
-            this.TlfTxtLbl.Size = new System.Drawing.Size(62, 21);
-            this.TlfTxtLbl.TabIndex = 0;
-            this.TlfTxtLbl.Text = "Telefon:";
+            this.RedigerKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RedigerKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.RedigerKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RedigerKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RedigerKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RedigerKundeButton.ForeColor = System.Drawing.Color.White;
+            this.RedigerKundeButton.Location = new System.Drawing.Point(276, 15);
+            this.RedigerKundeButton.Name = "RedigerKundeButton";
+            this.RedigerKundeButton.Size = new System.Drawing.Size(154, 37);
+            this.RedigerKundeButton.TabIndex = 1;
+            this.RedigerKundeButton.Text = "Rediger Kunde";
+            this.RedigerKundeButton.UseVisualStyleBackColor = false;
             // 
-            // EmailTxtLbl
+            // NyKundeButton
             // 
-            this.EmailTxtLbl.AutoSize = true;
-            this.EmailTxtLbl.Location = new System.Drawing.Point(16, 72);
-            this.EmailTxtLbl.Name = "EmailTxtLbl";
-            this.EmailTxtLbl.Size = new System.Drawing.Size(57, 21);
-            this.EmailTxtLbl.TabIndex = 0;
-            this.EmailTxtLbl.Text = "E-mail:";
-            // 
-            // NameContentLabel
-            // 
-            this.NameContentLabel.AutoSize = true;
-            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameContentLabel.Location = new System.Drawing.Point(84, 30);
-            this.NameContentLabel.Name = "NameContentLabel";
-            this.NameContentLabel.Size = new System.Drawing.Size(86, 21);
-            this.NameContentLabel.TabIndex = 0;
-            this.NameContentLabel.Text = "Peter Ipsen";
-            // 
-            // TlfContentLabel
-            // 
-            this.TlfContentLabel.AutoSize = true;
-            this.TlfContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.TlfContentLabel.Location = new System.Drawing.Point(84, 51);
-            this.TlfContentLabel.Name = "TlfContentLabel";
-            this.TlfContentLabel.Size = new System.Drawing.Size(94, 21);
-            this.TlfContentLabel.TabIndex = 0;
-            this.TlfContentLabel.Text = "75 88 19 52";
-            // 
-            // EmailContentLabel
-            // 
-            this.EmailContentLabel.AutoSize = true;
-            this.EmailContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.EmailContentLabel.Location = new System.Drawing.Point(84, 72);
-            this.EmailContentLabel.Name = "EmailContentLabel";
-            this.EmailContentLabel.Size = new System.Drawing.Size(161, 21);
-            this.EmailContentLabel.TabIndex = 0;
-            this.EmailContentLabel.Text = "pipsen68@gmail.com";
-            // 
-            // AdresseTxtLbl
-            // 
-            this.AdresseTxtLbl.AutoSize = true;
-            this.AdresseTxtLbl.Location = new System.Drawing.Point(338, 30);
-            this.AdresseTxtLbl.Name = "AdresseTxtLbl";
-            this.AdresseTxtLbl.Size = new System.Drawing.Size(68, 21);
-            this.AdresseTxtLbl.TabIndex = 0;
-            this.AdresseTxtLbl.Text = "Adresse:";
-            // 
-            // AdresseContentLabel
-            // 
-            this.AdresseContentLabel.AutoSize = true;
-            this.AdresseContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.AdresseContentLabel.Location = new System.Drawing.Point(352, 51);
-            this.AdresseContentLabel.Name = "AdresseContentLabel";
-            this.AdresseContentLabel.Size = new System.Drawing.Size(221, 42);
-            this.AdresseContentLabel.TabIndex = 0;
-            this.AdresseContentLabel.Text = "Rudolph Wullfs Gade 10, st. tv.\r\n8000 Aarhus C";
+            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NyKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.NyKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.NyKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NyKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NyKundeButton.ForeColor = System.Drawing.Color.White;
+            this.NyKundeButton.Location = new System.Drawing.Point(482, 15);
+            this.NyKundeButton.Name = "NyKundeButton";
+            this.NyKundeButton.Size = new System.Drawing.Size(154, 37);
+            this.NyKundeButton.TabIndex = 1;
+            this.NyKundeButton.Text = "Ny Kunde";
+            this.NyKundeButton.UseVisualStyleBackColor = false;
             // 
             // OrdreGrpBox
             // 
@@ -412,76 +387,101 @@
             this.Status.ReadOnly = true;
             this.Status.Width = 77;
             // 
-            // BottomRightPanel
+            // KundeInfoGrpBox
             // 
-            this.BottomRightPanel.Controls.Add(this.OpretOrdreButton);
-            this.BottomRightPanel.Controls.Add(this.RedigerKundeButton);
-            this.BottomRightPanel.Controls.Add(this.NyKundeButton);
-            this.BottomRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BottomRightPanel.Location = new System.Drawing.Point(0, 538);
-            this.BottomRightPanel.Name = "BottomRightPanel";
-            this.BottomRightPanel.Size = new System.Drawing.Size(648, 63);
-            this.BottomRightPanel.TabIndex = 2;
+            this.KundeInfoGrpBox.Controls.Add(this.EmailTxtLbl);
+            this.KundeInfoGrpBox.Controls.Add(this.TlfTxtLbl);
+            this.KundeInfoGrpBox.Controls.Add(this.EmailContentLabel);
+            this.KundeInfoGrpBox.Controls.Add(this.TlfContentLabel);
+            this.KundeInfoGrpBox.Controls.Add(this.NameContentLabel);
+            this.KundeInfoGrpBox.Controls.Add(this.AdresseContentLabel);
+            this.KundeInfoGrpBox.Controls.Add(this.AdresseTxtLbl);
+            this.KundeInfoGrpBox.Controls.Add(this.NameTxtLbl);
+            this.KundeInfoGrpBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.KundeInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KundeInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.KundeInfoGrpBox.Location = new System.Drawing.Point(0, 0);
+            this.KundeInfoGrpBox.Name = "KundeInfoGrpBox";
+            this.KundeInfoGrpBox.Size = new System.Drawing.Size(648, 122);
+            this.KundeInfoGrpBox.TabIndex = 0;
+            this.KundeInfoGrpBox.TabStop = false;
+            this.KundeInfoGrpBox.Text = "Kunde Information";
             // 
-            // NyKundeButton
+            // EmailTxtLbl
             // 
-            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NyKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.NyKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.NyKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NyKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NyKundeButton.ForeColor = System.Drawing.Color.White;
-            this.NyKundeButton.Location = new System.Drawing.Point(482, 15);
-            this.NyKundeButton.Name = "NyKundeButton";
-            this.NyKundeButton.Size = new System.Drawing.Size(154, 37);
-            this.NyKundeButton.TabIndex = 1;
-            this.NyKundeButton.Text = "Ny Kunde";
-            this.NyKundeButton.UseVisualStyleBackColor = false;
+            this.EmailTxtLbl.AutoSize = true;
+            this.EmailTxtLbl.Location = new System.Drawing.Point(16, 72);
+            this.EmailTxtLbl.Name = "EmailTxtLbl";
+            this.EmailTxtLbl.Size = new System.Drawing.Size(57, 21);
+            this.EmailTxtLbl.TabIndex = 0;
+            this.EmailTxtLbl.Text = "E-mail:";
             // 
-            // RedigerKundeButton
+            // TlfTxtLbl
             // 
-            this.RedigerKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RedigerKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.RedigerKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.RedigerKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RedigerKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RedigerKundeButton.ForeColor = System.Drawing.Color.White;
-            this.RedigerKundeButton.Location = new System.Drawing.Point(276, 15);
-            this.RedigerKundeButton.Name = "RedigerKundeButton";
-            this.RedigerKundeButton.Size = new System.Drawing.Size(154, 37);
-            this.RedigerKundeButton.TabIndex = 1;
-            this.RedigerKundeButton.Text = "Rediger Kunde";
-            this.RedigerKundeButton.UseVisualStyleBackColor = false;
+            this.TlfTxtLbl.AutoSize = true;
+            this.TlfTxtLbl.Location = new System.Drawing.Point(16, 51);
+            this.TlfTxtLbl.Name = "TlfTxtLbl";
+            this.TlfTxtLbl.Size = new System.Drawing.Size(62, 21);
+            this.TlfTxtLbl.TabIndex = 0;
+            this.TlfTxtLbl.Text = "Telefon:";
             // 
-            // SearchButton
+            // EmailContentLabel
             // 
-            this.SearchButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.SearchButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButton.ForeColor = System.Drawing.Color.White;
-            this.SearchButton.Location = new System.Drawing.Point(476, 19);
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(154, 37);
-            this.SearchButton.TabIndex = 1;
-            this.SearchButton.Text = "Søg";
-            this.SearchButton.UseVisualStyleBackColor = false;
+            this.EmailContentLabel.AutoSize = true;
+            this.EmailContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.EmailContentLabel.Location = new System.Drawing.Point(84, 72);
+            this.EmailContentLabel.Name = "EmailContentLabel";
+            this.EmailContentLabel.Size = new System.Drawing.Size(161, 21);
+            this.EmailContentLabel.TabIndex = 0;
+            this.EmailContentLabel.Text = "pipsen68@gmail.com";
             // 
-            // OpretOrdreButton
+            // TlfContentLabel
             // 
-            this.OpretOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.OpretOrdreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.OpretOrdreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.OpretOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OpretOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OpretOrdreButton.ForeColor = System.Drawing.Color.White;
-            this.OpretOrdreButton.Location = new System.Drawing.Point(62, 15);
-            this.OpretOrdreButton.Name = "OpretOrdreButton";
-            this.OpretOrdreButton.Size = new System.Drawing.Size(154, 37);
-            this.OpretOrdreButton.TabIndex = 1;
-            this.OpretOrdreButton.Text = "Opret Ordre";
-            this.OpretOrdreButton.UseVisualStyleBackColor = false;
+            this.TlfContentLabel.AutoSize = true;
+            this.TlfContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.TlfContentLabel.Location = new System.Drawing.Point(84, 51);
+            this.TlfContentLabel.Name = "TlfContentLabel";
+            this.TlfContentLabel.Size = new System.Drawing.Size(94, 21);
+            this.TlfContentLabel.TabIndex = 0;
+            this.TlfContentLabel.Text = "75 88 19 52";
+            // 
+            // NameContentLabel
+            // 
+            this.NameContentLabel.AutoSize = true;
+            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameContentLabel.Location = new System.Drawing.Point(84, 30);
+            this.NameContentLabel.Name = "NameContentLabel";
+            this.NameContentLabel.Size = new System.Drawing.Size(86, 21);
+            this.NameContentLabel.TabIndex = 0;
+            this.NameContentLabel.Text = "Peter Ipsen";
+            // 
+            // AdresseContentLabel
+            // 
+            this.AdresseContentLabel.AutoSize = true;
+            this.AdresseContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.AdresseContentLabel.Location = new System.Drawing.Point(352, 51);
+            this.AdresseContentLabel.Name = "AdresseContentLabel";
+            this.AdresseContentLabel.Size = new System.Drawing.Size(221, 42);
+            this.AdresseContentLabel.TabIndex = 0;
+            this.AdresseContentLabel.Text = "Rudolph Wullfs Gade 10, st. tv.\r\n8000 Aarhus C";
+            // 
+            // AdresseTxtLbl
+            // 
+            this.AdresseTxtLbl.AutoSize = true;
+            this.AdresseTxtLbl.Location = new System.Drawing.Point(338, 30);
+            this.AdresseTxtLbl.Name = "AdresseTxtLbl";
+            this.AdresseTxtLbl.Size = new System.Drawing.Size(68, 21);
+            this.AdresseTxtLbl.TabIndex = 0;
+            this.AdresseTxtLbl.Text = "Adresse:";
+            // 
+            // NameTxtLbl
+            // 
+            this.NameTxtLbl.AutoSize = true;
+            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
+            this.NameTxtLbl.Name = "NameTxtLbl";
+            this.NameTxtLbl.Size = new System.Drawing.Size(50, 21);
+            this.NameTxtLbl.TabIndex = 0;
+            this.NameTxtLbl.Text = "Navn:";
             // 
             // KundeModulForm
             // 
@@ -492,7 +492,6 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.BottomPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1300, 800);
             this.Name = "KundeModulForm";
@@ -500,17 +499,17 @@
             this.Text = "Køkken Fanatikeren Kunde Modul";
             this.HeaderPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.KundeListeGridView)).EndInit();
+            this.LeftMainPanel.ResumeLayout(false);
             this.KundeListeGrpBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.KundeListeGridView)).EndInit();
             this.FindKundeGrpBox.ResumeLayout(false);
             this.FindKundeGrpBox.PerformLayout();
-            this.LeftMainPanel.ResumeLayout(false);
             this.RightMainPanel.ResumeLayout(false);
-            this.KundeInfoGrpBox.ResumeLayout(false);
-            this.KundeInfoGrpBox.PerformLayout();
+            this.BottomRightPanel.ResumeLayout(false);
             this.OrdreGrpBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.KundeOrdreGridView)).EndInit();
-            this.BottomRightPanel.ResumeLayout(false);
+            this.KundeInfoGrpBox.ResumeLayout(false);
+            this.KundeInfoGrpBox.PerformLayout();
             this.ResumeLayout(false);
 
         }

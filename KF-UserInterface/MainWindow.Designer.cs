@@ -121,6 +121,7 @@
             this.VareModulButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.VareModulButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.VareModulButton.UseVisualStyleBackColor = false;
+            this.VareModulButton.Click += new System.EventHandler(this.VareModulButton_Click);
             // 
             // KundeModulButton
             // 
@@ -150,7 +151,6 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.BottomPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
