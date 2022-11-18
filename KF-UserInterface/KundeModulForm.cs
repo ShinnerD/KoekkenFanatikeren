@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace KF_UserInterface
 {
-    public partial class MainWindow : Form
+    public partial class KundeModulForm : Form
     {
-        public MainWindow()
+        public KundeModulForm()
         {
             InitializeComponent();
-        }
-
-        private void LogOffButton_Click(object sender, EventArgs e)
-        {
-            LockProgram();
         }
 
         private void LockProgram()
@@ -27,12 +22,9 @@ namespace KF_UserInterface
             Application.Restart();
         }
 
-        private void KundeModulButton_Click(object sender, EventArgs e)
+        private void LukModulButton_Click(object sender, EventArgs e)
         {
-            KundeModulForm kundeModul = new KundeModulForm();
-            this.Hide();
-            kundeModul.ShowDialog();
-            this.Show();
+            this.Close();
         }
     }
 }

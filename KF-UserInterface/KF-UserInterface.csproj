@@ -58,6 +58,12 @@
     <Compile Include="LoginFormAlternate.Designer.cs">
       <DependentUpon>LoginFormAlternate.cs</DependentUpon>
     </Compile>
+    <Compile Include="KundeModulForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KundeModulForm.Designer.cs">
+      <DependentUpon>KundeModulForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFormAlternate.resx">
       <DependentUpon>LoginFormAlternate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KundeModulForm.resx">
+      <DependentUpon>KundeModulForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
