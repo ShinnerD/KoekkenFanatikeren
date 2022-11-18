@@ -52,6 +52,12 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginFormAlternate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFormAlternate.Designer.cs">
+      <DependentUpon>LoginFormAlternate.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFormAlternate.resx">
+      <DependentUpon>LoginFormAlternate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -95,6 +104,8 @@
     <Content Include="Media\mainicon.ico" />
     <Content Include="Media\MainIcon.png" />
     <Content Include="Media\OrdreImage.png" />
+    <Content Include="Media\PasswordImage.png" />
+    <None Include="Media\PasswordImage1.png" />
     <Content Include="Media\VareImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

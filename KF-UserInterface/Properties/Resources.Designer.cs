@@ -93,6 +93,16 @@ namespace KF_UserInterface.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PasswordImage {
+            get {
+                object obj = ResourceManager.GetObject("PasswordImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VareImage {
             get {
                 object obj = ResourceManager.GetObject("VareImage", resourceCulture);

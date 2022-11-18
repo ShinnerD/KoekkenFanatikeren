@@ -16,7 +16,14 @@ namespace KF_UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainWindow());
+            DialogResult result;
+            using (var loginForm = new LoginFormAlternate())
+                result = loginForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                // login was successful
+                Application.Run(new MainWindow());
+            }
         }
     }
 }
