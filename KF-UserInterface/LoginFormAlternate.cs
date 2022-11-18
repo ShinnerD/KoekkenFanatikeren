@@ -42,5 +42,13 @@ namespace KF_UserInterface
         {
             ValidateLogin(PasswordTextBox.Text);
         }
+
+        private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ValidateLogin(PasswordTextBox.Text);
+            }
+        }
     }
 }
