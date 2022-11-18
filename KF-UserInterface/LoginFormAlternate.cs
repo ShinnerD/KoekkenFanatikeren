@@ -43,6 +43,7 @@ namespace KF_UserInterface
             ValidateLogin(PasswordTextBox.Text);
         }
 
+        //Handles the "Enter" Key event in the password text field.
         private void PasswordTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
