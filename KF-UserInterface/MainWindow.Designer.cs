@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.BottomPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.LogOffButton = new System.Windows.Forms.Button();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.VareModulButton = new System.Windows.Forms.Button();
             this.KundeModulButton = new System.Windows.Forms.Button();
@@ -59,17 +59,6 @@
             this.BottomPanel.Size = new System.Drawing.Size(914, 80);
             this.BottomPanel.TabIndex = 1;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.Controls.Add(this.NewOrderButton);
-            this.MainPanel.Controls.Add(this.VareModulButton);
-            this.MainPanel.Controls.Add(this.KundeModulButton);
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 80);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(914, 361);
-            this.MainPanel.TabIndex = 2;
-            // 
             // LogOffButton
             // 
             this.LogOffButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -85,6 +74,17 @@
             this.LogOffButton.Text = "Log Ud";
             this.LogOffButton.UseVisualStyleBackColor = false;
             this.LogOffButton.Click += new System.EventHandler(this.LogOffButton_Click);
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.Controls.Add(this.NewOrderButton);
+            this.MainPanel.Controls.Add(this.VareModulButton);
+            this.MainPanel.Controls.Add(this.KundeModulButton);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 80);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(914, 361);
+            this.MainPanel.TabIndex = 2;
             // 
             // NewOrderButton
             // 
@@ -139,6 +139,7 @@
             this.KundeModulButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.KundeModulButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.KundeModulButton.UseVisualStyleBackColor = false;
+            this.KundeModulButton.Click += new System.EventHandler(this.KundeModulButton_Click);
             // 
             // MainWindow
             // 
