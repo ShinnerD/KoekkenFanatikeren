@@ -119,7 +119,6 @@
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.BottomPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginFormAlternate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

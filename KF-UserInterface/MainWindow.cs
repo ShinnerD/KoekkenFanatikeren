@@ -34,5 +34,13 @@ namespace KF_UserInterface
             kundeModul.ShowDialog();
             this.Show();
         }
+
+        private void VareModulButton_Click(object sender, EventArgs e)
+        {
+            VareModulForm vareModul = new VareModulForm();
+            this.Hide();
+            vareModul.ShowDialog();
+            this.Show();
+        }
     }
 }
