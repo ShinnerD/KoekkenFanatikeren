@@ -497,6 +497,7 @@
             this.Name = "KundeModulForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Kunde Modul";
+            this.Load += new System.EventHandler(this.KundeModulForm_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.LeftMainPanel.ResumeLayout(false);
