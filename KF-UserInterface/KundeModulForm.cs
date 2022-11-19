@@ -26,5 +26,10 @@ namespace KF_UserInterface
         {
             this.Close();
         }
+
+        private void KundeModulForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
