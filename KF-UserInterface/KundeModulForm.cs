@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace KF_UserInterface
 {
+    /// <summary>
+    /// /teori Test
+    /// </summary>
     public partial class KundeModulForm : Form
     {
         public KundeModulForm()
