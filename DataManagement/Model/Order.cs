@@ -11,10 +11,10 @@ namespace DataManagement.Model
         public int EmployeeId { get; set; }
         public string To_FirstName { get; set; }
         public string To_LastName { get; set; }
-        public string To_PhoneNumber { get; set; }
+        public int To_PhoneNumber { get; set; }
         public string To_Street { get; set; }
         public string To_City { get; set; }
-        public string To_ZipCode { get; set; }
+        public int To_ZipCode { get; set; }
         public DateTime DateOfSending { get; set; }
 
         public List<Vare> OrderProducts { get; set; }
