@@ -16,6 +16,7 @@ namespace DataManagement.Model
         public string To_City { get; set; }
         public int To_ZipCode { get; set; }
         public DateTime DateOfSending { get; set; }
+        public DateTime CreatedDate { get; set; }
 
         public List<Vare> OrderProducts { get; set; }
         public Kunde Kunde { get; set; }
