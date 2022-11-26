@@ -27,16 +27,17 @@ namespace DataManagement.Repository
 
                
                
-                Employee.EmployeeID = dbEmployee.;
-                Employee.FirstName = dbEmployee.;
-                Employee.LastName = dbEmployee.;
-                Employee.PhoneNumber = dbEmployee.;
-                Employee.Address = dbEmployee.;
-                Employee.Salary = dbEmployee.;
+                Employee.EmployeeID = dbEmployee.Employee_Id;
+                Employee.FirstName = dbEmployee.FirstName;
+                Employee.LastName = dbEmployee.LastName;
+                Employee.PhoneNumber = dbEmployee.Phonenumber;
+                Employee.Address = dbEmployee.Address;
+                Employee.Salary = dbEmployee.Salary;
                 
 
             }
             return result;
+            //Skrevet af Erik og vedligholdt 
         }
     }
 }

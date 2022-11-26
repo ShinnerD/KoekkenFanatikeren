@@ -14,6 +14,7 @@ namespace DataManagement.Model
         public string Address { get; set; }
         public int PhoneNumber { get; set; }
         public int Salary { get; set; }
+        //Skrevet af Erik og vedligholdt 
 
     }
 }

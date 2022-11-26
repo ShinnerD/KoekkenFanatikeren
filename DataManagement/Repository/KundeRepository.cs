@@ -28,17 +28,17 @@ namespace KundeManagement.Repository
                 {
                 Kunde kunde = new Kunde();
 
-                    kunde.KundeID = dbKunde.;
-                    kunde.FirstName = dbKunde.;
-                    kunde.LastName = dbKunde.;
-                    kunde.Street = dbKunde.;
-                    kunde.City = dbKunde.;
-                    kunde.Address=dbKunde.;
-                    kunde.Zipcode = dbKunde.e;
-                    kunde.PhoneNumber = dbKunde.;
+                    kunde.KundeID = dbKunde.Customer_Id;
+                    kunde.FirstName = dbKunde.FirstName;
+                    kunde.LastName = dbKunde.LastName;
+                    kunde.Street = dbKunde.Streetname;
+                    kunde.City = dbKunde.City;
+                    kunde.Zipcode = dbKunde.Zipcode;
+                    kunde.PhoneNumber = dbKunde.Phonenumber;
                 }
                 return result;
-            }
+            //Skrevet af Erik og vedligholdt 
         }
+    }
     
 }
