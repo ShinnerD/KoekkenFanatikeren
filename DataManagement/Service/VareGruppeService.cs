@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using KundeManagement.Model;
 
-namespace KundeManagement.Service
+namespace DataManagement.Service
 {
     public class VareGruppeService
     {
@@ -14,6 +14,5 @@ namespace KundeManagement.Service
             var VaregruppeRepository = new Repository.VareGruppeRepository();
             return VaregruppeRepository.FindAlleVaregruppe();
         }
-
     }
 }

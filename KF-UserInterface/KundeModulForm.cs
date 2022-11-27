@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace KF_UserInterface
 {
+    /// <summary>
+    /// /teori Test
+    /// </summary>
     public partial class KundeModulForm : Form
     {
         public KundeModulForm()
@@ -25,6 +28,11 @@ namespace KF_UserInterface
         private void LukModulButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void KundeModulForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,11 +1,7 @@
-﻿using KundeManagement.Model;
-using System;
+﻿using DataManagement.Model;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace KundeManagement.Service
+namespace DataManagement.Service
 {
     public class VareService
     {
