@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KundeManagement.Model
+namespace DataManagement.Model
 {
     public class Varegruppe
     {

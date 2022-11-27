@@ -58,8 +58,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Repository\Employee.cs" />
-    master
+    <Compile Include="Repository\EmployeeRepository.cs" />
     <Compile Include="Repository\KundeRepository.cs" />
     <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\VareGruppeRepository.cs" />
@@ -70,9 +69,7 @@
     <Compile Include="Service\VareGruppeService.cs" />
     <Compile Include="Service\VareService.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-   master
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
