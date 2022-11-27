@@ -47,7 +47,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>KFDataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Kunde.cs" />
+    <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Vare.cs" />
     <Compile Include="Model\Varegruppe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,17 +58,21 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Repository\Employee.cs" />
+    master
     <Compile Include="Repository\KundeRepository.cs" />
+    <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\VareGruppeRepository.cs" />
     <Compile Include="Repository\VareRepository.cs" />
+    <Compile Include="Service\Employee.cs" />
     <Compile Include="Service\KundeService.cs" />
+    <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\VareGruppeService.cs" />
     <Compile Include="Service\VareService.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="KundeManagement\" />
-  </ItemGroup>
-  <ItemGroup>
+   master
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>

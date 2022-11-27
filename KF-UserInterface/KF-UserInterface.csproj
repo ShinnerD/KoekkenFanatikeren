@@ -123,6 +123,7 @@
     <Content Include="Media\MainIcon.png" />
     <Content Include="Media\OrdreImage.png" />
     <Content Include="Media\PasswordImage.png" />
+    <None Include="Resources\CustomerImage.bmp" />
     <None Include="Media\PasswordImage1.png" />
     <Content Include="Media\VareImage.png" />
   </ItemGroup>
