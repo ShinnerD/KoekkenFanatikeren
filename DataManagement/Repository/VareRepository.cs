@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataManagement.Database;
-using KundeManagement.Model;
+using DataManagement.Model;
 
-namespace KundeManagement.Repository
+namespace DataManagement.Repository
 {
   
 

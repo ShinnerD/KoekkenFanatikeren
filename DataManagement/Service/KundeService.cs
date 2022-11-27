@@ -1,4 +1,4 @@
-﻿namespace KundeManagement.Service
+﻿namespace DataManagement.Service
 {
     public class KundeService
     {

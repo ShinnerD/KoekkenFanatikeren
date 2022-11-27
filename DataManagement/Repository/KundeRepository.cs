@@ -1,16 +1,10 @@
-﻿using DataHandling.Model;
-using DataManagement.Database;
+﻿using DataManagement.Database;
 using System.Collections.Generic;
-using System.Linq;
-using KundeManagement.Model;
 using DataManagement.Model;
 
-namespace KundeManagement.Repository
-
+namespace DataManagement.Repository
 {
-    
-    
-        public class KundeRepository
+    public class KundeRepository
         {
             private KFDataClassesDataContext DataContext { get; set; }
 

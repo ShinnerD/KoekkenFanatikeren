@@ -1,5 +1,4 @@
-﻿using DataHandling.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace DataManagement.Model
@@ -20,6 +19,7 @@ namespace DataManagement.Model
 
         public List<Vare> OrderProducts { get; set; }
         public Kunde Kunde { get; set; }
+        public Employee Employee { get; set; }
     }
 }
 
