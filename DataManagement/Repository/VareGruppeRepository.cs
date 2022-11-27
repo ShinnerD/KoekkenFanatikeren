@@ -16,7 +16,19 @@ namespace DataManagement.Repository
         {
             DataContext = new KFDataClassesDataContext();
         }
+        public List<Varegruppe> FindAlleVaregruppe()
+        {
+            List<Varegruppe> result = new List<Varegruppe>();
 
+            var VaregruppeIdListe = DataContext.ProductGroups;
+
+            foreach (var varegruppe in VaregruppeIdListe)
+            {
+                result.Add(FindEnVaregruppe(varegruppe.ProductGroup_Id));
+            }
+            return result;
+
+        }
         public Varegruppe FindEnVaregruppe(int id)
         {
             var dtoVaregruppe = DataContext.ProductGroups.FirstOrDefault(i => i.ProductGroup_Id == id);
