@@ -29,6 +29,9 @@ namespace DataManagement.Repository
                     kunde.City = dbKunde.City;
                     kunde.Zipcode = dbKunde.Zipcode;
                     kunde.PhoneNumber = dbKunde.Phonenumber;
+                    kunde.Email = dbKunde.Email;
+
+                result.Add(kunde);
                 }
                 return result;
             //Skrevet af Erik og vedligholdt 

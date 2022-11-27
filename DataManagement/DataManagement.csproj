@@ -63,7 +63,7 @@
     <Compile Include="Repository\OrderRepository.cs" />
     <Compile Include="Repository\VareGruppeRepository.cs" />
     <Compile Include="Repository\VareRepository.cs" />
-    <Compile Include="Service\Employee.cs" />
+    <Compile Include="Service\EmployeeService.cs" />
     <Compile Include="Service\KundeService.cs" />
     <Compile Include="Service\OrderService.cs" />
     <Compile Include="Service\VareGruppeService.cs" />
