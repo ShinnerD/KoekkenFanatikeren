@@ -9,7 +9,7 @@ namespace KundeManagement.Service
 {
     public class VareService
     {
-        public List<Vare> RetunererAlleVarerService()
+        public List<Vare> RetunererAlleVareService()
         {
             var VareRepository = new Repository.VareRepository();
             return VareRepository.GetAllVare();
