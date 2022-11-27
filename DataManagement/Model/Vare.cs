@@ -16,5 +16,6 @@ namespace DataManagement.Model
         public string Colour { get; set; }
         public string Grip { get; set; }
         public Varegruppe Varegruppe { get; set; }
+        public string VaregruppeNavn { get { return this.Varegruppe.ProductGroupName; } }
     }
 }

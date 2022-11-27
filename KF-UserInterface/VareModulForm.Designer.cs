@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Rød");
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Grøn");
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Beige");
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Teal");
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("Orange");
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("Teak");
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem("Maghoni");
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem("Ege Træ");
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem("Bast");
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem("Chrome");
-            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
-            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem("Titanium");
-            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem("Plastik");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VareModulForm));
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Chrome");
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Titanium");
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Plastik");
+            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("Teak");
+            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("Maghoni");
+            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem("Ege Træ");
+            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem("Bast");
+            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem("Rød");
+            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem("Grøn");
+            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem("Beige");
+            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem("Teal");
+            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem("Orange");
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.LukModulButton = new System.Windows.Forms.Button();
             this.HeaderLabel = new System.Windows.Forms.Label();
@@ -52,51 +52,51 @@
             this.VareListeGrpBox = new System.Windows.Forms.GroupBox();
             this.VareListeDataGrid = new System.Windows.Forms.DataGridView();
             this.FindVareGrpBox = new System.Windows.Forms.GroupBox();
-            this.SearchButton = new System.Windows.Forms.Button();
+            this.FindVareSearchPanel = new System.Windows.Forms.Panel();
             this.SearchFieldTextBox = new System.Windows.Forms.TextBox();
+            this.FindVareButtonPanel = new System.Windows.Forms.Panel();
+            this.VareGruppeComboBox = new System.Windows.Forms.ComboBox();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.RightMainPanel = new System.Windows.Forms.Panel();
-            this.BottomRightPanel = new System.Windows.Forms.Panel();
-            this.RedigerVareButton = new System.Windows.Forms.Button();
-            this.NyVareButton = new System.Windows.Forms.Button();
             this.VareInfoGrpBox = new System.Windows.Forms.GroupBox();
+            this.BeskrivelseGrpBox = new System.Windows.Forms.GroupBox();
+            this.VareBeskrivelseTxtBox = new System.Windows.Forms.TextBox();
+            this.GrebListeGrpBox = new System.Windows.Forms.GroupBox();
+            this.GrebListView = new System.Windows.Forms.ListView();
+            this.MaterialerGrpBox = new System.Windows.Forms.GroupBox();
+            this.MaterialerListView = new System.Windows.Forms.ListView();
+            this.FarverGrpBox = new System.Windows.Forms.GroupBox();
+            this.FarverListView = new System.Windows.Forms.ListView();
             this.VareGruppeTxtLbl = new System.Windows.Forms.Label();
             this.VareIdTxtLbl = new System.Windows.Forms.Label();
             this.VareGruppeContentLabel = new System.Windows.Forms.Label();
             this.VareIdContentLabel = new System.Windows.Forms.Label();
-            this.NameContentLabel = new System.Windows.Forms.Label();
-            this.NameTxtLbl = new System.Windows.Forms.Label();
-            this.FarverGrpBox = new System.Windows.Forms.GroupBox();
-            this.FarverListView = new System.Windows.Forms.ListView();
-            this.PrisTxtLbl = new System.Windows.Forms.Label();
             this.PrisContentLabel = new System.Windows.Forms.Label();
-            this.MaterialerGrpBox = new System.Windows.Forms.GroupBox();
-            this.MaterialerListView = new System.Windows.Forms.ListView();
-            this.GrebListeGrpBox = new System.Windows.Forms.GroupBox();
-            this.GrebListView = new System.Windows.Forms.ListView();
+            this.NameContentLabel = new System.Windows.Forms.Label();
+            this.PrisTxtLbl = new System.Windows.Forms.Label();
+            this.NameTxtLbl = new System.Windows.Forms.Label();
+            this.BottomRightPanel = new System.Windows.Forms.Panel();
+            this.RedigerVareButton = new System.Windows.Forms.Button();
+            this.NyVareButton = new System.Windows.Forms.Button();
             this.Navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VareGruppe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pris = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BeskrivelseGrpBox = new System.Windows.Forms.GroupBox();
-            this.VareBeskrivelseTxtBox = new System.Windows.Forms.TextBox();
-            this.VareGruppeComboBox = new System.Windows.Forms.ComboBox();
-            this.FindVareButtonPanel = new System.Windows.Forms.Panel();
-            this.FindVareSearchPanel = new System.Windows.Forms.Panel();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
             this.VareListeGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VareListeDataGrid)).BeginInit();
             this.FindVareGrpBox.SuspendLayout();
-            this.RightMainPanel.SuspendLayout();
-            this.BottomRightPanel.SuspendLayout();
-            this.VareInfoGrpBox.SuspendLayout();
-            this.FarverGrpBox.SuspendLayout();
-            this.MaterialerGrpBox.SuspendLayout();
-            this.GrebListeGrpBox.SuspendLayout();
-            this.BeskrivelseGrpBox.SuspendLayout();
-            this.FindVareButtonPanel.SuspendLayout();
             this.FindVareSearchPanel.SuspendLayout();
+            this.FindVareButtonPanel.SuspendLayout();
+            this.RightMainPanel.SuspendLayout();
+            this.VareInfoGrpBox.SuspendLayout();
+            this.BeskrivelseGrpBox.SuspendLayout();
+            this.GrebListeGrpBox.SuspendLayout();
+            this.MaterialerGrpBox.SuspendLayout();
+            this.FarverGrpBox.SuspendLayout();
+            this.BottomRightPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -218,6 +218,7 @@
             this.VareListeDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.VareListeDataGrid.Size = new System.Drawing.Size(630, 472);
             this.VareListeDataGrid.TabIndex = 2;
+            this.VareListeDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VareListeDataGrid_CellClick);
             // 
             // FindVareGrpBox
             // 
@@ -234,6 +235,62 @@
             this.FindVareGrpBox.TabStop = false;
             this.FindVareGrpBox.Text = "Find Vare";
             // 
+            // FindVareSearchPanel
+            // 
+            this.FindVareSearchPanel.Controls.Add(this.SearchFieldTextBox);
+            this.FindVareSearchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FindVareSearchPanel.Location = new System.Drawing.Point(3, 25);
+            this.FindVareSearchPanel.Name = "FindVareSearchPanel";
+            this.FindVareSearchPanel.Size = new System.Drawing.Size(430, 73);
+            this.FindVareSearchPanel.TabIndex = 5;
+            // 
+            // SearchFieldTextBox
+            // 
+            this.SearchFieldTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchFieldTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchFieldTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchFieldTextBox.ForeColor = System.Drawing.Color.DimGray;
+            this.SearchFieldTextBox.Location = new System.Drawing.Point(3, 23);
+            this.SearchFieldTextBox.Name = "SearchFieldTextBox";
+            this.SearchFieldTextBox.Size = new System.Drawing.Size(421, 26);
+            this.SearchFieldTextBox.TabIndex = 0;
+            this.SearchFieldTextBox.Text = "Indtast en vare...";
+            // 
+            // FindVareButtonPanel
+            // 
+            this.FindVareButtonPanel.Controls.Add(this.VareGruppeComboBox);
+            this.FindVareButtonPanel.Controls.Add(this.SearchButton);
+            this.FindVareButtonPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.FindVareButtonPanel.Location = new System.Drawing.Point(433, 25);
+            this.FindVareButtonPanel.Name = "FindVareButtonPanel";
+            this.FindVareButtonPanel.Size = new System.Drawing.Size(200, 73);
+            this.FindVareButtonPanel.TabIndex = 4;
+            // 
+            // VareGruppeComboBox
+            // 
+            this.VareGruppeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.VareGruppeComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.VareGruppeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VareGruppeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VareGruppeComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VareGruppeComboBox.ForeColor = System.Drawing.Color.White;
+            this.VareGruppeComboBox.FormattingEnabled = true;
+            this.VareGruppeComboBox.ItemHeight = 25;
+            this.VareGruppeComboBox.Items.AddRange(new object[] {
+            "Alle",
+            "Højskab",
+            "Overskab",
+            "Underskab",
+            "Hjørneskab",
+            "Skuffeelement",
+            "Skabslåge",
+            "Bordplade"});
+            this.VareGruppeComboBox.Location = new System.Drawing.Point(0, 40);
+            this.VareGruppeComboBox.MaxDropDownItems = 10;
+            this.VareGruppeComboBox.Name = "VareGruppeComboBox";
+            this.VareGruppeComboBox.Size = new System.Drawing.Size(200, 33);
+            this.VareGruppeComboBox.TabIndex = 3;
+            // 
             // SearchButton
             // 
             this.SearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
@@ -249,18 +306,6 @@
             this.SearchButton.Text = "Søg";
             this.SearchButton.UseVisualStyleBackColor = false;
             // 
-            // SearchFieldTextBox
-            // 
-            this.SearchFieldTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchFieldTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchFieldTextBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchFieldTextBox.ForeColor = System.Drawing.Color.DimGray;
-            this.SearchFieldTextBox.Location = new System.Drawing.Point(3, 23);
-            this.SearchFieldTextBox.Name = "SearchFieldTextBox";
-            this.SearchFieldTextBox.Size = new System.Drawing.Size(421, 26);
-            this.SearchFieldTextBox.TabIndex = 0;
-            this.SearchFieldTextBox.Text = "Indtast en vare...";
-            // 
             // RightMainPanel
             // 
             this.RightMainPanel.Controls.Add(this.VareInfoGrpBox);
@@ -270,6 +315,218 @@
             this.RightMainPanel.Name = "RightMainPanel";
             this.RightMainPanel.Size = new System.Drawing.Size(648, 601);
             this.RightMainPanel.TabIndex = 6;
+            // 
+            // VareInfoGrpBox
+            // 
+            this.VareInfoGrpBox.Controls.Add(this.BeskrivelseGrpBox);
+            this.VareInfoGrpBox.Controls.Add(this.GrebListeGrpBox);
+            this.VareInfoGrpBox.Controls.Add(this.MaterialerGrpBox);
+            this.VareInfoGrpBox.Controls.Add(this.FarverGrpBox);
+            this.VareInfoGrpBox.Controls.Add(this.VareGruppeTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.VareIdTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.VareGruppeContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.VareIdContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.PrisContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.NameContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.PrisTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.NameTxtLbl);
+            this.VareInfoGrpBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VareInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VareInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.VareInfoGrpBox.Location = new System.Drawing.Point(0, 0);
+            this.VareInfoGrpBox.Name = "VareInfoGrpBox";
+            this.VareInfoGrpBox.Size = new System.Drawing.Size(648, 538);
+            this.VareInfoGrpBox.TabIndex = 0;
+            this.VareInfoGrpBox.TabStop = false;
+            this.VareInfoGrpBox.Text = "Vare Information";
+            // 
+            // BeskrivelseGrpBox
+            // 
+            this.BeskrivelseGrpBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BeskrivelseGrpBox.Controls.Add(this.VareBeskrivelseTxtBox);
+            this.BeskrivelseGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.BeskrivelseGrpBox.Location = new System.Drawing.Point(20, 403);
+            this.BeskrivelseGrpBox.Name = "BeskrivelseGrpBox";
+            this.BeskrivelseGrpBox.Size = new System.Drawing.Size(616, 135);
+            this.BeskrivelseGrpBox.TabIndex = 3;
+            this.BeskrivelseGrpBox.TabStop = false;
+            this.BeskrivelseGrpBox.Text = "Beskrivelse";
+            // 
+            // VareBeskrivelseTxtBox
+            // 
+            this.VareBeskrivelseTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.VareBeskrivelseTxtBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.VareBeskrivelseTxtBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VareBeskrivelseTxtBox.Location = new System.Drawing.Point(3, 25);
+            this.VareBeskrivelseTxtBox.Multiline = true;
+            this.VareBeskrivelseTxtBox.Name = "VareBeskrivelseTxtBox";
+            this.VareBeskrivelseTxtBox.Size = new System.Drawing.Size(610, 107);
+            this.VareBeskrivelseTxtBox.TabIndex = 0;
+            this.VareBeskrivelseTxtBox.Text = resources.GetString("VareBeskrivelseTxtBox.Text");
+            // 
+            // GrebListeGrpBox
+            // 
+            this.GrebListeGrpBox.Controls.Add(this.GrebListView);
+            this.GrebListeGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.GrebListeGrpBox.Location = new System.Drawing.Point(20, 301);
+            this.GrebListeGrpBox.Name = "GrebListeGrpBox";
+            this.GrebListeGrpBox.Size = new System.Drawing.Size(616, 96);
+            this.GrebListeGrpBox.TabIndex = 3;
+            this.GrebListeGrpBox.TabStop = false;
+            this.GrebListeGrpBox.Text = "Greb";
+            // 
+            // GrebListView
+            // 
+            this.GrebListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GrebListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GrebListView.HideSelection = false;
+            this.GrebListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem27,
+            listViewItem28,
+            listViewItem29,
+            listViewItem30});
+            this.GrebListView.Location = new System.Drawing.Point(3, 25);
+            this.GrebListView.Name = "GrebListView";
+            this.GrebListView.Size = new System.Drawing.Size(610, 68);
+            this.GrebListView.TabIndex = 0;
+            this.GrebListView.UseCompatibleStateImageBehavior = false;
+            this.GrebListView.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // MaterialerGrpBox
+            // 
+            this.MaterialerGrpBox.Controls.Add(this.MaterialerListView);
+            this.MaterialerGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.MaterialerGrpBox.Location = new System.Drawing.Point(20, 199);
+            this.MaterialerGrpBox.Name = "MaterialerGrpBox";
+            this.MaterialerGrpBox.Size = new System.Drawing.Size(616, 96);
+            this.MaterialerGrpBox.TabIndex = 2;
+            this.MaterialerGrpBox.TabStop = false;
+            this.MaterialerGrpBox.Text = "Materialer";
+            // 
+            // MaterialerListView
+            // 
+            this.MaterialerListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MaterialerListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MaterialerListView.HideSelection = false;
+            this.MaterialerListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem31,
+            listViewItem32,
+            listViewItem33,
+            listViewItem34});
+            this.MaterialerListView.Location = new System.Drawing.Point(3, 25);
+            this.MaterialerListView.Name = "MaterialerListView";
+            this.MaterialerListView.Size = new System.Drawing.Size(610, 68);
+            this.MaterialerListView.TabIndex = 0;
+            this.MaterialerListView.UseCompatibleStateImageBehavior = false;
+            this.MaterialerListView.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // FarverGrpBox
+            // 
+            this.FarverGrpBox.Controls.Add(this.FarverListView);
+            this.FarverGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.FarverGrpBox.Location = new System.Drawing.Point(20, 97);
+            this.FarverGrpBox.Name = "FarverGrpBox";
+            this.FarverGrpBox.Size = new System.Drawing.Size(616, 96);
+            this.FarverGrpBox.TabIndex = 1;
+            this.FarverGrpBox.TabStop = false;
+            this.FarverGrpBox.Text = "Farver";
+            // 
+            // FarverListView
+            // 
+            this.FarverListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FarverListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FarverListView.HideSelection = false;
+            this.FarverListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem35,
+            listViewItem36,
+            listViewItem37,
+            listViewItem38,
+            listViewItem39});
+            this.FarverListView.Location = new System.Drawing.Point(3, 25);
+            this.FarverListView.MultiSelect = false;
+            this.FarverListView.Name = "FarverListView";
+            this.FarverListView.Size = new System.Drawing.Size(610, 68);
+            this.FarverListView.TabIndex = 0;
+            this.FarverListView.UseCompatibleStateImageBehavior = false;
+            this.FarverListView.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // VareGruppeTxtLbl
+            // 
+            this.VareGruppeTxtLbl.AutoSize = true;
+            this.VareGruppeTxtLbl.Location = new System.Drawing.Point(16, 72);
+            this.VareGruppeTxtLbl.Name = "VareGruppeTxtLbl";
+            this.VareGruppeTxtLbl.Size = new System.Drawing.Size(94, 21);
+            this.VareGruppeTxtLbl.TabIndex = 0;
+            this.VareGruppeTxtLbl.Text = "Varegruppe:";
+            // 
+            // VareIdTxtLbl
+            // 
+            this.VareIdTxtLbl.AutoSize = true;
+            this.VareIdTxtLbl.Location = new System.Drawing.Point(16, 51);
+            this.VareIdTxtLbl.Name = "VareIdTxtLbl";
+            this.VareIdTxtLbl.Size = new System.Drawing.Size(63, 21);
+            this.VareIdTxtLbl.TabIndex = 0;
+            this.VareIdTxtLbl.Text = "Vare ID:";
+            // 
+            // VareGruppeContentLabel
+            // 
+            this.VareGruppeContentLabel.AutoSize = true;
+            this.VareGruppeContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.VareGruppeContentLabel.Location = new System.Drawing.Point(116, 72);
+            this.VareGruppeContentLabel.Name = "VareGruppeContentLabel";
+            this.VareGruppeContentLabel.Size = new System.Drawing.Size(66, 21);
+            this.VareGruppeContentLabel.TabIndex = 0;
+            this.VareGruppeContentLabel.Text = "Højskab";
+            // 
+            // VareIdContentLabel
+            // 
+            this.VareIdContentLabel.AutoSize = true;
+            this.VareIdContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.VareIdContentLabel.Location = new System.Drawing.Point(116, 51);
+            this.VareIdContentLabel.Name = "VareIdContentLabel";
+            this.VareIdContentLabel.Size = new System.Drawing.Size(73, 21);
+            this.VareIdContentLabel.TabIndex = 0;
+            this.VareIdContentLabel.Text = "1365884";
+            // 
+            // PrisContentLabel
+            // 
+            this.PrisContentLabel.AutoSize = true;
+            this.PrisContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.PrisContentLabel.Location = new System.Drawing.Point(431, 30);
+            this.PrisContentLabel.Name = "PrisContentLabel";
+            this.PrisContentLabel.Size = new System.Drawing.Size(88, 21);
+            this.PrisContentLabel.TabIndex = 0;
+            this.PrisContentLabel.Text = "1299,95 kr.";
+            // 
+            // NameContentLabel
+            // 
+            this.NameContentLabel.AutoSize = true;
+            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameContentLabel.Location = new System.Drawing.Point(116, 30);
+            this.NameContentLabel.Name = "NameContentLabel";
+            this.NameContentLabel.Size = new System.Drawing.Size(175, 21);
+            this.NameContentLabel.TabIndex = 0;
+            this.NameContentLabel.Text = "Classic Køkkenskab, Høj";
+            // 
+            // PrisTxtLbl
+            // 
+            this.PrisTxtLbl.AutoSize = true;
+            this.PrisTxtLbl.Location = new System.Drawing.Point(386, 30);
+            this.PrisTxtLbl.Name = "PrisTxtLbl";
+            this.PrisTxtLbl.Size = new System.Drawing.Size(39, 21);
+            this.PrisTxtLbl.TabIndex = 0;
+            this.PrisTxtLbl.Text = "Pris:";
+            // 
+            // NameTxtLbl
+            // 
+            this.NameTxtLbl.AutoSize = true;
+            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
+            this.NameTxtLbl.Name = "NameTxtLbl";
+            this.NameTxtLbl.Size = new System.Drawing.Size(44, 21);
+            this.NameTxtLbl.TabIndex = 0;
+            this.NameTxtLbl.Text = "Vare:";
             // 
             // BottomRightPanel
             // 
@@ -311,195 +568,10 @@
             this.NyVareButton.Text = "Ny Vare";
             this.NyVareButton.UseVisualStyleBackColor = false;
             // 
-            // VareInfoGrpBox
-            // 
-            this.VareInfoGrpBox.Controls.Add(this.BeskrivelseGrpBox);
-            this.VareInfoGrpBox.Controls.Add(this.GrebListeGrpBox);
-            this.VareInfoGrpBox.Controls.Add(this.MaterialerGrpBox);
-            this.VareInfoGrpBox.Controls.Add(this.FarverGrpBox);
-            this.VareInfoGrpBox.Controls.Add(this.VareGruppeTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.VareIdTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.VareGruppeContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.VareIdContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.PrisContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.NameContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.PrisTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.NameTxtLbl);
-            this.VareInfoGrpBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VareInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VareInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.VareInfoGrpBox.Location = new System.Drawing.Point(0, 0);
-            this.VareInfoGrpBox.Name = "VareInfoGrpBox";
-            this.VareInfoGrpBox.Size = new System.Drawing.Size(648, 538);
-            this.VareInfoGrpBox.TabIndex = 0;
-            this.VareInfoGrpBox.TabStop = false;
-            this.VareInfoGrpBox.Text = "Vare Information";
-            // 
-            // VareGruppeTxtLbl
-            // 
-            this.VareGruppeTxtLbl.AutoSize = true;
-            this.VareGruppeTxtLbl.Location = new System.Drawing.Point(16, 72);
-            this.VareGruppeTxtLbl.Name = "VareGruppeTxtLbl";
-            this.VareGruppeTxtLbl.Size = new System.Drawing.Size(94, 21);
-            this.VareGruppeTxtLbl.TabIndex = 0;
-            this.VareGruppeTxtLbl.Text = "Varegruppe:";
-            // 
-            // VareIdTxtLbl
-            // 
-            this.VareIdTxtLbl.AutoSize = true;
-            this.VareIdTxtLbl.Location = new System.Drawing.Point(16, 51);
-            this.VareIdTxtLbl.Name = "VareIdTxtLbl";
-            this.VareIdTxtLbl.Size = new System.Drawing.Size(63, 21);
-            this.VareIdTxtLbl.TabIndex = 0;
-            this.VareIdTxtLbl.Text = "Vare ID:";
-            // 
-            // VareGruppeContentLabel
-            // 
-            this.VareGruppeContentLabel.AutoSize = true;
-            this.VareGruppeContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.VareGruppeContentLabel.Location = new System.Drawing.Point(116, 72);
-            this.VareGruppeContentLabel.Name = "VareGruppeContentLabel";
-            this.VareGruppeContentLabel.Size = new System.Drawing.Size(66, 21);
-            this.VareGruppeContentLabel.TabIndex = 0;
-            this.VareGruppeContentLabel.Text = "Højskab";
-            // 
-            // VareIdContentLabel
-            // 
-            this.VareIdContentLabel.AutoSize = true;
-            this.VareIdContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.VareIdContentLabel.Location = new System.Drawing.Point(116, 51);
-            this.VareIdContentLabel.Name = "VareIdContentLabel";
-            this.VareIdContentLabel.Size = new System.Drawing.Size(73, 21);
-            this.VareIdContentLabel.TabIndex = 0;
-            this.VareIdContentLabel.Text = "1365884";
-            // 
-            // NameContentLabel
-            // 
-            this.NameContentLabel.AutoSize = true;
-            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameContentLabel.Location = new System.Drawing.Point(116, 30);
-            this.NameContentLabel.Name = "NameContentLabel";
-            this.NameContentLabel.Size = new System.Drawing.Size(175, 21);
-            this.NameContentLabel.TabIndex = 0;
-            this.NameContentLabel.Text = "Classic Køkkenskab, Høj";
-            // 
-            // NameTxtLbl
-            // 
-            this.NameTxtLbl.AutoSize = true;
-            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
-            this.NameTxtLbl.Name = "NameTxtLbl";
-            this.NameTxtLbl.Size = new System.Drawing.Size(44, 21);
-            this.NameTxtLbl.TabIndex = 0;
-            this.NameTxtLbl.Text = "Vare:";
-            // 
-            // FarverGrpBox
-            // 
-            this.FarverGrpBox.Controls.Add(this.FarverListView);
-            this.FarverGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.FarverGrpBox.Location = new System.Drawing.Point(20, 97);
-            this.FarverGrpBox.Name = "FarverGrpBox";
-            this.FarverGrpBox.Size = new System.Drawing.Size(616, 96);
-            this.FarverGrpBox.TabIndex = 1;
-            this.FarverGrpBox.TabStop = false;
-            this.FarverGrpBox.Text = "Farver";
-            // 
-            // FarverListView
-            // 
-            this.FarverListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FarverListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FarverListView.HideSelection = false;
-            this.FarverListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem27,
-            listViewItem28,
-            listViewItem29,
-            listViewItem30,
-            listViewItem31});
-            this.FarverListView.Location = new System.Drawing.Point(3, 25);
-            this.FarverListView.MultiSelect = false;
-            this.FarverListView.Name = "FarverListView";
-            this.FarverListView.Size = new System.Drawing.Size(610, 68);
-            this.FarverListView.TabIndex = 0;
-            this.FarverListView.UseCompatibleStateImageBehavior = false;
-            this.FarverListView.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // PrisTxtLbl
-            // 
-            this.PrisTxtLbl.AutoSize = true;
-            this.PrisTxtLbl.Location = new System.Drawing.Point(386, 30);
-            this.PrisTxtLbl.Name = "PrisTxtLbl";
-            this.PrisTxtLbl.Size = new System.Drawing.Size(39, 21);
-            this.PrisTxtLbl.TabIndex = 0;
-            this.PrisTxtLbl.Text = "Pris:";
-            // 
-            // PrisContentLabel
-            // 
-            this.PrisContentLabel.AutoSize = true;
-            this.PrisContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.PrisContentLabel.Location = new System.Drawing.Point(431, 30);
-            this.PrisContentLabel.Name = "PrisContentLabel";
-            this.PrisContentLabel.Size = new System.Drawing.Size(88, 21);
-            this.PrisContentLabel.TabIndex = 0;
-            this.PrisContentLabel.Text = "1299,95 kr.";
-            // 
-            // MaterialerGrpBox
-            // 
-            this.MaterialerGrpBox.Controls.Add(this.MaterialerListView);
-            this.MaterialerGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.MaterialerGrpBox.Location = new System.Drawing.Point(20, 199);
-            this.MaterialerGrpBox.Name = "MaterialerGrpBox";
-            this.MaterialerGrpBox.Size = new System.Drawing.Size(616, 96);
-            this.MaterialerGrpBox.TabIndex = 2;
-            this.MaterialerGrpBox.TabStop = false;
-            this.MaterialerGrpBox.Text = "Materialer";
-            // 
-            // MaterialerListView
-            // 
-            this.MaterialerListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MaterialerListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MaterialerListView.HideSelection = false;
-            this.MaterialerListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem32,
-            listViewItem33,
-            listViewItem34,
-            listViewItem35});
-            this.MaterialerListView.Location = new System.Drawing.Point(3, 25);
-            this.MaterialerListView.Name = "MaterialerListView";
-            this.MaterialerListView.Size = new System.Drawing.Size(610, 68);
-            this.MaterialerListView.TabIndex = 0;
-            this.MaterialerListView.UseCompatibleStateImageBehavior = false;
-            this.MaterialerListView.View = System.Windows.Forms.View.SmallIcon;
-            // 
-            // GrebListeGrpBox
-            // 
-            this.GrebListeGrpBox.Controls.Add(this.GrebListView);
-            this.GrebListeGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.GrebListeGrpBox.Location = new System.Drawing.Point(20, 301);
-            this.GrebListeGrpBox.Name = "GrebListeGrpBox";
-            this.GrebListeGrpBox.Size = new System.Drawing.Size(616, 96);
-            this.GrebListeGrpBox.TabIndex = 3;
-            this.GrebListeGrpBox.TabStop = false;
-            this.GrebListeGrpBox.Text = "Greb";
-            // 
-            // GrebListView
-            // 
-            this.GrebListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GrebListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GrebListView.HideSelection = false;
-            this.GrebListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem36,
-            listViewItem37,
-            listViewItem38,
-            listViewItem39});
-            this.GrebListView.Location = new System.Drawing.Point(3, 25);
-            this.GrebListView.Name = "GrebListView";
-            this.GrebListView.Size = new System.Drawing.Size(610, 68);
-            this.GrebListView.TabIndex = 0;
-            this.GrebListView.UseCompatibleStateImageBehavior = false;
-            this.GrebListView.View = System.Windows.Forms.View.SmallIcon;
-            // 
             // Navn
             // 
             this.Navn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Navn.DataPropertyName = "ProductName";
             this.Navn.HeaderText = "Navn";
             this.Navn.Name = "Navn";
             this.Navn.ReadOnly = true;
@@ -507,6 +579,7 @@
             // Email
             // 
             this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Email.DataPropertyName = "Product_Id";
             this.Email.HeaderText = "ID";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
@@ -515,6 +588,7 @@
             // VareGruppe
             // 
             this.VareGruppe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.VareGruppe.DataPropertyName = "VaregruppeNavn";
             this.VareGruppe.FillWeight = 50F;
             this.VareGruppe.HeaderText = "Vare Gruppe";
             this.VareGruppe.Name = "VareGruppe";
@@ -524,80 +598,11 @@
             // Pris
             // 
             this.Pris.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pris.DataPropertyName = "Price";
             this.Pris.HeaderText = "Pris";
             this.Pris.Name = "Pris";
             this.Pris.ReadOnly = true;
             this.Pris.Width = 61;
-            // 
-            // BeskrivelseGrpBox
-            // 
-            this.BeskrivelseGrpBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BeskrivelseGrpBox.Controls.Add(this.VareBeskrivelseTxtBox);
-            this.BeskrivelseGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.BeskrivelseGrpBox.Location = new System.Drawing.Point(20, 403);
-            this.BeskrivelseGrpBox.Name = "BeskrivelseGrpBox";
-            this.BeskrivelseGrpBox.Size = new System.Drawing.Size(616, 135);
-            this.BeskrivelseGrpBox.TabIndex = 3;
-            this.BeskrivelseGrpBox.TabStop = false;
-            this.BeskrivelseGrpBox.Text = "Beskrivelse";
-            // 
-            // VareBeskrivelseTxtBox
-            // 
-            this.VareBeskrivelseTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.VareBeskrivelseTxtBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.VareBeskrivelseTxtBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VareBeskrivelseTxtBox.Location = new System.Drawing.Point(3, 25);
-            this.VareBeskrivelseTxtBox.Multiline = true;
-            this.VareBeskrivelseTxtBox.Name = "VareBeskrivelseTxtBox";
-            this.VareBeskrivelseTxtBox.Size = new System.Drawing.Size(610, 107);
-            this.VareBeskrivelseTxtBox.TabIndex = 0;
-            this.VareBeskrivelseTxtBox.Text = resources.GetString("VareBeskrivelseTxtBox.Text");
-            // 
-            // VareGruppeComboBox
-            // 
-            this.VareGruppeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.VareGruppeComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.VareGruppeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VareGruppeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VareGruppeComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VareGruppeComboBox.ForeColor = System.Drawing.Color.White;
-            this.VareGruppeComboBox.FormattingEnabled = true;
-            this.VareGruppeComboBox.ItemHeight = 25;
-            this.VareGruppeComboBox.Items.AddRange(new object[] {
-            "Alle",
-            "Højskab",
-            "Overskab",
-            "Underskab",
-            "Hjørneskab",
-            "Skuffeelement",
-            "Skabslåge",
-            "Bordplade"});
-            this.VareGruppeComboBox.Location = new System.Drawing.Point(0, 40);
-            this.VareGruppeComboBox.MaxDropDownItems = 10;
-            this.VareGruppeComboBox.Name = "VareGruppeComboBox";
-            this.VareGruppeComboBox.Size = new System.Drawing.Size(200, 33);
-            this.VareGruppeComboBox.TabIndex = 3;
-            // 
-            // FindVareButtonPanel
-            // 
-            this.FindVareButtonPanel.Controls.Add(this.VareGruppeComboBox);
-            this.FindVareButtonPanel.Controls.Add(this.SearchButton);
-            this.FindVareButtonPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.FindVareButtonPanel.Location = new System.Drawing.Point(433, 25);
-            this.FindVareButtonPanel.Name = "FindVareButtonPanel";
-            this.FindVareButtonPanel.Size = new System.Drawing.Size(200, 73);
-            this.FindVareButtonPanel.TabIndex = 4;
-            // 
-            // FindVareSearchPanel
-            // 
-            this.FindVareSearchPanel.Controls.Add(this.SearchFieldTextBox);
-            this.FindVareSearchPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FindVareSearchPanel.Location = new System.Drawing.Point(3, 25);
-            this.FindVareSearchPanel.Name = "FindVareSearchPanel";
-            this.FindVareSearchPanel.Size = new System.Drawing.Size(430, 73);
-            this.FindVareSearchPanel.TabIndex = 5;
             // 
             // VareModulForm
             // 
@@ -620,18 +625,18 @@
             this.VareListeGrpBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VareListeDataGrid)).EndInit();
             this.FindVareGrpBox.ResumeLayout(false);
-            this.RightMainPanel.ResumeLayout(false);
-            this.BottomRightPanel.ResumeLayout(false);
-            this.VareInfoGrpBox.ResumeLayout(false);
-            this.VareInfoGrpBox.PerformLayout();
-            this.FarverGrpBox.ResumeLayout(false);
-            this.MaterialerGrpBox.ResumeLayout(false);
-            this.GrebListeGrpBox.ResumeLayout(false);
-            this.BeskrivelseGrpBox.ResumeLayout(false);
-            this.BeskrivelseGrpBox.PerformLayout();
-            this.FindVareButtonPanel.ResumeLayout(false);
             this.FindVareSearchPanel.ResumeLayout(false);
             this.FindVareSearchPanel.PerformLayout();
+            this.FindVareButtonPanel.ResumeLayout(false);
+            this.RightMainPanel.ResumeLayout(false);
+            this.VareInfoGrpBox.ResumeLayout(false);
+            this.VareInfoGrpBox.PerformLayout();
+            this.BeskrivelseGrpBox.ResumeLayout(false);
+            this.BeskrivelseGrpBox.PerformLayout();
+            this.GrebListeGrpBox.ResumeLayout(false);
+            this.MaterialerGrpBox.ResumeLayout(false);
+            this.FarverGrpBox.ResumeLayout(false);
+            this.BottomRightPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -665,10 +670,6 @@
         private System.Windows.Forms.ListView FarverListView;
         private System.Windows.Forms.Label PrisContentLabel;
         private System.Windows.Forms.Label PrisTxtLbl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Navn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VareGruppe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pris;
         private System.Windows.Forms.GroupBox BeskrivelseGrpBox;
         private System.Windows.Forms.TextBox VareBeskrivelseTxtBox;
         private System.Windows.Forms.GroupBox GrebListeGrpBox;
@@ -678,6 +679,10 @@
         private System.Windows.Forms.ComboBox VareGruppeComboBox;
         private System.Windows.Forms.Panel FindVareSearchPanel;
         private System.Windows.Forms.Panel FindVareButtonPanel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Navn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VareGruppe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pris;
     }
 }
 
