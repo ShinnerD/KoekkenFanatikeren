@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KundeModulForm));
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.LukModulButton = new System.Windows.Forms.Button();
@@ -38,9 +39,6 @@
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.KundeListeGrpBox = new System.Windows.Forms.GroupBox();
             this.KundeListeGridView = new System.Windows.Forms.DataGridView();
-            this.Navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TlfNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FindKundeGrpBox = new System.Windows.Forms.GroupBox();
             this.SearchButton = new System.Windows.Forms.Button();
             this.SearchFieldTextBox = new System.Windows.Forms.TextBox();
@@ -51,9 +49,6 @@
             this.NyKundeButton = new System.Windows.Forms.Button();
             this.OrdreGrpBox = new System.Windows.Forms.GroupBox();
             this.KundeOrdreGridView = new System.Windows.Forms.DataGridView();
-            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Dato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KundeInfoGrpBox = new System.Windows.Forms.GroupBox();
             this.EmailTxtLbl = new System.Windows.Forms.Label();
             this.TlfTxtLbl = new System.Windows.Forms.Label();
@@ -63,6 +58,13 @@
             this.AdresseContentLabel = new System.Windows.Forms.Label();
             this.AdresseTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
+            this.Fornavn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Efternavn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TlfNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Afsendt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ansvarlig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
@@ -177,12 +179,15 @@
             // 
             this.KundeListeGridView.AllowUserToAddRows = false;
             this.KundeListeGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(190)))), ((int)(((byte)(216)))));
+            this.KundeListeGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.KundeListeGridView.BackgroundColor = System.Drawing.Color.White;
             this.KundeListeGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.KundeListeGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.KundeListeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KundeListeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Navn,
+            this.Fornavn,
+            this.Efternavn,
             this.TlfNr,
             this.Email});
             this.KundeListeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -195,29 +200,7 @@
             this.KundeListeGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundeListeGridView.Size = new System.Drawing.Size(630, 507);
             this.KundeListeGridView.TabIndex = 2;
-            // 
-            // Navn
-            // 
-            this.Navn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Navn.HeaderText = "Navn";
-            this.Navn.Name = "Navn";
-            this.Navn.ReadOnly = true;
-            // 
-            // TlfNr
-            // 
-            this.TlfNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TlfNr.FillWeight = 50F;
-            this.TlfNr.HeaderText = "Tlf. Nr.";
-            this.TlfNr.Name = "TlfNr";
-            this.TlfNr.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Email.HeaderText = "E-Mail";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 79;
+            this.KundeListeGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.KundeListeGridView_CellMouseClick);
             // 
             // FindKundeGrpBox
             // 
@@ -351,8 +334,8 @@
             this.KundeOrdreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KundeOrdreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdreNr,
-            this.Dato,
-            this.Status});
+            this.Afsendt,
+            this.Ansvarlig});
             this.KundeOrdreGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KundeOrdreGridView.GridColor = System.Drawing.Color.Black;
             this.KundeOrdreGridView.Location = new System.Drawing.Point(3, 25);
@@ -363,29 +346,6 @@
             this.KundeOrdreGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundeOrdreGridView.Size = new System.Drawing.Size(642, 451);
             this.KundeOrdreGridView.TabIndex = 3;
-            // 
-            // OrdreNr
-            // 
-            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.OrdreNr.HeaderText = "Ordre Nr.";
-            this.OrdreNr.Name = "OrdreNr";
-            this.OrdreNr.ReadOnly = true;
-            // 
-            // Dato
-            // 
-            this.Dato.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Dato.FillWeight = 40F;
-            this.Dato.HeaderText = "Dato";
-            this.Dato.Name = "Dato";
-            this.Dato.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Width = 77;
             // 
             // KundeInfoGrpBox
             // 
@@ -483,6 +443,66 @@
             this.NameTxtLbl.TabIndex = 0;
             this.NameTxtLbl.Text = "Navn:";
             // 
+            // Fornavn
+            // 
+            this.Fornavn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Fornavn.DataPropertyName = "Firstname";
+            this.Fornavn.HeaderText = "Fornavn";
+            this.Fornavn.Name = "Fornavn";
+            this.Fornavn.ReadOnly = true;
+            // 
+            // Efternavn
+            // 
+            this.Efternavn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Efternavn.DataPropertyName = "Lastname";
+            this.Efternavn.HeaderText = "Efternavn";
+            this.Efternavn.Name = "Efternavn";
+            this.Efternavn.ReadOnly = true;
+            // 
+            // TlfNr
+            // 
+            this.TlfNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TlfNr.DataPropertyName = "PhoneNumber";
+            this.TlfNr.FillWeight = 50F;
+            this.TlfNr.HeaderText = "Tlf. Nr.";
+            this.TlfNr.Name = "TlfNr";
+            this.TlfNr.ReadOnly = true;
+            this.TlfNr.Width = 80;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "E-Mail";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 79;
+            // 
+            // OrdreNr
+            // 
+            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OrdreNr.DataPropertyName = "Id";
+            this.OrdreNr.HeaderText = "Ordre Nr.";
+            this.OrdreNr.Name = "OrdreNr";
+            this.OrdreNr.ReadOnly = true;
+            // 
+            // Afsendt
+            // 
+            this.Afsendt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Afsendt.DataPropertyName = "DateOfSending";
+            this.Afsendt.FillWeight = 40F;
+            this.Afsendt.HeaderText = "Afsendt";
+            this.Afsendt.Name = "Afsendt";
+            this.Afsendt.ReadOnly = true;
+            // 
+            // Ansvarlig
+            // 
+            this.Ansvarlig.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Ansvarlig.DataPropertyName = "AnsvarligEmployeeName";
+            this.Ansvarlig.HeaderText = "Ansvarlig";
+            this.Ansvarlig.Name = "Ansvarlig";
+            this.Ansvarlig.ReadOnly = true;
+            // 
             // KundeModulForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,7 +517,6 @@
             this.Name = "KundeModulForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Kunde Modul";
-            this.Load += new System.EventHandler(this.KundeModulForm_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.LeftMainPanel.ResumeLayout(false);
@@ -529,9 +548,6 @@
         private System.Windows.Forms.Panel LeftMainPanel;
         private System.Windows.Forms.GroupBox KundeListeGrpBox;
         private System.Windows.Forms.DataGridView KundeListeGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Navn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TlfNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.GroupBox FindKundeGrpBox;
         private System.Windows.Forms.TextBox SearchFieldTextBox;
         private System.Windows.Forms.Panel BottomRightPanel;
@@ -539,9 +555,6 @@
         private System.Windows.Forms.Button NyKundeButton;
         private System.Windows.Forms.GroupBox OrdreGrpBox;
         private System.Windows.Forms.DataGridView KundeOrdreGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Dato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.Label EmailTxtLbl;
         private System.Windows.Forms.Label TlfTxtLbl;
         private System.Windows.Forms.Label EmailContentLabel;
@@ -551,6 +564,13 @@
         private System.Windows.Forms.Label AdresseTxtLbl;
         private System.Windows.Forms.Button OpretOrdreButton;
         private System.Windows.Forms.Button SearchButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fornavn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Efternavn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TlfNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Afsendt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
     }
 }
 

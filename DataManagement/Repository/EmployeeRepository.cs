@@ -30,7 +30,7 @@ namespace DataManagement.Repository
                 Employee.Address = dbEmployee.Address;
                 Employee.Salary = dbEmployee.Salary;
                 
-
+            result.Add(Employee);
             }
             return result;
             //Skrevet af Erik og vedligholdt 

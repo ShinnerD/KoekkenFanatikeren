@@ -9,6 +9,7 @@
         public string Street { get; set; }
         public string City { get; set; }
         public int Zipcode { get; set; }
+        public string Email { get; set; }
         //Skrevet af Erik og vedligholdt 
     }
 }

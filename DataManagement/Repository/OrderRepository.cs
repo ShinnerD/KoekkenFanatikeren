@@ -22,12 +22,24 @@ namespace DataManagement.Repository
             var dbOrders = DataContext.Orders;
             foreach (var dbOrder in dbOrders)
             {
-                result.Add(GetOrderFromId(dbOrder.Order_Id));
+                result.Add(GetOrderFromOrderId(dbOrder.Order_Id));
             }
             return result;
         }
 
-        public Model.Order GetOrderFromId(int id)
+        public List<Model.Order> GetOrdersFromCustomer(int customerId)
+        {
+            List<Model.Order> result = new List<Model.Order>();
+
+            var dbOrders = DataContext.Orders.Where(i => i.Customer_Id == customerId).ToList();
+            foreach (var dbOrder in dbOrders)
+            {
+                result.Add(GetOrderFromOrderId(dbOrder.Order_Id));
+            }
+            return result;
+        }
+
+        public Model.Order GetOrderFromOrderId(int id)
         {
             var result = new Model.Order();
             var dbOrder = DataContext.Orders.FirstOrDefault(i => i.Order_Id.Equals(id));
@@ -52,6 +64,7 @@ namespace DataManagement.Repository
             result.Kunde.PhoneNumber = dbCustomer.Phonenumber;
 
             var dbEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == dbOrder.Employee_Id);
+            result.Employee = new Model.Employee();
             result.Employee.EmployeeID = dbEmployee.Employee_Id;
             result.Employee.FirstName = dbEmployee.FirstName;
             result.Employee.LastName = dbEmployee.LastName;

@@ -127,5 +127,11 @@
     <None Include="Media\PasswordImage1.png" />
     <Content Include="Media\VareImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataManagement\DataManagement.csproj">
+      <Project>{21633960-C924-4F2B-B9A3-7D8A90E0A6DB}</Project>
+      <Name>DataManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

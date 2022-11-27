@@ -17,6 +17,11 @@ namespace DataManagement.Service
             OrderRepository = new Repository.OrderRepository();
         }
 
+        public List<Model.Order> GetCustomerOrders(int customerId)
+        {
+            return OrderRepository.GetOrdersFromCustomer(customerId);
+        }
+
         /// <summary>
         /// Retrieves a list of All Orders from the OrderRepository.
         /// </summary>
@@ -33,7 +38,7 @@ namespace DataManagement.Service
         /// <returns></returns>
         public Model.Order GetOrderFromId(int id)
         {
-            return OrderRepository.GetOrderFromId(id);
+            return OrderRepository.GetOrderFromOrderId(id);
         }
 
         /// <summary>
