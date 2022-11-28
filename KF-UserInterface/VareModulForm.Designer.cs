@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VareModulForm));
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem("Chrome");
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem("Titanium");
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem("Plastik");
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem("Teak");
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem("Maghoni");
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem("Ege Træ");
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem("Bast");
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem("Rød");
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem("Grøn");
-            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem("Beige");
-            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem("Teal");
-            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem("Orange");
+            System.Windows.Forms.ListViewItem listViewItem40 = new System.Windows.Forms.ListViewItem("Chrome");
+            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
+            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem("Titanium");
+            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem("Plastik");
+            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem("Teak");
+            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem("Maghoni");
+            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem("Ege Træ");
+            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem("Bast");
+            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem("Rød");
+            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem("Grøn");
+            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem("Beige");
+            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem("Teal");
+            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem("Orange");
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.LukModulButton = new System.Windows.Forms.Button();
             this.HeaderLabel = new System.Windows.Forms.Label();
@@ -51,6 +51,10 @@
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.VareListeGrpBox = new System.Windows.Forms.GroupBox();
             this.VareListeDataGrid = new System.Windows.Forms.DataGridView();
+            this.Navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VareGruppe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pris = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FindVareGrpBox = new System.Windows.Forms.GroupBox();
             this.FindVareSearchPanel = new System.Windows.Forms.Panel();
             this.SearchFieldTextBox = new System.Windows.Forms.TextBox();
@@ -78,10 +82,6 @@
             this.BottomRightPanel = new System.Windows.Forms.Panel();
             this.RedigerVareButton = new System.Windows.Forms.Button();
             this.NyVareButton = new System.Windows.Forms.Button();
-            this.Navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VareGruppe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pris = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
@@ -211,6 +211,7 @@
             this.VareListeDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VareListeDataGrid.GridColor = System.Drawing.Color.Black;
             this.VareListeDataGrid.Location = new System.Drawing.Point(3, 25);
+            this.VareListeDataGrid.MultiSelect = false;
             this.VareListeDataGrid.Name = "VareListeDataGrid";
             this.VareListeDataGrid.ReadOnly = true;
             this.VareListeDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -219,6 +220,42 @@
             this.VareListeDataGrid.Size = new System.Drawing.Size(630, 472);
             this.VareListeDataGrid.TabIndex = 2;
             this.VareListeDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VareListeDataGrid_CellClick);
+            // 
+            // Navn
+            // 
+            this.Navn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Navn.DataPropertyName = "ProductName";
+            this.Navn.HeaderText = "Navn";
+            this.Navn.Name = "Navn";
+            this.Navn.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Email.DataPropertyName = "Product_Id";
+            this.Email.HeaderText = "ID";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 50;
+            // 
+            // VareGruppe
+            // 
+            this.VareGruppe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.VareGruppe.DataPropertyName = "VaregruppeNavn";
+            this.VareGruppe.FillWeight = 50F;
+            this.VareGruppe.HeaderText = "Vare Gruppe";
+            this.VareGruppe.Name = "VareGruppe";
+            this.VareGruppe.ReadOnly = true;
+            this.VareGruppe.Width = 112;
+            // 
+            // Pris
+            // 
+            this.Pris.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pris.DataPropertyName = "Price";
+            this.Pris.HeaderText = "Pris";
+            this.Pris.Name = "Pris";
+            this.Pris.ReadOnly = true;
+            this.Pris.Width = 61;
             // 
             // FindVareGrpBox
             // 
@@ -254,7 +291,9 @@
             this.SearchFieldTextBox.Name = "SearchFieldTextBox";
             this.SearchFieldTextBox.Size = new System.Drawing.Size(421, 26);
             this.SearchFieldTextBox.TabIndex = 0;
-            this.SearchFieldTextBox.Text = "Indtast en vare...";
+            this.SearchFieldTextBox.Text = "Indtast varenavn, vare id eller varegruppe...";
+            this.SearchFieldTextBox.Click += new System.EventHandler(this.SearchFieldTextBox_Click);
+            this.SearchFieldTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SearchFieldTextBox_KeyUp);
             // 
             // FindVareButtonPanel
             // 
@@ -269,6 +308,7 @@
             // VareGruppeComboBox
             // 
             this.VareGruppeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.VareGruppeComboBox.DisplayMember = "ProductGroupName";
             this.VareGruppeComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.VareGruppeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VareGruppeComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -290,6 +330,7 @@
             this.VareGruppeComboBox.Name = "VareGruppeComboBox";
             this.VareGruppeComboBox.Size = new System.Drawing.Size(200, 33);
             this.VareGruppeComboBox.TabIndex = 3;
+            this.VareGruppeComboBox.SelectionChangeCommitted += new System.EventHandler(this.VareGruppeComboBox_SelectionChangeCommitted);
             // 
             // SearchButton
             // 
@@ -383,10 +424,10 @@
             this.GrebListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrebListView.HideSelection = false;
             this.GrebListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem27,
-            listViewItem28,
-            listViewItem29,
-            listViewItem30});
+            listViewItem40,
+            listViewItem41,
+            listViewItem42,
+            listViewItem43});
             this.GrebListView.Location = new System.Drawing.Point(3, 25);
             this.GrebListView.Name = "GrebListView";
             this.GrebListView.Size = new System.Drawing.Size(610, 68);
@@ -411,10 +452,10 @@
             this.MaterialerListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MaterialerListView.HideSelection = false;
             this.MaterialerListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem31,
-            listViewItem32,
-            listViewItem33,
-            listViewItem34});
+            listViewItem44,
+            listViewItem45,
+            listViewItem46,
+            listViewItem47});
             this.MaterialerListView.Location = new System.Drawing.Point(3, 25);
             this.MaterialerListView.Name = "MaterialerListView";
             this.MaterialerListView.Size = new System.Drawing.Size(610, 68);
@@ -439,11 +480,11 @@
             this.FarverListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FarverListView.HideSelection = false;
             this.FarverListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem35,
-            listViewItem36,
-            listViewItem37,
-            listViewItem38,
-            listViewItem39});
+            listViewItem48,
+            listViewItem49,
+            listViewItem50,
+            listViewItem51,
+            listViewItem52});
             this.FarverListView.Location = new System.Drawing.Point(3, 25);
             this.FarverListView.MultiSelect = false;
             this.FarverListView.Name = "FarverListView";
@@ -567,42 +608,6 @@
             this.NyVareButton.TabIndex = 1;
             this.NyVareButton.Text = "Ny Vare";
             this.NyVareButton.UseVisualStyleBackColor = false;
-            // 
-            // Navn
-            // 
-            this.Navn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Navn.DataPropertyName = "ProductName";
-            this.Navn.HeaderText = "Navn";
-            this.Navn.Name = "Navn";
-            this.Navn.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Email.DataPropertyName = "Product_Id";
-            this.Email.HeaderText = "ID";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 50;
-            // 
-            // VareGruppe
-            // 
-            this.VareGruppe.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.VareGruppe.DataPropertyName = "VaregruppeNavn";
-            this.VareGruppe.FillWeight = 50F;
-            this.VareGruppe.HeaderText = "Vare Gruppe";
-            this.VareGruppe.Name = "VareGruppe";
-            this.VareGruppe.ReadOnly = true;
-            this.VareGruppe.Width = 122;
-            // 
-            // Pris
-            // 
-            this.Pris.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Pris.DataPropertyName = "Price";
-            this.Pris.HeaderText = "Pris";
-            this.Pris.Name = "Pris";
-            this.Pris.ReadOnly = true;
-            this.Pris.Width = 61;
             // 
             // VareModulForm
             // 
