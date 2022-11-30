@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VareModulForm));
-            System.Windows.Forms.ListViewItem listViewItem40 = new System.Windows.Forms.ListViewItem("Chrome");
-            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
-            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem("Titanium");
-            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem("Plastik");
-            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem("Teak");
-            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem("Maghoni");
-            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem("Ege Træ");
-            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem("Bast");
-            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem("Rød");
-            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem("Grøn");
-            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem("Beige");
-            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem("Teal");
-            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem("Orange");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Chrome");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Råstfri Stål");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Titanium");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Plastik");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Teak");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Maghoni");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ege Træ");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Bast");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Beige");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Grøn");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Orange");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Rød");
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("Teal");
             this.HeaderPanel = new System.Windows.Forms.Panel();
             this.LukModulButton = new System.Windows.Forms.Button();
             this.HeaderLabel = new System.Windows.Forms.Label();
@@ -424,16 +424,16 @@
             this.GrebListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GrebListView.HideSelection = false;
             this.GrebListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem40,
-            listViewItem41,
-            listViewItem42,
-            listViewItem43});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.GrebListView.Location = new System.Drawing.Point(3, 25);
             this.GrebListView.Name = "GrebListView";
             this.GrebListView.Size = new System.Drawing.Size(610, 68);
             this.GrebListView.TabIndex = 0;
             this.GrebListView.UseCompatibleStateImageBehavior = false;
-            this.GrebListView.View = System.Windows.Forms.View.SmallIcon;
+            this.GrebListView.View = System.Windows.Forms.View.List;
             // 
             // MaterialerGrpBox
             // 
@@ -452,16 +452,16 @@
             this.MaterialerListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MaterialerListView.HideSelection = false;
             this.MaterialerListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem44,
-            listViewItem45,
-            listViewItem46,
-            listViewItem47});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.MaterialerListView.Location = new System.Drawing.Point(3, 25);
             this.MaterialerListView.Name = "MaterialerListView";
             this.MaterialerListView.Size = new System.Drawing.Size(610, 68);
             this.MaterialerListView.TabIndex = 0;
             this.MaterialerListView.UseCompatibleStateImageBehavior = false;
-            this.MaterialerListView.View = System.Windows.Forms.View.SmallIcon;
+            this.MaterialerListView.View = System.Windows.Forms.View.List;
             // 
             // FarverGrpBox
             // 
@@ -478,20 +478,21 @@
             // 
             this.FarverListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FarverListView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FarverListView.HideSelection = false;
+            this.FarverListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.FarverListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem48,
-            listViewItem49,
-            listViewItem50,
-            listViewItem51,
-            listViewItem52});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13});
             this.FarverListView.Location = new System.Drawing.Point(3, 25);
             this.FarverListView.MultiSelect = false;
             this.FarverListView.Name = "FarverListView";
             this.FarverListView.Size = new System.Drawing.Size(610, 68);
+            this.FarverListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.FarverListView.TabIndex = 0;
             this.FarverListView.UseCompatibleStateImageBehavior = false;
-            this.FarverListView.View = System.Windows.Forms.View.SmallIcon;
+            this.FarverListView.View = System.Windows.Forms.View.List;
             // 
             // VareGruppeTxtLbl
             // 

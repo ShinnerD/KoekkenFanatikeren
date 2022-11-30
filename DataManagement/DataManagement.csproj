@@ -48,7 +48,10 @@
       <DependentUpon>KFDataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\Grip.cs" />
+    <Compile Include="Model\KitchenColor.cs" />
     <Compile Include="Model\Kunde.cs" />
+    <Compile Include="Model\Material.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Vare.cs" />
     <Compile Include="Model\Varegruppe.cs" />
