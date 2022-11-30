@@ -17,6 +17,11 @@ namespace DataManagement.Service
             OrderRepository = new Repository.OrderRepository();
         }
 
+        /// <summary>
+        /// Retrieves a list of Orders belonging to the Customer with the given Customer Id.
+        /// </summary>
+        /// <param name="customerId"></param>
+        /// <returns></returns>
         public List<Model.Order> GetCustomerOrders(int customerId)
         {
             return OrderRepository.GetOrdersFromCustomer(customerId);

@@ -124,5 +124,16 @@ namespace KF_UserInterface
         {
             PerformCustomerSearch();
         }
+
+        private void VisOrdreButton_Click(object sender, EventArgs e)
+        {
+            if (KundeOrdreGridView.RowCount > 0)
+            {
+                Order valgtOrder = KundeOrdreGridView.SelectedRows[0].DataBoundItem as Order;
+                VisOrdreForm ordreVindue = new VisOrdreForm(valgtOrder.Id);
+                ordreVindue.Show();
+            }
+
+        }
     }
 }

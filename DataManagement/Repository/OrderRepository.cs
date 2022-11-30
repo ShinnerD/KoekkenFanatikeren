@@ -52,6 +52,7 @@ namespace DataManagement.Repository
             result.To_City = dbOrder.To_City;
             result.To_ZipCode = dbOrder.To_Zipcode;
             result.DateOfSending = dbOrder.DateOfSending;
+            result.Order_Comment = dbOrder.Order_Comment;
 
             var dbCustomer = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == dbOrder.Customer_Id);
             result.Kunde = new Kunde();
@@ -77,7 +78,21 @@ namespace DataManagement.Repository
             VareRepository vareRepository = new VareRepository();
             foreach (var dbOrderProduct in dbOrderProducts)
             {
-                result.OrderProducts.Add(vareRepository.GetOneVare(dbOrderProduct.Product_Id));
+                Model.Vare nyVare = vareRepository.GetOneVare(dbOrderProduct.Product_Id);
+                
+                nyVare.ChosenColor = new KitchenColor();
+                nyVare.ChosenColor.Color_Id = dbOrderProduct.Product_Colour;
+                nyVare.ChosenColor.Color_Name = DataContext.Colours.FirstOrDefault(i => i.Colour_Id == dbOrderProduct.Product_Colour).Colour_Name;
+
+                nyVare.ChosenGrip = new Model.Grip();
+                nyVare.ChosenGrip.Grip_Id = dbOrderProduct.Product_Grip;
+                nyVare.ChosenGrip.Grip_Name = DataContext.Grips.FirstOrDefault(i => i.Grip_Id == dbOrderProduct.Product_Grip).Grip_Name;
+
+                nyVare.ChosenMaterial = new Model.Material();
+                nyVare.ChosenMaterial.Material_Id= dbOrderProduct.Product_Material;
+                nyVare.ChosenMaterial.MaterialName = DataContext.Materials.FirstOrDefault(i => i.Material_Id == dbOrderProduct.Product_Material).Material_Name;
+
+                result.OrderProducts.Add(nyVare);
             }
             return result;
         }
