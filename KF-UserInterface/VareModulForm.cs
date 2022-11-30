@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -79,15 +80,24 @@ namespace KF_UserInterface
             PrisContentLabel.Text = ValgteVare.Price.ToString();
 
             FarverListView.Items.Clear();
-            FarverListView.Items.Add(ValgteVare.Colour);
+            foreach (KitchenColor color in ValgteVare.AvailableColors)
+            {
+                FarverListView.Items.Add(color.Color_Name);
+            }
 
             MaterialerListView.Items.Clear();
-            MaterialerListView.Items.Add(ValgteVare.Material);
+            foreach (Material material in ValgteVare.AvailableMaterials)
+            {
+                MaterialerListView.Items.Add(material.MaterialName);
+            }
 
             GrebListView.Items.Clear();
-            GrebListView.Items.Add(ValgteVare.Grip);
+            foreach (Grip grip in ValgteVare.AvailableGrips)
+            {
+                GrebListView.Items.Add(grip.Grip_Name);
+            }
 
-            VareBeskrivelseTxtBox.Text = "";
+            VareBeskrivelseTxtBox.Text = ValgteVare.Description;
         }
 
         /// <summary>

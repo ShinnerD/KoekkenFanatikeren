@@ -65,7 +65,9 @@
             this.AdresseContentLabel = new System.Windows.Forms.Label();
             this.AdresseTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
+            this.VisOrdreButton = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
+            this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
             this.KundeListeGrpBox.SuspendLayout();
@@ -135,6 +137,7 @@
             // BottomPanel
             // 
             this.BottomPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.BottomPanel.Controls.Add(this.NyKundeButton);
             this.BottomPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomPanel.Location = new System.Drawing.Point(0, 681);
             this.BottomPanel.Name = "BottomPanel";
@@ -294,9 +297,9 @@
             // 
             // BottomRightPanel
             // 
+            this.BottomRightPanel.Controls.Add(this.VisOrdreButton);
             this.BottomRightPanel.Controls.Add(this.OpretOrdreButton);
             this.BottomRightPanel.Controls.Add(this.RedigerKundeButton);
-            this.BottomRightPanel.Controls.Add(this.NyKundeButton);
             this.BottomRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BottomRightPanel.Location = new System.Drawing.Point(0, 538);
             this.BottomRightPanel.Name = "BottomRightPanel";
@@ -311,7 +314,7 @@
             this.OpretOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpretOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OpretOrdreButton.ForeColor = System.Drawing.Color.White;
-            this.OpretOrdreButton.Location = new System.Drawing.Point(62, 15);
+            this.OpretOrdreButton.Location = new System.Drawing.Point(252, 15);
             this.OpretOrdreButton.Name = "OpretOrdreButton";
             this.OpretOrdreButton.Size = new System.Drawing.Size(154, 37);
             this.OpretOrdreButton.TabIndex = 1;
@@ -326,7 +329,7 @@
             this.RedigerKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RedigerKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RedigerKundeButton.ForeColor = System.Drawing.Color.White;
-            this.RedigerKundeButton.Location = new System.Drawing.Point(276, 15);
+            this.RedigerKundeButton.Location = new System.Drawing.Point(448, 15);
             this.RedigerKundeButton.Name = "RedigerKundeButton";
             this.RedigerKundeButton.Size = new System.Drawing.Size(154, 37);
             this.RedigerKundeButton.TabIndex = 1;
@@ -335,13 +338,13 @@
             // 
             // NyKundeButton
             // 
-            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NyKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
             this.NyKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.NyKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NyKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NyKundeButton.ForeColor = System.Drawing.Color.White;
-            this.NyKundeButton.Location = new System.Drawing.Point(482, 15);
+            this.NyKundeButton.Location = new System.Drawing.Point(12, 21);
             this.NyKundeButton.Name = "NyKundeButton";
             this.NyKundeButton.Size = new System.Drawing.Size(154, 37);
             this.NyKundeButton.TabIndex = 1;
@@ -505,6 +508,21 @@
             this.NameTxtLbl.TabIndex = 0;
             this.NameTxtLbl.Text = "Navn:";
             // 
+            // VisOrdreButton
+            // 
+            this.VisOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.VisOrdreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.VisOrdreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.VisOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VisOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisOrdreButton.ForeColor = System.Drawing.Color.White;
+            this.VisOrdreButton.Location = new System.Drawing.Point(44, 15);
+            this.VisOrdreButton.Name = "VisOrdreButton";
+            this.VisOrdreButton.Size = new System.Drawing.Size(154, 37);
+            this.VisOrdreButton.TabIndex = 1;
+            this.VisOrdreButton.Text = "Vis Ordre";
+            this.VisOrdreButton.UseVisualStyleBackColor = false;
+            // 
             // KundeModulForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,6 +538,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Kunde Modul";
             this.HeaderPanel.ResumeLayout(false);
+            this.BottomPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.LeftMainPanel.ResumeLayout(false);
             this.KundeListeGrpBox.ResumeLayout(false);
@@ -573,6 +592,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Afsendt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
+        private System.Windows.Forms.Button VisOrdreButton;
     }
 }
 
