@@ -479,6 +479,7 @@
             this.FarverListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FarverListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FarverListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.FarverListView.HideSelection = false;
             this.FarverListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem9,
             listViewItem10,

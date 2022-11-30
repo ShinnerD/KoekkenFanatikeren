@@ -38,12 +38,6 @@
         <elementListCompartment Id="96e50ba2-d926-4d29-9c95-18055bf2c0f1" absoluteBounds="10.39, 9.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="af584705-9ee7-40c9-adbb-4dee1dc7280e" absoluteBounds="10.375, 6, 2, 2.1554996744791666">
-      <DataClassMoniker Name="/KFDataClassesDataContext/Order_Product" />
-      <nestedChildShapes>
-        <elementListCompartment Id="a3576d40-2fa8-4828-b4b5-8534ea0d2f2c" absoluteBounds="10.39, 6.46, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="b89275e2-9840-43c5-a638-7988c2839f7d" absoluteBounds="7.25, 5.625, 2, 2.3478011067708344">
       <DataClassMoniker Name="/KFDataClassesDataContext/Product" />
       <nestedChildShapes>
@@ -74,35 +68,21 @@
         <elementListCompartment Id="2b78ccc1-2b6b-4286-bdcc-b52dfaae897f" absoluteBounds="4.7650000000000006, 7.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(9.75 : 11.2748527018229); (10.375 : 11.2748527018229)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.75 : 11.2748527018229); (10.375 : 11.2748527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Customer/Customer_Order" />
       <nodes>
         <classShapeMoniker Id="b590f77b-4352-482d-b010-207618a5db89" />
         <classShapeMoniker Id="09e19868-cb86-4e0a-b2a4-1817f566018d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(9.75 : 9.60659912109375); (10.375 : 9.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.75 : 9.60659912109375); (10.375 : 9.60659912109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Employee/Employee_Order" />
       <nodes>
         <classShapeMoniker Id="b143a108-fe3b-4969-8aa3-dba39c97adae" />
         <classShapeMoniker Id="09e19868-cb86-4e0a-b2a4-1817f566018d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(11.375 : 8.625); (11.375 : 8.15549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/KFDataClassesDataContext/Order/Order_Order_Product" />
-      <nodes>
-        <classShapeMoniker Id="09e19868-cb86-4e0a-b2a4-1817f566018d" />
-        <classShapeMoniker Id="af584705-9ee7-40c9-adbb-4dee1dc7280e" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(9.25 : 6.98640055338542); (10.375 : 6.98640055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/KFDataClassesDataContext/Product/Product_Order_Product" />
-      <nodes>
-        <classShapeMoniker Id="b89275e2-9840-43c5-a638-7988c2839f7d" />
-        <classShapeMoniker Id="af584705-9ee7-40c9-adbb-4dee1dc7280e" />
-      </nodes>
-    </associationConnector>
-    <associationConnector edgePoints="[(10.9375 : 3.31899251302083); (10.9375 : 3.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(10.9375 : 3.31899251302083); (10.9375 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Colour/Colour_Product_Colour" />
       <nodes>
         <classShapeMoniker Id="ddf4c0c6-d175-42f1-b788-8c69f4236ebf" />
@@ -116,39 +96,59 @@
         <classShapeMoniker Id="6c20547b-7a22-46da-bf60-190096341c2d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.25 : 3.19399251302083); (8.25 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.25 : 3.19399251302083); (8.25 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Grip/Grip_Product_Grip" />
       <nodes>
         <classShapeMoniker Id="31e27c13-7179-4c6f-97a7-499848596d8d" />
         <classShapeMoniker Id="58d2ae1f-35cf-46e7-9d7f-a96fdd667962" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(8.2187475 : 5.625); (8.2187475 : 5.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(8.2187475 : 5.625); (8.2187475 : 5.0112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Product/Product_Product_Grip" />
       <nodes>
         <classShapeMoniker Id="b89275e2-9840-43c5-a638-7988c2839f7d" />
         <classShapeMoniker Id="58d2ae1f-35cf-46e7-9d7f-a96fdd667962" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.75 : 4.69399251302083); (5.75 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.75 : 4.69399251302083); (5.75 : 5.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Material/Material_Product_Material" />
       <nodes>
         <classShapeMoniker Id="117e4c08-35fb-497d-8d3f-e0330e799864" />
         <classShapeMoniker Id="561967c1-3cb3-4179-9916-8bb43cc963d7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7.25 : 6.19314697265625); (6.75 : 6.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.25 : 6.19314697265625); (6.75 : 6.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/Product/Product_Product_Material" />
       <nodes>
         <classShapeMoniker Id="b89275e2-9840-43c5-a638-7988c2839f7d" />
         <classShapeMoniker Id="561967c1-3cb3-4179-9916-8bb43cc963d7" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(6.75 : 7.61140055338542); (7.25 : 7.61140055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(6.75 : 7.61140055338542); (7.25 : 7.61140055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/KFDataClassesDataContext/ProductGroup/ProductGroup_Product" />
       <nodes>
         <classShapeMoniker Id="90018fa3-e5f7-4454-a1b8-0d8cd8c59c5a" />
         <classShapeMoniker Id="b89275e2-9840-43c5-a638-7988c2839f7d" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3f6957ae-bd4a-4834-9599-ec5c2044938b" absoluteBounds="10.125, 5.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/KFDataClassesDataContext/Order_Product" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7cc128a9-1e38-4526-974a-dd68d2caa994" absoluteBounds="10.14, 6.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.25 : 8.625); (11.25 : 7.90549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KFDataClassesDataContext/Order/Order_Order_Product" />
+      <nodes>
+        <classShapeMoniker Id="09e19868-cb86-4e0a-b2a4-1817f566018d" />
+        <classShapeMoniker Id="3f6957ae-bd4a-4834-9599-ec5c2044938b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(9.25 : 6.82774983723958); (10.125 : 6.82774983723958)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KFDataClassesDataContext/Product/Product_Order_Product" />
+      <nodes>
+        <classShapeMoniker Id="b89275e2-9840-43c5-a638-7988c2839f7d" />
+        <classShapeMoniker Id="3f6957ae-bd4a-4834-9599-ec5c2044938b" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

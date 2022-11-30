@@ -17,6 +17,16 @@ namespace DataManagement.Model
         public List<Grip> AvailableGrips { get; set; }
         public Varegruppe Varegruppe { get; set; }
         public string Description { get; set; }
+
+        public Material ChosenMaterial { get; set; }
+        public string ChosenMaterialString { get { return ChosenMaterial.MaterialName; } }
+
+        public KitchenColor ChosenColor { get; set; }
+        public string ChosenColorString { get { return ChosenColor.Color_Name; } }
+
+        public Grip ChosenGrip { get; set; }
+        public string ChosenGripString { get { return ChosenGrip.Grip_Name; } }
+
         public string VaregruppeNavn { get { return this.Varegruppe.ProductGroupName; } }
     }
 }

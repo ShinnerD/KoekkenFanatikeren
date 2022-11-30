@@ -35,6 +35,7 @@
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.HeaderImageLabel = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
+            this.NyKundeButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.LeftMainPanel = new System.Windows.Forms.Panel();
             this.KundeListeGrpBox = new System.Windows.Forms.GroupBox();
@@ -48,14 +49,11 @@
             this.SearchFieldTextBox = new System.Windows.Forms.TextBox();
             this.RightMainPanel = new System.Windows.Forms.Panel();
             this.BottomRightPanel = new System.Windows.Forms.Panel();
+            this.VisOrdreButton = new System.Windows.Forms.Button();
             this.OpretOrdreButton = new System.Windows.Forms.Button();
             this.RedigerKundeButton = new System.Windows.Forms.Button();
-            this.NyKundeButton = new System.Windows.Forms.Button();
             this.OrdreGrpBox = new System.Windows.Forms.GroupBox();
             this.KundeOrdreGridView = new System.Windows.Forms.DataGridView();
-            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Afsendt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ansvarlig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KundeInfoGrpBox = new System.Windows.Forms.GroupBox();
             this.EmailTxtLbl = new System.Windows.Forms.Label();
             this.TlfTxtLbl = new System.Windows.Forms.Label();
@@ -65,7 +63,10 @@
             this.AdresseContentLabel = new System.Windows.Forms.Label();
             this.AdresseTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
-            this.VisOrdreButton = new System.Windows.Forms.Button();
+            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AntalVare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Afsendt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ansvarlig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -143,6 +144,21 @@
             this.BottomPanel.Name = "BottomPanel";
             this.BottomPanel.Size = new System.Drawing.Size(1284, 80);
             this.BottomPanel.TabIndex = 1;
+            // 
+            // NyKundeButton
+            // 
+            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.NyKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.NyKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.NyKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NyKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NyKundeButton.ForeColor = System.Drawing.Color.White;
+            this.NyKundeButton.Location = new System.Drawing.Point(12, 21);
+            this.NyKundeButton.Name = "NyKundeButton";
+            this.NyKundeButton.Size = new System.Drawing.Size(154, 37);
+            this.NyKundeButton.TabIndex = 1;
+            this.NyKundeButton.Text = "Ny Kunde";
+            this.NyKundeButton.UseVisualStyleBackColor = false;
             // 
             // MainPanel
             // 
@@ -306,6 +322,22 @@
             this.BottomRightPanel.Size = new System.Drawing.Size(648, 63);
             this.BottomRightPanel.TabIndex = 2;
             // 
+            // VisOrdreButton
+            // 
+            this.VisOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.VisOrdreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.VisOrdreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.VisOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VisOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VisOrdreButton.ForeColor = System.Drawing.Color.White;
+            this.VisOrdreButton.Location = new System.Drawing.Point(44, 15);
+            this.VisOrdreButton.Name = "VisOrdreButton";
+            this.VisOrdreButton.Size = new System.Drawing.Size(154, 37);
+            this.VisOrdreButton.TabIndex = 1;
+            this.VisOrdreButton.Text = "Vis Ordre";
+            this.VisOrdreButton.UseVisualStyleBackColor = false;
+            this.VisOrdreButton.Click += new System.EventHandler(this.VisOrdreButton_Click);
+            // 
             // OpretOrdreButton
             // 
             this.OpretOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -336,21 +368,6 @@
             this.RedigerKundeButton.Text = "Rediger Kunde";
             this.RedigerKundeButton.UseVisualStyleBackColor = false;
             // 
-            // NyKundeButton
-            // 
-            this.NyKundeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.NyKundeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.NyKundeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.NyKundeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NyKundeButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NyKundeButton.ForeColor = System.Drawing.Color.White;
-            this.NyKundeButton.Location = new System.Drawing.Point(12, 21);
-            this.NyKundeButton.Name = "NyKundeButton";
-            this.NyKundeButton.Size = new System.Drawing.Size(154, 37);
-            this.NyKundeButton.TabIndex = 1;
-            this.NyKundeButton.Text = "Ny Kunde";
-            this.NyKundeButton.UseVisualStyleBackColor = false;
-            // 
             // OrdreGrpBox
             // 
             this.OrdreGrpBox.Controls.Add(this.KundeOrdreGridView);
@@ -374,6 +391,7 @@
             this.KundeOrdreGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KundeOrdreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdreNr,
+            this.AntalVare,
             this.Afsendt,
             this.Ansvarlig});
             this.KundeOrdreGridView.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -386,31 +404,6 @@
             this.KundeOrdreGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundeOrdreGridView.Size = new System.Drawing.Size(642, 451);
             this.KundeOrdreGridView.TabIndex = 3;
-            // 
-            // OrdreNr
-            // 
-            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.OrdreNr.DataPropertyName = "Id";
-            this.OrdreNr.HeaderText = "Ordre Nr.";
-            this.OrdreNr.Name = "OrdreNr";
-            this.OrdreNr.ReadOnly = true;
-            // 
-            // Afsendt
-            // 
-            this.Afsendt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Afsendt.DataPropertyName = "DateOfSending";
-            this.Afsendt.FillWeight = 40F;
-            this.Afsendt.HeaderText = "Afsendt";
-            this.Afsendt.Name = "Afsendt";
-            this.Afsendt.ReadOnly = true;
-            // 
-            // Ansvarlig
-            // 
-            this.Ansvarlig.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Ansvarlig.DataPropertyName = "AnsvarligEmployeeName";
-            this.Ansvarlig.HeaderText = "Ansvarlig";
-            this.Ansvarlig.Name = "Ansvarlig";
-            this.Ansvarlig.ReadOnly = true;
             // 
             // KundeInfoGrpBox
             // 
@@ -508,20 +501,37 @@
             this.NameTxtLbl.TabIndex = 0;
             this.NameTxtLbl.Text = "Navn:";
             // 
-            // VisOrdreButton
+            // OrdreNr
             // 
-            this.VisOrdreButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.VisOrdreButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.VisOrdreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.VisOrdreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VisOrdreButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VisOrdreButton.ForeColor = System.Drawing.Color.White;
-            this.VisOrdreButton.Location = new System.Drawing.Point(44, 15);
-            this.VisOrdreButton.Name = "VisOrdreButton";
-            this.VisOrdreButton.Size = new System.Drawing.Size(154, 37);
-            this.VisOrdreButton.TabIndex = 1;
-            this.VisOrdreButton.Text = "Vis Ordre";
-            this.VisOrdreButton.UseVisualStyleBackColor = false;
+            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OrdreNr.DataPropertyName = "Id";
+            this.OrdreNr.HeaderText = "Ordre Nr.";
+            this.OrdreNr.Name = "OrdreNr";
+            this.OrdreNr.ReadOnly = true;
+            // 
+            // AntalVare
+            // 
+            this.AntalVare.DataPropertyName = "ProductCount";
+            this.AntalVare.HeaderText = "Antal Vare";
+            this.AntalVare.Name = "AntalVare";
+            this.AntalVare.ReadOnly = true;
+            // 
+            // Afsendt
+            // 
+            this.Afsendt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Afsendt.DataPropertyName = "DateOfSending";
+            this.Afsendt.FillWeight = 40F;
+            this.Afsendt.HeaderText = "Afsendt";
+            this.Afsendt.Name = "Afsendt";
+            this.Afsendt.ReadOnly = true;
+            // 
+            // Ansvarlig
+            // 
+            this.Ansvarlig.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Ansvarlig.DataPropertyName = "AnsvarligEmployeeName";
+            this.Ansvarlig.HeaderText = "Ansvarlig";
+            this.Ansvarlig.Name = "Ansvarlig";
+            this.Ansvarlig.ReadOnly = true;
             // 
             // KundeModulForm
             // 
@@ -589,10 +599,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Efternavn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TlfNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.Button VisOrdreButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AntalVare;
         private System.Windows.Forms.DataGridViewTextBoxColumn Afsendt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
-        private System.Windows.Forms.Button VisOrdreButton;
     }
 }
 
