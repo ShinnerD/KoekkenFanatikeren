@@ -36,9 +36,6 @@ namespace DataManagement.Database
     partial void InsertCustomer(Customer instance);
     partial void UpdateCustomer(Customer instance);
     partial void DeleteCustomer(Customer instance);
-    partial void InsertEmployee(Employee instance);
-    partial void UpdateEmployee(Employee instance);
-    partial void DeleteEmployee(Employee instance);
     partial void InsertGrip(Grip instance);
     partial void UpdateGrip(Grip instance);
     partial void DeleteGrip(Grip instance);
@@ -48,9 +45,6 @@ namespace DataManagement.Database
     partial void InsertOrder(Order instance);
     partial void UpdateOrder(Order instance);
     partial void DeleteOrder(Order instance);
-    partial void InsertProduct(Product instance);
-    partial void UpdateProduct(Product instance);
-    partial void DeleteProduct(Product instance);
     partial void InsertProduct_Colour(Product_Colour instance);
     partial void UpdateProduct_Colour(Product_Colour instance);
     partial void DeleteProduct_Colour(Product_Colour instance);
@@ -66,6 +60,12 @@ namespace DataManagement.Database
     partial void InsertOrder_Product(Order_Product instance);
     partial void UpdateOrder_Product(Order_Product instance);
     partial void DeleteOrder_Product(Order_Product instance);
+    partial void InsertProduct(Product instance);
+    partial void UpdateProduct(Product instance);
+    partial void DeleteProduct(Product instance);
+    partial void InsertEmployee(Employee instance);
+    partial void UpdateEmployee(Employee instance);
+    partial void DeleteEmployee(Employee instance);
     #endregion
 		
 		public KFDataClassesDataContext() : 
@@ -114,14 +114,6 @@ namespace DataManagement.Database
 			}
 		}
 		
-		public System.Data.Linq.Table<Employee> Employees
-		{
-			get
-			{
-				return this.GetTable<Employee>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Grip> Grips
 		{
 			get
@@ -143,14 +135,6 @@ namespace DataManagement.Database
 			get
 			{
 				return this.GetTable<Order>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Product> Products
-		{
-			get
-			{
-				return this.GetTable<Product>();
 			}
 		}
 		
@@ -191,6 +175,22 @@ namespace DataManagement.Database
 			get
 			{
 				return this.GetTable<Order_Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Product> Products
+		{
+			get
+			{
+				return this.GetTable<Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Employee> Employees
+		{
+			get
+			{
+				return this.GetTable<Employee>();
 			}
 		}
 	}
@@ -564,216 +564,6 @@ namespace DataManagement.Database
 		{
 			this.SendPropertyChanging();
 			entity.Customer = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
-	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Employee_Id;
-		
-		private string _FirstName;
-		
-		private string _LastName;
-		
-		private string _Address;
-		
-		private int _Phonenumber;
-		
-		private int _Salary;
-		
-		private EntitySet<Order> _Orders;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnEmployee_IdChanging(int value);
-    partial void OnEmployee_IdChanged();
-    partial void OnFirstNameChanging(string value);
-    partial void OnFirstNameChanged();
-    partial void OnLastNameChanging(string value);
-    partial void OnLastNameChanged();
-    partial void OnAddressChanging(string value);
-    partial void OnAddressChanged();
-    partial void OnPhonenumberChanging(int value);
-    partial void OnPhonenumberChanged();
-    partial void OnSalaryChanging(int value);
-    partial void OnSalaryChanged();
-    #endregion
-		
-		public Employee()
-		{
-			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Employee_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Employee_Id
-		{
-			get
-			{
-				return this._Employee_Id;
-			}
-			set
-			{
-				if ((this._Employee_Id != value))
-				{
-					this.OnEmployee_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Employee_Id = value;
-					this.SendPropertyChanged("Employee_Id");
-					this.OnEmployee_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string FirstName
-		{
-			get
-			{
-				return this._FirstName;
-			}
-			set
-			{
-				if ((this._FirstName != value))
-				{
-					this.OnFirstNameChanging(value);
-					this.SendPropertyChanging();
-					this._FirstName = value;
-					this.SendPropertyChanged("FirstName");
-					this.OnFirstNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string LastName
-		{
-			get
-			{
-				return this._LastName;
-			}
-			set
-			{
-				if ((this._LastName != value))
-				{
-					this.OnLastNameChanging(value);
-					this.SendPropertyChanging();
-					this._LastName = value;
-					this.SendPropertyChanged("LastName");
-					this.OnLastNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Address
-		{
-			get
-			{
-				return this._Address;
-			}
-			set
-			{
-				if ((this._Address != value))
-				{
-					this.OnAddressChanging(value);
-					this.SendPropertyChanging();
-					this._Address = value;
-					this.SendPropertyChanged("Address");
-					this.OnAddressChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phonenumber", DbType="Int NOT NULL")]
-		public int Phonenumber
-		{
-			get
-			{
-				return this._Phonenumber;
-			}
-			set
-			{
-				if ((this._Phonenumber != value))
-				{
-					this.OnPhonenumberChanging(value);
-					this.SendPropertyChanging();
-					this._Phonenumber = value;
-					this.SendPropertyChanged("Phonenumber");
-					this.OnPhonenumberChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Salary", DbType="Int NOT NULL")]
-		public int Salary
-		{
-			get
-			{
-				return this._Salary;
-			}
-			set
-			{
-				if ((this._Salary != value))
-				{
-					this.OnSalaryChanging(value);
-					this.SendPropertyChanging();
-					this._Salary = value;
-					this.SendPropertyChanged("Salary");
-					this.OnSalaryChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Order", Storage="_Orders", ThisKey="Employee_Id", OtherKey="Employee_Id")]
-		public EntitySet<Order> Orders
-		{
-			get
-			{
-				return this._Orders;
-			}
-			set
-			{
-				this._Orders.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = this;
-		}
-		
-		private void detach_Orders(Order entity)
-		{
-			this.SendPropertyChanging();
-			entity.Employee = null;
 		}
 	}
 	
@@ -1414,389 +1204,6 @@ namespace DataManagement.Database
 		{
 			this.SendPropertyChanging();
 			entity.Order = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Product")]
-	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Product_Id;
-		
-		private int _ProductGroup_Id;
-		
-		private string _ProductName;
-		
-		private int _Price;
-		
-		private string _Material;
-		
-		private string _Colours;
-		
-		private string _Grip;
-		
-		private string _Product_Description;
-		
-		private EntitySet<Product_Colour> _Product_Colours;
-		
-		private EntitySet<Product_Grip> _Product_Grips;
-		
-		private EntitySet<Product_Material> _Product_Materials;
-		
-		private EntitySet<Order_Product> _Order_Products;
-		
-		private EntityRef<ProductGroup> _ProductGroup;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnProduct_IdChanging(int value);
-    partial void OnProduct_IdChanged();
-    partial void OnProductGroup_IdChanging(int value);
-    partial void OnProductGroup_IdChanged();
-    partial void OnProductNameChanging(string value);
-    partial void OnProductNameChanged();
-    partial void OnPriceChanging(int value);
-    partial void OnPriceChanged();
-    partial void OnMaterialChanging(string value);
-    partial void OnMaterialChanged();
-    partial void OnColoursChanging(string value);
-    partial void OnColoursChanged();
-    partial void OnGripChanging(string value);
-    partial void OnGripChanged();
-    partial void OnProduct_DescriptionChanging(string value);
-    partial void OnProduct_DescriptionChanged();
-    #endregion
-		
-		public Product()
-		{
-			this._Product_Colours = new EntitySet<Product_Colour>(new Action<Product_Colour>(this.attach_Product_Colours), new Action<Product_Colour>(this.detach_Product_Colours));
-			this._Product_Grips = new EntitySet<Product_Grip>(new Action<Product_Grip>(this.attach_Product_Grips), new Action<Product_Grip>(this.detach_Product_Grips));
-			this._Product_Materials = new EntitySet<Product_Material>(new Action<Product_Material>(this.attach_Product_Materials), new Action<Product_Material>(this.detach_Product_Materials));
-			this._Order_Products = new EntitySet<Order_Product>(new Action<Order_Product>(this.attach_Order_Products), new Action<Order_Product>(this.detach_Order_Products));
-			this._ProductGroup = default(EntityRef<ProductGroup>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Product_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Product_Id
-		{
-			get
-			{
-				return this._Product_Id;
-			}
-			set
-			{
-				if ((this._Product_Id != value))
-				{
-					this.OnProduct_IdChanging(value);
-					this.SendPropertyChanging();
-					this._Product_Id = value;
-					this.SendPropertyChanged("Product_Id");
-					this.OnProduct_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductGroup_Id", DbType="Int NOT NULL")]
-		public int ProductGroup_Id
-		{
-			get
-			{
-				return this._ProductGroup_Id;
-			}
-			set
-			{
-				if ((this._ProductGroup_Id != value))
-				{
-					if (this._ProductGroup.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnProductGroup_IdChanging(value);
-					this.SendPropertyChanging();
-					this._ProductGroup_Id = value;
-					this.SendPropertyChanged("ProductGroup_Id");
-					this.OnProductGroup_IdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string ProductName
-		{
-			get
-			{
-				return this._ProductName;
-			}
-			set
-			{
-				if ((this._ProductName != value))
-				{
-					this.OnProductNameChanging(value);
-					this.SendPropertyChanging();
-					this._ProductName = value;
-					this.SendPropertyChanged("ProductName");
-					this.OnProductNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int NOT NULL")]
-		public int Price
-		{
-			get
-			{
-				return this._Price;
-			}
-			set
-			{
-				if ((this._Price != value))
-				{
-					this.OnPriceChanging(value);
-					this.SendPropertyChanging();
-					this._Price = value;
-					this.SendPropertyChanged("Price");
-					this.OnPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Material", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Material
-		{
-			get
-			{
-				return this._Material;
-			}
-			set
-			{
-				if ((this._Material != value))
-				{
-					this.OnMaterialChanging(value);
-					this.SendPropertyChanging();
-					this._Material = value;
-					this.SendPropertyChanged("Material");
-					this.OnMaterialChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Colours", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Colours
-		{
-			get
-			{
-				return this._Colours;
-			}
-			set
-			{
-				if ((this._Colours != value))
-				{
-					this.OnColoursChanging(value);
-					this.SendPropertyChanging();
-					this._Colours = value;
-					this.SendPropertyChanged("Colours");
-					this.OnColoursChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Grip", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Grip
-		{
-			get
-			{
-				return this._Grip;
-			}
-			set
-			{
-				if ((this._Grip != value))
-				{
-					this.OnGripChanging(value);
-					this.SendPropertyChanging();
-					this._Grip = value;
-					this.SendPropertyChanged("Grip");
-					this.OnGripChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Product_Description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
-		public string Product_Description
-		{
-			get
-			{
-				return this._Product_Description;
-			}
-			set
-			{
-				if ((this._Product_Description != value))
-				{
-					this.OnProduct_DescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._Product_Description = value;
-					this.SendPropertyChanged("Product_Description");
-					this.OnProduct_DescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Colour", Storage="_Product_Colours", ThisKey="Product_Id", OtherKey="Product_Id")]
-		public EntitySet<Product_Colour> Product_Colours
-		{
-			get
-			{
-				return this._Product_Colours;
-			}
-			set
-			{
-				this._Product_Colours.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Grip", Storage="_Product_Grips", ThisKey="Product_Id", OtherKey="Product_Id")]
-		public EntitySet<Product_Grip> Product_Grips
-		{
-			get
-			{
-				return this._Product_Grips;
-			}
-			set
-			{
-				this._Product_Grips.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Material", Storage="_Product_Materials", ThisKey="Product_Id", OtherKey="Product_Id")]
-		public EntitySet<Product_Material> Product_Materials
-		{
-			get
-			{
-				return this._Product_Materials;
-			}
-			set
-			{
-				this._Product_Materials.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Order_Product", Storage="_Order_Products", ThisKey="Product_Id", OtherKey="Product_Id")]
-		public EntitySet<Order_Product> Order_Products
-		{
-			get
-			{
-				return this._Order_Products;
-			}
-			set
-			{
-				this._Order_Products.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductGroup_Product", Storage="_ProductGroup", ThisKey="ProductGroup_Id", OtherKey="ProductGroup_Id", IsForeignKey=true)]
-		public ProductGroup ProductGroup
-		{
-			get
-			{
-				return this._ProductGroup.Entity;
-			}
-			set
-			{
-				ProductGroup previousValue = this._ProductGroup.Entity;
-				if (((previousValue != value) 
-							|| (this._ProductGroup.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ProductGroup.Entity = null;
-						previousValue.Products.Remove(this);
-					}
-					this._ProductGroup.Entity = value;
-					if ((value != null))
-					{
-						value.Products.Add(this);
-						this._ProductGroup_Id = value.ProductGroup_Id;
-					}
-					else
-					{
-						this._ProductGroup_Id = default(int);
-					}
-					this.SendPropertyChanged("ProductGroup");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Product_Colours(Product_Colour entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_Product_Colours(Product_Colour entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
-		}
-		
-		private void attach_Product_Grips(Product_Grip entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_Product_Grips(Product_Grip entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
-		}
-		
-		private void attach_Product_Materials(Product_Material entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_Product_Materials(Product_Material entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
-		}
-		
-		private void attach_Order_Products(Order_Product entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = this;
-		}
-		
-		private void detach_Order_Products(Order_Product entity)
-		{
-			this.SendPropertyChanging();
-			entity.Product = null;
 		}
 	}
 	
@@ -2775,6 +2182,671 @@ namespace DataManagement.Database
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Product")]
+	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Product_Id;
+		
+		private int _ProductGroup_Id;
+		
+		private string _ProductName;
+		
+		private int _Price;
+		
+		private string _Material;
+		
+		private string _Colours;
+		
+		private string _Grip;
+		
+		private string _Product_Description;
+		
+		private System.Nullable<decimal> _Length;
+		
+		private System.Nullable<decimal> _Height;
+		
+		private System.Nullable<decimal> _Width;
+		
+		private EntitySet<Product_Colour> _Product_Colours;
+		
+		private EntitySet<Product_Grip> _Product_Grips;
+		
+		private EntitySet<Product_Material> _Product_Materials;
+		
+		private EntitySet<Order_Product> _Order_Products;
+		
+		private EntityRef<ProductGroup> _ProductGroup;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnProduct_IdChanging(int value);
+    partial void OnProduct_IdChanged();
+    partial void OnProductGroup_IdChanging(int value);
+    partial void OnProductGroup_IdChanged();
+    partial void OnProductNameChanging(string value);
+    partial void OnProductNameChanged();
+    partial void OnPriceChanging(int value);
+    partial void OnPriceChanged();
+    partial void OnMaterialChanging(string value);
+    partial void OnMaterialChanged();
+    partial void OnColoursChanging(string value);
+    partial void OnColoursChanged();
+    partial void OnGripChanging(string value);
+    partial void OnGripChanged();
+    partial void OnProduct_DescriptionChanging(string value);
+    partial void OnProduct_DescriptionChanged();
+    partial void OnLengthChanging(System.Nullable<decimal> value);
+    partial void OnLengthChanged();
+    partial void OnHeightChanging(System.Nullable<decimal> value);
+    partial void OnHeightChanged();
+    partial void OnWidthChanging(System.Nullable<decimal> value);
+    partial void OnWidthChanged();
+    #endregion
+		
+		public Product()
+		{
+			this._Product_Colours = new EntitySet<Product_Colour>(new Action<Product_Colour>(this.attach_Product_Colours), new Action<Product_Colour>(this.detach_Product_Colours));
+			this._Product_Grips = new EntitySet<Product_Grip>(new Action<Product_Grip>(this.attach_Product_Grips), new Action<Product_Grip>(this.detach_Product_Grips));
+			this._Product_Materials = new EntitySet<Product_Material>(new Action<Product_Material>(this.attach_Product_Materials), new Action<Product_Material>(this.detach_Product_Materials));
+			this._Order_Products = new EntitySet<Order_Product>(new Action<Order_Product>(this.attach_Order_Products), new Action<Order_Product>(this.detach_Order_Products));
+			this._ProductGroup = default(EntityRef<ProductGroup>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Product_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Product_Id
+		{
+			get
+			{
+				return this._Product_Id;
+			}
+			set
+			{
+				if ((this._Product_Id != value))
+				{
+					this.OnProduct_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Product_Id = value;
+					this.SendPropertyChanged("Product_Id");
+					this.OnProduct_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductGroup_Id", DbType="Int NOT NULL")]
+		public int ProductGroup_Id
+		{
+			get
+			{
+				return this._ProductGroup_Id;
+			}
+			set
+			{
+				if ((this._ProductGroup_Id != value))
+				{
+					if (this._ProductGroup.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnProductGroup_IdChanging(value);
+					this.SendPropertyChanging();
+					this._ProductGroup_Id = value;
+					this.SendPropertyChanged("ProductGroup_Id");
+					this.OnProductGroup_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductName", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string ProductName
+		{
+			get
+			{
+				return this._ProductName;
+			}
+			set
+			{
+				if ((this._ProductName != value))
+				{
+					this.OnProductNameChanging(value);
+					this.SendPropertyChanging();
+					this._ProductName = value;
+					this.SendPropertyChanged("ProductName");
+					this.OnProductNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Price", DbType="Int NOT NULL")]
+		public int Price
+		{
+			get
+			{
+				return this._Price;
+			}
+			set
+			{
+				if ((this._Price != value))
+				{
+					this.OnPriceChanging(value);
+					this.SendPropertyChanging();
+					this._Price = value;
+					this.SendPropertyChanged("Price");
+					this.OnPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Material", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Material
+		{
+			get
+			{
+				return this._Material;
+			}
+			set
+			{
+				if ((this._Material != value))
+				{
+					this.OnMaterialChanging(value);
+					this.SendPropertyChanging();
+					this._Material = value;
+					this.SendPropertyChanged("Material");
+					this.OnMaterialChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Colours", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Colours
+		{
+			get
+			{
+				return this._Colours;
+			}
+			set
+			{
+				if ((this._Colours != value))
+				{
+					this.OnColoursChanging(value);
+					this.SendPropertyChanging();
+					this._Colours = value;
+					this.SendPropertyChanged("Colours");
+					this.OnColoursChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Grip", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Grip
+		{
+			get
+			{
+				return this._Grip;
+			}
+			set
+			{
+				if ((this._Grip != value))
+				{
+					this.OnGripChanging(value);
+					this.SendPropertyChanging();
+					this._Grip = value;
+					this.SendPropertyChanged("Grip");
+					this.OnGripChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Product_Description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Product_Description
+		{
+			get
+			{
+				return this._Product_Description;
+			}
+			set
+			{
+				if ((this._Product_Description != value))
+				{
+					this.OnProduct_DescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Product_Description = value;
+					this.SendPropertyChanged("Product_Description");
+					this.OnProduct_DescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Length", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Length
+		{
+			get
+			{
+				return this._Length;
+			}
+			set
+			{
+				if ((this._Length != value))
+				{
+					this.OnLengthChanging(value);
+					this.SendPropertyChanging();
+					this._Length = value;
+					this.SendPropertyChanged("Length");
+					this.OnLengthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Height", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Height
+		{
+			get
+			{
+				return this._Height;
+			}
+			set
+			{
+				if ((this._Height != value))
+				{
+					this.OnHeightChanging(value);
+					this.SendPropertyChanging();
+					this._Height = value;
+					this.SendPropertyChanged("Height");
+					this.OnHeightChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Width", DbType="Decimal(15,2)")]
+		public System.Nullable<decimal> Width
+		{
+			get
+			{
+				return this._Width;
+			}
+			set
+			{
+				if ((this._Width != value))
+				{
+					this.OnWidthChanging(value);
+					this.SendPropertyChanging();
+					this._Width = value;
+					this.SendPropertyChanged("Width");
+					this.OnWidthChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Colour", Storage="_Product_Colours", ThisKey="Product_Id", OtherKey="Product_Id")]
+		public EntitySet<Product_Colour> Product_Colours
+		{
+			get
+			{
+				return this._Product_Colours;
+			}
+			set
+			{
+				this._Product_Colours.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Grip", Storage="_Product_Grips", ThisKey="Product_Id", OtherKey="Product_Id")]
+		public EntitySet<Product_Grip> Product_Grips
+		{
+			get
+			{
+				return this._Product_Grips;
+			}
+			set
+			{
+				this._Product_Grips.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Product_Material", Storage="_Product_Materials", ThisKey="Product_Id", OtherKey="Product_Id")]
+		public EntitySet<Product_Material> Product_Materials
+		{
+			get
+			{
+				return this._Product_Materials;
+			}
+			set
+			{
+				this._Product_Materials.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Order_Product", Storage="_Order_Products", ThisKey="Product_Id", OtherKey="Product_Id")]
+		public EntitySet<Order_Product> Order_Products
+		{
+			get
+			{
+				return this._Order_Products;
+			}
+			set
+			{
+				this._Order_Products.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ProductGroup_Product", Storage="_ProductGroup", ThisKey="ProductGroup_Id", OtherKey="ProductGroup_Id", IsForeignKey=true)]
+		public ProductGroup ProductGroup
+		{
+			get
+			{
+				return this._ProductGroup.Entity;
+			}
+			set
+			{
+				ProductGroup previousValue = this._ProductGroup.Entity;
+				if (((previousValue != value) 
+							|| (this._ProductGroup.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ProductGroup.Entity = null;
+						previousValue.Products.Remove(this);
+					}
+					this._ProductGroup.Entity = value;
+					if ((value != null))
+					{
+						value.Products.Add(this);
+						this._ProductGroup_Id = value.ProductGroup_Id;
+					}
+					else
+					{
+						this._ProductGroup_Id = default(int);
+					}
+					this.SendPropertyChanged("ProductGroup");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Product_Colours(Product_Colour entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_Product_Colours(Product_Colour entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+		
+		private void attach_Product_Grips(Product_Grip entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_Product_Grips(Product_Grip entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+		
+		private void attach_Product_Materials(Product_Material entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_Product_Materials(Product_Material entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+		
+		private void attach_Order_Products(Order_Product entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = this;
+		}
+		
+		private void detach_Order_Products(Order_Product entity)
+		{
+			this.SendPropertyChanging();
+			entity.Product = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Employee")]
+	public partial class Employee : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Employee_Id;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _Address;
+		
+		private int _Phonenumber;
+		
+		private int _Salary;
+		
+		private EntitySet<Order> _Orders;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnEmployee_IdChanging(int value);
+    partial void OnEmployee_IdChanged();
+    partial void OnFirstNameChanging(string value);
+    partial void OnFirstNameChanged();
+    partial void OnLastNameChanging(string value);
+    partial void OnLastNameChanged();
+    partial void OnAddressChanging(string value);
+    partial void OnAddressChanged();
+    partial void OnPhonenumberChanging(int value);
+    partial void OnPhonenumberChanged();
+    partial void OnSalaryChanging(int value);
+    partial void OnSalaryChanged();
+    #endregion
+		
+		public Employee()
+		{
+			this._Orders = new EntitySet<Order>(new Action<Order>(this.attach_Orders), new Action<Order>(this.detach_Orders));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Employee_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Employee_Id
+		{
+			get
+			{
+				return this._Employee_Id;
+			}
+			set
+			{
+				if ((this._Employee_Id != value))
+				{
+					this.OnEmployee_IdChanging(value);
+					this.SendPropertyChanging();
+					this._Employee_Id = value;
+					this.SendPropertyChanged("Employee_Id");
+					this.OnEmployee_IdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this.OnFirstNameChanging(value);
+					this.SendPropertyChanging();
+					this._FirstName = value;
+					this.SendPropertyChanged("FirstName");
+					this.OnFirstNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this.OnLastNameChanging(value);
+					this.SendPropertyChanging();
+					this._LastName = value;
+					this.SendPropertyChanged("LastName");
+					this.OnLastNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this.OnAddressChanging(value);
+					this.SendPropertyChanging();
+					this._Address = value;
+					this.SendPropertyChanged("Address");
+					this.OnAddressChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phonenumber", DbType="Int NOT NULL")]
+		public int Phonenumber
+		{
+			get
+			{
+				return this._Phonenumber;
+			}
+			set
+			{
+				if ((this._Phonenumber != value))
+				{
+					this.OnPhonenumberChanging(value);
+					this.SendPropertyChanging();
+					this._Phonenumber = value;
+					this.SendPropertyChanged("Phonenumber");
+					this.OnPhonenumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Salary", DbType="Int NOT NULL")]
+		public int Salary
+		{
+			get
+			{
+				return this._Salary;
+			}
+			set
+			{
+				if ((this._Salary != value))
+				{
+					this.OnSalaryChanging(value);
+					this.SendPropertyChanging();
+					this._Salary = value;
+					this.SendPropertyChanged("Salary");
+					this.OnSalaryChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Employee_Order", Storage="_Orders", ThisKey="Employee_Id", OtherKey="Employee_Id")]
+		public EntitySet<Order> Orders
+		{
+			get
+			{
+				return this._Orders;
+			}
+			set
+			{
+				this._Orders.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Orders(Order entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = this;
+		}
+		
+		private void detach_Orders(Order entity)
+		{
+			this.SendPropertyChanging();
+			entity.Employee = null;
 		}
 	}
 }
