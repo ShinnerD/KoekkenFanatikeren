@@ -38,6 +38,23 @@
             this.VareListeGrpBox = new System.Windows.Forms.GroupBox();
             this.VareListeDataGrid = new System.Windows.Forms.DataGridView();
             this.RightMainPanel = new System.Windows.Forms.Panel();
+            this.VareInfoGrpBox = new System.Windows.Forms.GroupBox();
+            this.GrebTxtLbl = new System.Windows.Forms.Label();
+            this.BeskrivelseGrpBox = new System.Windows.Forms.GroupBox();
+            this.VareBeskrivelseTxtBox = new System.Windows.Forms.TextBox();
+            this.MaterialeTxtLbl = new System.Windows.Forms.Label();
+            this.FarveTxtLbl = new System.Windows.Forms.Label();
+            this.VareGruppeTxtLbl = new System.Windows.Forms.Label();
+            this.VareIdTxtLbl = new System.Windows.Forms.Label();
+            this.VareGruppeContentLabel = new System.Windows.Forms.Label();
+            this.VareIdContentLabel = new System.Windows.Forms.Label();
+            this.VarePrisContentLabel = new System.Windows.Forms.Label();
+            this.GrebContentLabel = new System.Windows.Forms.Label();
+            this.MaterialeContentLabel = new System.Windows.Forms.Label();
+            this.FarveContentLabel = new System.Windows.Forms.Label();
+            this.NameContentLabel = new System.Windows.Forms.Label();
+            this.VarePrisTxtLbl = new System.Windows.Forms.Label();
+            this.NameTxtLbl = new System.Windows.Forms.Label();
             this.OrdreInfoGrpBox = new System.Windows.Forms.GroupBox();
             this.OrdreCommentGrpBox = new System.Windows.Forms.GroupBox();
             this.OrdreCommentTextBox = new System.Windows.Forms.TextBox();
@@ -47,45 +64,29 @@
             this.AdresseContentLabel = new System.Windows.Forms.Label();
             this.TlfContentLabel = new System.Windows.Forms.Label();
             this.KundeContentLabel = new System.Windows.Forms.Label();
+            this.EmployeeContentLabel = new System.Windows.Forms.Label();
             this.TotalPrisContentLabel = new System.Windows.Forms.Label();
             this.OrdreIdContentLabel = new System.Windows.Forms.Label();
+            this.EmployeeTxtLbl = new System.Windows.Forms.Label();
             this.PrisTxtLbl = new System.Windows.Forms.Label();
             this.OrdreIdTxtLbl = new System.Windows.Forms.Label();
-            this.VareInfoGrpBox = new System.Windows.Forms.GroupBox();
-            this.BeskrivelseGrpBox = new System.Windows.Forms.GroupBox();
-            this.VareBeskrivelseTxtBox = new System.Windows.Forms.TextBox();
-            this.VareGruppeTxtLbl = new System.Windows.Forms.Label();
-            this.VareIdTxtLbl = new System.Windows.Forms.Label();
-            this.VareGruppeContentLabel = new System.Windows.Forms.Label();
-            this.VareIdContentLabel = new System.Windows.Forms.Label();
-            this.VarePrisContentLabel = new System.Windows.Forms.Label();
-            this.NameContentLabel = new System.Windows.Forms.Label();
-            this.VarePrisTxtLbl = new System.Windows.Forms.Label();
-            this.NameTxtLbl = new System.Windows.Forms.Label();
-            this.FarveTxtLbl = new System.Windows.Forms.Label();
-            this.MaterialeTxtLbl = new System.Windows.Forms.Label();
-            this.GrebTxtLbl = new System.Windows.Forms.Label();
-            this.FarveContentLabel = new System.Windows.Forms.Label();
-            this.MaterialeContentLabel = new System.Windows.Forms.Label();
-            this.GrebContentLabel = new System.Windows.Forms.Label();
             this.Vare = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Varegruppe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Greb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Farve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Materiale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Antal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pris = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmployeeTxtLbl = new System.Windows.Forms.Label();
-            this.EmployeeContentLabel = new System.Windows.Forms.Label();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
             this.VareListeGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VareListeDataGrid)).BeginInit();
             this.RightMainPanel.SuspendLayout();
-            this.OrdreInfoGrpBox.SuspendLayout();
-            this.OrdreCommentGrpBox.SuspendLayout();
             this.VareInfoGrpBox.SuspendLayout();
             this.BeskrivelseGrpBox.SuspendLayout();
+            this.OrdreInfoGrpBox.SuspendLayout();
+            this.OrdreCommentGrpBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -180,6 +181,7 @@
             this.Greb,
             this.Farve,
             this.Materiale,
+            this.Antal,
             this.Pris});
             this.VareListeDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VareListeDataGrid.GridColor = System.Drawing.Color.Black;
@@ -203,6 +205,189 @@
             this.RightMainPanel.Name = "RightMainPanel";
             this.RightMainPanel.Size = new System.Drawing.Size(648, 601);
             this.RightMainPanel.TabIndex = 6;
+            // 
+            // VareInfoGrpBox
+            // 
+            this.VareInfoGrpBox.Controls.Add(this.GrebTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.BeskrivelseGrpBox);
+            this.VareInfoGrpBox.Controls.Add(this.MaterialeTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.FarveTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.VareGruppeTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.VareIdTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.VareGruppeContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.VareIdContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.VarePrisContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.GrebContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.MaterialeContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.FarveContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.NameContentLabel);
+            this.VareInfoGrpBox.Controls.Add(this.VarePrisTxtLbl);
+            this.VareInfoGrpBox.Controls.Add(this.NameTxtLbl);
+            this.VareInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VareInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.VareInfoGrpBox.Location = new System.Drawing.Point(0, 286);
+            this.VareInfoGrpBox.Name = "VareInfoGrpBox";
+            this.VareInfoGrpBox.Size = new System.Drawing.Size(648, 315);
+            this.VareInfoGrpBox.TabIndex = 1;
+            this.VareInfoGrpBox.TabStop = false;
+            this.VareInfoGrpBox.Text = "Vare Information";
+            // 
+            // GrebTxtLbl
+            // 
+            this.GrebTxtLbl.AutoSize = true;
+            this.GrebTxtLbl.Location = new System.Drawing.Point(473, 111);
+            this.GrebTxtLbl.Name = "GrebTxtLbl";
+            this.GrebTxtLbl.Size = new System.Drawing.Size(44, 21);
+            this.GrebTxtLbl.TabIndex = 4;
+            this.GrebTxtLbl.Text = "Greb";
+            // 
+            // BeskrivelseGrpBox
+            // 
+            this.BeskrivelseGrpBox.Controls.Add(this.VareBeskrivelseTxtBox);
+            this.BeskrivelseGrpBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BeskrivelseGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.BeskrivelseGrpBox.Location = new System.Drawing.Point(3, 177);
+            this.BeskrivelseGrpBox.Name = "BeskrivelseGrpBox";
+            this.BeskrivelseGrpBox.Size = new System.Drawing.Size(642, 135);
+            this.BeskrivelseGrpBox.TabIndex = 3;
+            this.BeskrivelseGrpBox.TabStop = false;
+            this.BeskrivelseGrpBox.Text = "Beskrivelse";
+            // 
+            // VareBeskrivelseTxtBox
+            // 
+            this.VareBeskrivelseTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.VareBeskrivelseTxtBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.VareBeskrivelseTxtBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VareBeskrivelseTxtBox.Location = new System.Drawing.Point(3, 25);
+            this.VareBeskrivelseTxtBox.Multiline = true;
+            this.VareBeskrivelseTxtBox.Name = "VareBeskrivelseTxtBox";
+            this.VareBeskrivelseTxtBox.Size = new System.Drawing.Size(636, 107);
+            this.VareBeskrivelseTxtBox.TabIndex = 0;
+            this.VareBeskrivelseTxtBox.Text = resources.GetString("VareBeskrivelseTxtBox.Text");
+            // 
+            // MaterialeTxtLbl
+            // 
+            this.MaterialeTxtLbl.AutoSize = true;
+            this.MaterialeTxtLbl.Location = new System.Drawing.Point(257, 111);
+            this.MaterialeTxtLbl.Name = "MaterialeTxtLbl";
+            this.MaterialeTxtLbl.Size = new System.Drawing.Size(75, 21);
+            this.MaterialeTxtLbl.TabIndex = 0;
+            this.MaterialeTxtLbl.Text = "Materiale";
+            // 
+            // FarveTxtLbl
+            // 
+            this.FarveTxtLbl.AutoSize = true;
+            this.FarveTxtLbl.Location = new System.Drawing.Point(63, 111);
+            this.FarveTxtLbl.Name = "FarveTxtLbl";
+            this.FarveTxtLbl.Size = new System.Drawing.Size(47, 21);
+            this.FarveTxtLbl.TabIndex = 0;
+            this.FarveTxtLbl.Text = "Farve";
+            // 
+            // VareGruppeTxtLbl
+            // 
+            this.VareGruppeTxtLbl.AutoSize = true;
+            this.VareGruppeTxtLbl.Location = new System.Drawing.Point(16, 72);
+            this.VareGruppeTxtLbl.Name = "VareGruppeTxtLbl";
+            this.VareGruppeTxtLbl.Size = new System.Drawing.Size(94, 21);
+            this.VareGruppeTxtLbl.TabIndex = 0;
+            this.VareGruppeTxtLbl.Text = "Varegruppe:";
+            // 
+            // VareIdTxtLbl
+            // 
+            this.VareIdTxtLbl.AutoSize = true;
+            this.VareIdTxtLbl.Location = new System.Drawing.Point(16, 51);
+            this.VareIdTxtLbl.Name = "VareIdTxtLbl";
+            this.VareIdTxtLbl.Size = new System.Drawing.Size(63, 21);
+            this.VareIdTxtLbl.TabIndex = 0;
+            this.VareIdTxtLbl.Text = "Vare ID:";
+            // 
+            // VareGruppeContentLabel
+            // 
+            this.VareGruppeContentLabel.AutoSize = true;
+            this.VareGruppeContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.VareGruppeContentLabel.Location = new System.Drawing.Point(116, 72);
+            this.VareGruppeContentLabel.Name = "VareGruppeContentLabel";
+            this.VareGruppeContentLabel.Size = new System.Drawing.Size(66, 21);
+            this.VareGruppeContentLabel.TabIndex = 0;
+            this.VareGruppeContentLabel.Text = "Højskab";
+            // 
+            // VareIdContentLabel
+            // 
+            this.VareIdContentLabel.AutoSize = true;
+            this.VareIdContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.VareIdContentLabel.Location = new System.Drawing.Point(116, 51);
+            this.VareIdContentLabel.Name = "VareIdContentLabel";
+            this.VareIdContentLabel.Size = new System.Drawing.Size(73, 21);
+            this.VareIdContentLabel.TabIndex = 0;
+            this.VareIdContentLabel.Text = "1365884";
+            // 
+            // VarePrisContentLabel
+            // 
+            this.VarePrisContentLabel.AutoSize = true;
+            this.VarePrisContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.VarePrisContentLabel.Location = new System.Drawing.Point(431, 30);
+            this.VarePrisContentLabel.Name = "VarePrisContentLabel";
+            this.VarePrisContentLabel.Size = new System.Drawing.Size(88, 21);
+            this.VarePrisContentLabel.TabIndex = 0;
+            this.VarePrisContentLabel.Text = "1299,95 kr.";
+            // 
+            // GrebContentLabel
+            // 
+            this.GrebContentLabel.AutoSize = true;
+            this.GrebContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.GrebContentLabel.Location = new System.Drawing.Point(473, 132);
+            this.GrebContentLabel.Name = "GrebContentLabel";
+            this.GrebContentLabel.Size = new System.Drawing.Size(44, 21);
+            this.GrebContentLabel.TabIndex = 0;
+            this.GrebContentLabel.Text = "Greb";
+            // 
+            // MaterialeContentLabel
+            // 
+            this.MaterialeContentLabel.AutoSize = true;
+            this.MaterialeContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.MaterialeContentLabel.Location = new System.Drawing.Point(257, 132);
+            this.MaterialeContentLabel.Name = "MaterialeContentLabel";
+            this.MaterialeContentLabel.Size = new System.Drawing.Size(75, 21);
+            this.MaterialeContentLabel.TabIndex = 0;
+            this.MaterialeContentLabel.Text = "Materiale";
+            // 
+            // FarveContentLabel
+            // 
+            this.FarveContentLabel.AutoSize = true;
+            this.FarveContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.FarveContentLabel.Location = new System.Drawing.Point(63, 132);
+            this.FarveContentLabel.Name = "FarveContentLabel";
+            this.FarveContentLabel.Size = new System.Drawing.Size(47, 21);
+            this.FarveContentLabel.TabIndex = 0;
+            this.FarveContentLabel.Text = "Farve";
+            // 
+            // NameContentLabel
+            // 
+            this.NameContentLabel.AutoSize = true;
+            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.NameContentLabel.Location = new System.Drawing.Point(116, 30);
+            this.NameContentLabel.Name = "NameContentLabel";
+            this.NameContentLabel.Size = new System.Drawing.Size(175, 21);
+            this.NameContentLabel.TabIndex = 0;
+            this.NameContentLabel.Text = "Classic Køkkenskab, Høj";
+            // 
+            // VarePrisTxtLbl
+            // 
+            this.VarePrisTxtLbl.AutoSize = true;
+            this.VarePrisTxtLbl.Location = new System.Drawing.Point(386, 30);
+            this.VarePrisTxtLbl.Name = "VarePrisTxtLbl";
+            this.VarePrisTxtLbl.Size = new System.Drawing.Size(39, 21);
+            this.VarePrisTxtLbl.TabIndex = 0;
+            this.VarePrisTxtLbl.Text = "Pris:";
+            // 
+            // NameTxtLbl
+            // 
+            this.NameTxtLbl.AutoSize = true;
+            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
+            this.NameTxtLbl.Name = "NameTxtLbl";
+            this.NameTxtLbl.Size = new System.Drawing.Size(44, 21);
+            this.NameTxtLbl.TabIndex = 0;
+            this.NameTxtLbl.Text = "Vare:";
             // 
             // OrdreInfoGrpBox
             // 
@@ -311,6 +496,16 @@
             this.KundeContentLabel.TabIndex = 0;
             this.KundeContentLabel.Text = "Jens Petersen";
             // 
+            // EmployeeContentLabel
+            // 
+            this.EmployeeContentLabel.AutoSize = true;
+            this.EmployeeContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeContentLabel.Location = new System.Drawing.Point(431, 30);
+            this.EmployeeContentLabel.Name = "EmployeeContentLabel";
+            this.EmployeeContentLabel.Size = new System.Drawing.Size(136, 21);
+            this.EmployeeContentLabel.TabIndex = 0;
+            this.EmployeeContentLabel.Text = "MedarbejderNavn";
+            // 
             // TotalPrisContentLabel
             // 
             this.TotalPrisContentLabel.AutoSize = true;
@@ -331,6 +526,15 @@
             this.OrdreIdContentLabel.TabIndex = 0;
             this.OrdreIdContentLabel.Text = "12345";
             // 
+            // EmployeeTxtLbl
+            // 
+            this.EmployeeTxtLbl.AutoSize = true;
+            this.EmployeeTxtLbl.Location = new System.Drawing.Point(254, 30);
+            this.EmployeeTxtLbl.Name = "EmployeeTxtLbl";
+            this.EmployeeTxtLbl.Size = new System.Drawing.Size(171, 21);
+            this.EmployeeTxtLbl.TabIndex = 0;
+            this.EmployeeTxtLbl.Text = "Ansvarlig Medarbejder:";
+            // 
             // PrisTxtLbl
             // 
             this.PrisTxtLbl.AutoSize = true;
@@ -348,189 +552,6 @@
             this.OrdreIdTxtLbl.Size = new System.Drawing.Size(71, 21);
             this.OrdreIdTxtLbl.TabIndex = 0;
             this.OrdreIdTxtLbl.Text = "Ordre Id:";
-            // 
-            // VareInfoGrpBox
-            // 
-            this.VareInfoGrpBox.Controls.Add(this.GrebTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.BeskrivelseGrpBox);
-            this.VareInfoGrpBox.Controls.Add(this.MaterialeTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.FarveTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.VareGruppeTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.VareIdTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.VareGruppeContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.VareIdContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.VarePrisContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.GrebContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.MaterialeContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.FarveContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.NameContentLabel);
-            this.VareInfoGrpBox.Controls.Add(this.VarePrisTxtLbl);
-            this.VareInfoGrpBox.Controls.Add(this.NameTxtLbl);
-            this.VareInfoGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VareInfoGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.VareInfoGrpBox.Location = new System.Drawing.Point(0, 286);
-            this.VareInfoGrpBox.Name = "VareInfoGrpBox";
-            this.VareInfoGrpBox.Size = new System.Drawing.Size(648, 315);
-            this.VareInfoGrpBox.TabIndex = 1;
-            this.VareInfoGrpBox.TabStop = false;
-            this.VareInfoGrpBox.Text = "Vare Information";
-            // 
-            // BeskrivelseGrpBox
-            // 
-            this.BeskrivelseGrpBox.Controls.Add(this.VareBeskrivelseTxtBox);
-            this.BeskrivelseGrpBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BeskrivelseGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.BeskrivelseGrpBox.Location = new System.Drawing.Point(3, 177);
-            this.BeskrivelseGrpBox.Name = "BeskrivelseGrpBox";
-            this.BeskrivelseGrpBox.Size = new System.Drawing.Size(642, 135);
-            this.BeskrivelseGrpBox.TabIndex = 3;
-            this.BeskrivelseGrpBox.TabStop = false;
-            this.BeskrivelseGrpBox.Text = "Beskrivelse";
-            // 
-            // VareBeskrivelseTxtBox
-            // 
-            this.VareBeskrivelseTxtBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.VareBeskrivelseTxtBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.VareBeskrivelseTxtBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VareBeskrivelseTxtBox.Location = new System.Drawing.Point(3, 25);
-            this.VareBeskrivelseTxtBox.Multiline = true;
-            this.VareBeskrivelseTxtBox.Name = "VareBeskrivelseTxtBox";
-            this.VareBeskrivelseTxtBox.Size = new System.Drawing.Size(636, 107);
-            this.VareBeskrivelseTxtBox.TabIndex = 0;
-            this.VareBeskrivelseTxtBox.Text = resources.GetString("VareBeskrivelseTxtBox.Text");
-            // 
-            // VareGruppeTxtLbl
-            // 
-            this.VareGruppeTxtLbl.AutoSize = true;
-            this.VareGruppeTxtLbl.Location = new System.Drawing.Point(16, 72);
-            this.VareGruppeTxtLbl.Name = "VareGruppeTxtLbl";
-            this.VareGruppeTxtLbl.Size = new System.Drawing.Size(94, 21);
-            this.VareGruppeTxtLbl.TabIndex = 0;
-            this.VareGruppeTxtLbl.Text = "Varegruppe:";
-            // 
-            // VareIdTxtLbl
-            // 
-            this.VareIdTxtLbl.AutoSize = true;
-            this.VareIdTxtLbl.Location = new System.Drawing.Point(16, 51);
-            this.VareIdTxtLbl.Name = "VareIdTxtLbl";
-            this.VareIdTxtLbl.Size = new System.Drawing.Size(63, 21);
-            this.VareIdTxtLbl.TabIndex = 0;
-            this.VareIdTxtLbl.Text = "Vare ID:";
-            // 
-            // VareGruppeContentLabel
-            // 
-            this.VareGruppeContentLabel.AutoSize = true;
-            this.VareGruppeContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.VareGruppeContentLabel.Location = new System.Drawing.Point(116, 72);
-            this.VareGruppeContentLabel.Name = "VareGruppeContentLabel";
-            this.VareGruppeContentLabel.Size = new System.Drawing.Size(66, 21);
-            this.VareGruppeContentLabel.TabIndex = 0;
-            this.VareGruppeContentLabel.Text = "Højskab";
-            // 
-            // VareIdContentLabel
-            // 
-            this.VareIdContentLabel.AutoSize = true;
-            this.VareIdContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.VareIdContentLabel.Location = new System.Drawing.Point(116, 51);
-            this.VareIdContentLabel.Name = "VareIdContentLabel";
-            this.VareIdContentLabel.Size = new System.Drawing.Size(73, 21);
-            this.VareIdContentLabel.TabIndex = 0;
-            this.VareIdContentLabel.Text = "1365884";
-            // 
-            // VarePrisContentLabel
-            // 
-            this.VarePrisContentLabel.AutoSize = true;
-            this.VarePrisContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.VarePrisContentLabel.Location = new System.Drawing.Point(431, 30);
-            this.VarePrisContentLabel.Name = "VarePrisContentLabel";
-            this.VarePrisContentLabel.Size = new System.Drawing.Size(88, 21);
-            this.VarePrisContentLabel.TabIndex = 0;
-            this.VarePrisContentLabel.Text = "1299,95 kr.";
-            // 
-            // NameContentLabel
-            // 
-            this.NameContentLabel.AutoSize = true;
-            this.NameContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.NameContentLabel.Location = new System.Drawing.Point(116, 30);
-            this.NameContentLabel.Name = "NameContentLabel";
-            this.NameContentLabel.Size = new System.Drawing.Size(175, 21);
-            this.NameContentLabel.TabIndex = 0;
-            this.NameContentLabel.Text = "Classic Køkkenskab, Høj";
-            // 
-            // VarePrisTxtLbl
-            // 
-            this.VarePrisTxtLbl.AutoSize = true;
-            this.VarePrisTxtLbl.Location = new System.Drawing.Point(386, 30);
-            this.VarePrisTxtLbl.Name = "VarePrisTxtLbl";
-            this.VarePrisTxtLbl.Size = new System.Drawing.Size(39, 21);
-            this.VarePrisTxtLbl.TabIndex = 0;
-            this.VarePrisTxtLbl.Text = "Pris:";
-            // 
-            // NameTxtLbl
-            // 
-            this.NameTxtLbl.AutoSize = true;
-            this.NameTxtLbl.Location = new System.Drawing.Point(16, 30);
-            this.NameTxtLbl.Name = "NameTxtLbl";
-            this.NameTxtLbl.Size = new System.Drawing.Size(44, 21);
-            this.NameTxtLbl.TabIndex = 0;
-            this.NameTxtLbl.Text = "Vare:";
-            // 
-            // FarveTxtLbl
-            // 
-            this.FarveTxtLbl.AutoSize = true;
-            this.FarveTxtLbl.Location = new System.Drawing.Point(63, 111);
-            this.FarveTxtLbl.Name = "FarveTxtLbl";
-            this.FarveTxtLbl.Size = new System.Drawing.Size(47, 21);
-            this.FarveTxtLbl.TabIndex = 0;
-            this.FarveTxtLbl.Text = "Farve";
-            // 
-            // MaterialeTxtLbl
-            // 
-            this.MaterialeTxtLbl.AutoSize = true;
-            this.MaterialeTxtLbl.Location = new System.Drawing.Point(257, 111);
-            this.MaterialeTxtLbl.Name = "MaterialeTxtLbl";
-            this.MaterialeTxtLbl.Size = new System.Drawing.Size(75, 21);
-            this.MaterialeTxtLbl.TabIndex = 0;
-            this.MaterialeTxtLbl.Text = "Materiale";
-            // 
-            // GrebTxtLbl
-            // 
-            this.GrebTxtLbl.AutoSize = true;
-            this.GrebTxtLbl.Location = new System.Drawing.Point(473, 111);
-            this.GrebTxtLbl.Name = "GrebTxtLbl";
-            this.GrebTxtLbl.Size = new System.Drawing.Size(44, 21);
-            this.GrebTxtLbl.TabIndex = 4;
-            this.GrebTxtLbl.Text = "Greb";
-            // 
-            // FarveContentLabel
-            // 
-            this.FarveContentLabel.AutoSize = true;
-            this.FarveContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.FarveContentLabel.Location = new System.Drawing.Point(63, 132);
-            this.FarveContentLabel.Name = "FarveContentLabel";
-            this.FarveContentLabel.Size = new System.Drawing.Size(47, 21);
-            this.FarveContentLabel.TabIndex = 0;
-            this.FarveContentLabel.Text = "Farve";
-            // 
-            // MaterialeContentLabel
-            // 
-            this.MaterialeContentLabel.AutoSize = true;
-            this.MaterialeContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.MaterialeContentLabel.Location = new System.Drawing.Point(257, 132);
-            this.MaterialeContentLabel.Name = "MaterialeContentLabel";
-            this.MaterialeContentLabel.Size = new System.Drawing.Size(75, 21);
-            this.MaterialeContentLabel.TabIndex = 0;
-            this.MaterialeContentLabel.Text = "Materiale";
-            // 
-            // GrebContentLabel
-            // 
-            this.GrebContentLabel.AutoSize = true;
-            this.GrebContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.GrebContentLabel.Location = new System.Drawing.Point(473, 132);
-            this.GrebContentLabel.Name = "GrebContentLabel";
-            this.GrebContentLabel.Size = new System.Drawing.Size(44, 21);
-            this.GrebContentLabel.TabIndex = 0;
-            this.GrebContentLabel.Text = "Greb";
             // 
             // Vare
             // 
@@ -573,6 +594,13 @@
             this.Materiale.Name = "Materiale";
             this.Materiale.ReadOnly = true;
             // 
+            // Antal
+            // 
+            this.Antal.DataPropertyName = "Count";
+            this.Antal.HeaderText = "Antal";
+            this.Antal.Name = "Antal";
+            this.Antal.ReadOnly = true;
+            // 
             // Pris
             // 
             this.Pris.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -581,25 +609,6 @@
             this.Pris.Name = "Pris";
             this.Pris.ReadOnly = true;
             this.Pris.Width = 61;
-            // 
-            // EmployeeTxtLbl
-            // 
-            this.EmployeeTxtLbl.AutoSize = true;
-            this.EmployeeTxtLbl.Location = new System.Drawing.Point(254, 30);
-            this.EmployeeTxtLbl.Name = "EmployeeTxtLbl";
-            this.EmployeeTxtLbl.Size = new System.Drawing.Size(171, 21);
-            this.EmployeeTxtLbl.TabIndex = 0;
-            this.EmployeeTxtLbl.Text = "Ansvarlig Medarbejder:";
-            // 
-            // EmployeeContentLabel
-            // 
-            this.EmployeeContentLabel.AutoSize = true;
-            this.EmployeeContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.EmployeeContentLabel.Location = new System.Drawing.Point(431, 30);
-            this.EmployeeContentLabel.Name = "EmployeeContentLabel";
-            this.EmployeeContentLabel.Size = new System.Drawing.Size(136, 21);
-            this.EmployeeContentLabel.TabIndex = 0;
-            this.EmployeeContentLabel.Text = "MedarbejderNavn";
             // 
             // VisOrdreForm
             // 
@@ -622,14 +631,14 @@
             this.VareListeGrpBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.VareListeDataGrid)).EndInit();
             this.RightMainPanel.ResumeLayout(false);
-            this.OrdreInfoGrpBox.ResumeLayout(false);
-            this.OrdreInfoGrpBox.PerformLayout();
-            this.OrdreCommentGrpBox.ResumeLayout(false);
-            this.OrdreCommentGrpBox.PerformLayout();
             this.VareInfoGrpBox.ResumeLayout(false);
             this.VareInfoGrpBox.PerformLayout();
             this.BeskrivelseGrpBox.ResumeLayout(false);
             this.BeskrivelseGrpBox.PerformLayout();
+            this.OrdreInfoGrpBox.ResumeLayout(false);
+            this.OrdreInfoGrpBox.PerformLayout();
+            this.OrdreCommentGrpBox.ResumeLayout(false);
+            this.OrdreCommentGrpBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -675,14 +684,15 @@
         private System.Windows.Forms.Label NameContentLabel;
         private System.Windows.Forms.Label VarePrisTxtLbl;
         private System.Windows.Forms.Label NameTxtLbl;
+        private System.Windows.Forms.Label EmployeeContentLabel;
+        private System.Windows.Forms.Label EmployeeTxtLbl;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vare;
         private System.Windows.Forms.DataGridViewTextBoxColumn Varegruppe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Greb;
         private System.Windows.Forms.DataGridViewTextBoxColumn Farve;
         private System.Windows.Forms.DataGridViewTextBoxColumn Materiale;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Antal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pris;
-        private System.Windows.Forms.Label EmployeeContentLabel;
-        private System.Windows.Forms.Label EmployeeTxtLbl;
     }
 }
 

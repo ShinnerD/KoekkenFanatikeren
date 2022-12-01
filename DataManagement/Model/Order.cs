@@ -37,7 +37,7 @@ namespace DataManagement.Model
             int result = 0;
             foreach (Vare vare in OrderProducts)
             {
-                result += vare.Price;
+                result += (vare.Price * vare.Count);
             }
             return result;
         }

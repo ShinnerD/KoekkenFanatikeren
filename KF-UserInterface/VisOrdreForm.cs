@@ -13,13 +13,13 @@ namespace KF_UserInterface
         public Order VisteOrder { get; set; }
         public Vare ValgteVare { get; set; }
 
-        public VisOrdreForm(int orderId)
+        public VisOrdreForm(Order order)
         {
             InitializeComponent();
 
             try
             {
-                VisteOrder = new DataManagement.Service.OrderService().GetOrderFromId(orderId);
+                VisteOrder = order;
                 SetupOrderVareListe();
                 SetupCustomerInfo();
             }

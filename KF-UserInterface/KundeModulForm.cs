@@ -61,6 +61,8 @@ namespace KF_UserInterface
         {
             try
             {
+                Cursor = Cursors.WaitCursor;
+
                 //Set pagewide ValgteKunde property to the chosen customer in the row.
                 ValgteKunde = KundeListeGridView.SelectedRows[0].DataBoundItem as Kunde;
 
@@ -74,6 +76,8 @@ namespace KF_UserInterface
                 ValgteKundeOrders = new OrderService().GetCustomerOrders(ValgteKunde.KundeID);
                 KundeOrdreGridView.AutoGenerateColumns = false;
                 KundeOrdreGridView.DataSource = ValgteKundeOrders;
+
+                Cursor = Cursors.Default;
             }
             catch (Exception e)
             {
@@ -127,10 +131,10 @@ namespace KF_UserInterface
 
         private void VisOrdreButton_Click(object sender, EventArgs e)
         {
-            if (KundeOrdreGridView.RowCount > 0)
+            if (KundeOrdreGridView.SelectedRows.Count > 0)
             {
                 Order valgtOrder = KundeOrdreGridView.SelectedRows[0].DataBoundItem as Order;
-                VisOrdreForm ordreVindue = new VisOrdreForm(valgtOrder.Id);
+                VisOrdreForm ordreVindue = new VisOrdreForm(valgtOrder);
                 ordreVindue.Show();
             }
 
