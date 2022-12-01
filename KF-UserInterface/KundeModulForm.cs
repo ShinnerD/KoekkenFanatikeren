@@ -139,5 +139,10 @@ namespace KF_UserInterface
             }
 
         }
+
+        private void KundeModulForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
