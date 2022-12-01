@@ -29,7 +29,9 @@ namespace KF_UserInterface
 
         private void KundeModulButton_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             KundeModulForm kundeModul = new KundeModulForm();
+            Cursor = Cursors.Default;
             this.Hide();
             kundeModul.ShowDialog();
             this.Show();
@@ -37,7 +39,9 @@ namespace KF_UserInterface
 
         private void VareModulButton_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.WaitCursor;
             VareModulForm vareModul = new VareModulForm();
+            Cursor = Cursors.Default;
             this.Hide();
             vareModul.ShowDialog();
             this.Show();

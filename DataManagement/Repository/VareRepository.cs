@@ -39,8 +39,10 @@ namespace DataManagement.Repository
             Vare result = new Vare();
             result.Product_ID = dtovare.Product_Id;
             result.ProductGroup_ID = dtovare.ProductGroup_Id;
-            result.ProductName = dtovare.ProductName;
             result.Price = dtovare.Price;
+
+            result.ProductName = dtovare.ProductName;
+            result.Description = dtovare.Product_Description;
 
             var dtoProductMaterials = DataContext.Product_Materials.Where(i => i.Product_Id == dtovare.Product_Id);
             result.AvailableMaterials = new List<Model.Material>();
@@ -71,8 +73,6 @@ namespace DataManagement.Repository
                 grip.Grip_Name = DataContext.Grips.FirstOrDefault(i => i.Grip_Id == dtoProductGrip.Grip_Id).Grip_Name;
                 result.AvailableGrips.Add(grip);
             }
-
-            result.Description = dtovare.Product_Description;
 
             VareGruppeRepository vareGruppeRepository = new VareGruppeRepository();
             result.Varegruppe = vareGruppeRepository.FindEnVaregruppe(dtovare.ProductGroup_Id);
