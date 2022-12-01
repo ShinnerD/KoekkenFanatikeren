@@ -1,6 +1,8 @@
 ﻿using DataManagement.Database;
 using System.Collections.Generic;
+using System.Linq;
 
+//Skrevet af Erik og vedligholdt 
 namespace DataManagement.Repository
 {
     public class EmployeeRepository
@@ -21,19 +23,35 @@ namespace DataManagement.Repository
             {
                 Model.Employee Employee = new Model.Employee();
 
-               
-               
+
+
                 Employee.EmployeeID = dbEmployee.Employee_Id;
                 Employee.FirstName = dbEmployee.FirstName;
                 Employee.LastName = dbEmployee.LastName;
                 Employee.PhoneNumber = dbEmployee.Phonenumber;
                 Employee.Address = dbEmployee.Address;
                 Employee.Salary = dbEmployee.Salary;
-                
-            result.Add(Employee);
+
+                result.Add(Employee);
             }
             return result;
-            //Skrevet af Erik og vedligholdt 
         }
+
+        public Model.Employee GetEmployee(int employeeId)
+        {
+            Model.Employee result = new Model.Employee();
+
+            var dbEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == employeeId);
+
+            result.EmployeeID = dbEmployee.Employee_Id;
+            result.FirstName = dbEmployee.FirstName;
+            result.LastName = dbEmployee.LastName;
+            result.PhoneNumber = dbEmployee.Phonenumber;
+            result.Address = dbEmployee.Address;
+            result.Salary = dbEmployee.Salary;
+
+            return result;
+        }
+
     }
 }
