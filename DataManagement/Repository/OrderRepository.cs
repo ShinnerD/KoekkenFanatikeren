@@ -71,30 +71,13 @@ namespace DataManagement.Repository
             result.DateOfSending = dbOrder.DateOfSending;
             result.Order_Comment = dbOrder.Order_Comment;
 
-            var dbCustomer = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == dbOrder.Customer_Id);
-            result.Kunde = new Kunde();
-            result.Kunde.KundeID = dbCustomer.Customer_Id;
-            result.Kunde.FirstName = dbCustomer.FirstName;
-            result.Kunde.LastName = dbCustomer.LastName;
-            result.Kunde.Street = dbCustomer.Streetname;
-            result.Kunde.City = dbCustomer.City;
-            result.Kunde.Zipcode = dbCustomer.Zipcode;
-            result.Kunde.PhoneNumber = dbCustomer.Phonenumber;
-            result.Kunde.Email = dbCustomer.Email;
+            result.Kunde = new KundeRepository().GetKunde(dbOrder.Customer_Id);
 
-            var dbEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == dbOrder.Employee_Id);
-            result.Employee = new Model.Employee();
-            result.Employee.EmployeeID = dbEmployee.Employee_Id;
-            result.Employee.FirstName = dbEmployee.FirstName;
-            result.Employee.LastName = dbEmployee.LastName;
-            result.Employee.PhoneNumber = dbEmployee.Phonenumber;
-            result.Employee.Address = dbEmployee.Address;
-            result.Employee.Salary = dbEmployee.Salary;
+            result.Employee = new EmployeeRepository().GetEmployee(dbOrder.Employee_Id);
 
-            var dbOrderProducts = DataContext.Order_Products.Where(i => i.Order_Id == dbOrder.Order_Id).ToList();
             result.OrderProducts = new List<Vare>();
             VareRepository vareRepository = new VareRepository();
-            foreach (var dbOrderProduct in dbOrderProducts)
+            foreach (var dbOrderProduct in dbOrder.Order_Products)
             {
                 Model.Vare nyVare = vareRepository.GetOneVare(dbOrderProduct.Product_Id);
 
@@ -144,6 +127,11 @@ namespace DataManagement.Repository
             }
         }
 
+        /// <summary>
+        /// Gemmer en Ordre i databasen samt dens vareliste. Hvis ordren findes i forvejen opdateres den i databasen.
+        /// </summary>
+        /// <param name="order"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public void SaveOrder(Model.Order order)
         {
             if (order != null) //Hvis order ikke er null gem ordren ellers throw argument null exception.
@@ -177,8 +165,8 @@ namespace DataManagement.Repository
                     foreach (Vare vare in order.OrderProducts)
                     {
                         var nyVare = new Database.Order_Product();
-                        nyVare.Order_Id = order.Id; //skal have fat i det nyligt genererede ordre id,
-                                                    //regner med det er opdateret her efter Submitchanges.
+                        nyVare.Order_Id = dbOrder.Order_Id; //skal have fat i det nyligt genererede ordre id,
+                                                            //regner med det er opdateret her efter Submitchanges.
                         nyVare.Product_Id = vare.Product_ID;
                         nyVare.Product_Colour = vare.ChosenColor.Color_Id;
                         nyVare.Product_Material = vare.ChosenMaterial.Material_Id;
