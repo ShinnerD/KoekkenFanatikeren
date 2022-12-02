@@ -85,11 +85,12 @@ namespace DataManagement.Repository
                 targetKunde.LastName = kunde.LastName;
                 targetKunde.Phonenumber = kunde.PhoneNumber;
                 targetKunde.Streetname = kunde.Street;
-                targetKunde.City= kunde.City;
-                targetKunde.Zipcode= kunde.Zipcode;
-                targetKunde.Email= kunde.Email;
-                
+                targetKunde.City = kunde.City;
+                targetKunde.Zipcode = kunde.Zipcode;
+                targetKunde.Email = kunde.Email;
+
                 DataContext.SubmitChanges();
             }
         }
     }
+}
