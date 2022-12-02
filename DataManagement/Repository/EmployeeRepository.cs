@@ -1,4 +1,5 @@
 ﻿using DataManagement.Database;
+using DataManagement.Model;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -51,6 +52,37 @@ namespace DataManagement.Repository
             result.Salary = dbEmployee.Salary;
 
             return result;
+        }
+
+        public void SaveNewEmployee(Model.Employee employee)
+        {
+            Database.Employee newEmployee = new Database.Employee();
+
+            newEmployee.FirstName = employee.FirstName;
+            newEmployee.LastName = employee.LastName;
+            newEmployee.Phonenumber = employee.PhoneNumber;
+            newEmployee.Address = employee.Address;
+            newEmployee.Salary = employee.Salary;
+
+            DataContext.Employees.InsertOnSubmit(newEmployee);
+            DataContext.SubmitChanges();
+        }
+        public void EditEmployee(Model.Employee employee)
+        {
+            var targetEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == employee.EmployeeID);
+
+            if (targetEmployee != null)
+            {
+            
+                targetEmployee.FirstName = employee.FirstName;
+                targetEmployee.LastName = employee.LastName;
+                targetEmployee.Phonenumber= employee.PhoneNumber;
+                targetEmployee.Address = employee.Address;
+                targetEmployee.Salary = employee.Salary;
+                DataContext.SubmitChanges();
+
+            }
+        
         }
 
     }

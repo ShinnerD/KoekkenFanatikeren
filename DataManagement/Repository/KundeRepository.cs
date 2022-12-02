@@ -15,6 +15,7 @@ namespace DataManagement.Repository
             DataContext = new KFDataClassesDataContext();
         }
 
+
         public List<Kunde> GetAllKunder()
         {
             List<Kunde> result = new List<Kunde>();
@@ -57,6 +58,38 @@ namespace DataManagement.Repository
         }
 
 
-    }
+        public void SaveNewKunde(Kunde kunde)
+        {
+            Database.Customer newCustomer = new Database.Customer();
 
-}
+            newCustomer.FirstName = kunde.FirstName;
+            newCustomer.LastName = kunde.LastName;
+            newCustomer.Streetname = kunde.Street;
+            newCustomer.City = kunde.City;
+            newCustomer.Zipcode = kunde.Zipcode;
+            newCustomer.Phonenumber = kunde.PhoneNumber;
+            newCustomer.Email = kunde.Email;
+
+            DataContext.Customers.InsertOnSubmit(newCustomer);
+            DataContext.SubmitChanges();
+        }
+
+
+        public void EditEmployee(Kunde kunde)
+        {
+            var targetKunde = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == kunde.KundeID);
+
+            if (targetKunde != null)
+            {
+                targetKunde.FirstName = kunde.FirstName;
+                targetKunde.LastName = kunde.LastName;
+                targetKunde.Phonenumber = kunde.PhoneNumber;
+                targetKunde.Streetname = kunde.Street;
+                targetKunde.City= kunde.City;
+                targetKunde.Zipcode= kunde.Zipcode;
+                targetKunde.Email= kunde.Email;
+                
+                DataContext.SubmitChanges();
+            }
+        }
+    }
