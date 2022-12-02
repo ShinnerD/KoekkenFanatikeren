@@ -1,5 +1,6 @@
 ﻿using DataManagement.Database;
 using DataManagement.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -83,6 +84,24 @@ namespace DataManagement.Repository
 
             }
         
+        }
+
+        public void DeleteEmployee(Model.Employee employee)
+        {
+            if (employee != null)
+            {
+                var targetEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == employee.EmployeeID);
+
+                if (targetEmployee != null)
+                {
+                    DataContext.Employees.DeleteOnSubmit(targetEmployee);
+                    DataContext.SubmitChanges();
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(employee));
+            }
         }
 
     }

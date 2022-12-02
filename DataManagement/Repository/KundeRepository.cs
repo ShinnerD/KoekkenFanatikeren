@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DataManagement.Model;
 using System.Linq;
+using System;
 
 //Skrevet af Erik og vedligholdt 
 namespace DataManagement.Repository
@@ -92,5 +93,25 @@ namespace DataManagement.Repository
                 DataContext.SubmitChanges();
             }
         }
+
+
+        public void DeleteKunde(Kunde kunde)
+        {
+            if (kunde != null)
+            {
+                var targetKunde = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == kunde.KundeID);
+
+                if (targetKunde != null)
+                {
+                    DataContext.Customers.DeleteOnSubmit(targetKunde);
+                    DataContext.SubmitChanges();
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(kunde));
+            }
+        }
+
     }
 }
