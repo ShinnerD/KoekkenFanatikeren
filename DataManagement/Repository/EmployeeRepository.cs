@@ -1,5 +1,6 @@
 ﻿using DataManagement.Database;
 using DataManagement.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,6 +16,7 @@ namespace DataManagement.Repository
             DataContext = new KFDataClassesDataContext();
         }
 
+        // Getting a list of Employee from database
         public List<Model.Employee> GetAllEmployee()
         {
             List<Model.Employee> result = new List<Model.Employee>();
@@ -37,7 +39,7 @@ namespace DataManagement.Repository
             }
             return result;
         }
-
+        //Getting a Employee from Database
         public Model.Employee GetEmployee(int employeeId)
         {
             Model.Employee result = new Model.Employee();
@@ -53,7 +55,7 @@ namespace DataManagement.Repository
 
             return result;
         }
-
+        //saving a new Employee in the database
         public void SaveNewEmployee(Model.Employee employee)
         {
             Database.Employee newEmployee = new Database.Employee();
@@ -67,6 +69,7 @@ namespace DataManagement.Repository
             DataContext.Employees.InsertOnSubmit(newEmployee);
             DataContext.SubmitChanges();
         }
+        // making a edit function in the database
         public void EditEmployee(Model.Employee employee)
         {
             var targetEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == employee.EmployeeID);
@@ -83,6 +86,24 @@ namespace DataManagement.Repository
 
             }
         
+        }
+        //deleteting a Employee in the database
+        public void DeleteEmployee(Model.Employee employee)
+        {
+            if (employee != null)
+            {
+                var targetEmployee = DataContext.Employees.FirstOrDefault(i => i.Employee_Id == employee.EmployeeID);
+
+                if (targetEmployee != null)
+                {
+                    DataContext.Employees.DeleteOnSubmit(targetEmployee);
+                    DataContext.SubmitChanges();
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(employee));
+            }
         }
 
     }

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using DataManagement.Model;
 using System.Linq;
+using System;
 
-//Skrevet af Erik og vedligholdt 
+//Customer Repository made by Erik 
 namespace DataManagement.Repository
 {
     public class KundeRepository
@@ -15,7 +16,10 @@ namespace DataManagement.Repository
             DataContext = new KFDataClassesDataContext();
         }
 
-
+        /// <summary>
+        /// Retrieve a list of customer from the Database
+        /// </summary>
+        /// <returns></returns>
         public List<Kunde> GetAllKunder()
         {
             List<Kunde> result = new List<Kunde>();
@@ -39,6 +43,8 @@ namespace DataManagement.Repository
             return result;
         }
 
+
+        //Getting a Customer from Database
         public Kunde GetKunde(int kundeId)
         {
             Kunde kunde = new Kunde();
@@ -57,7 +63,7 @@ namespace DataManagement.Repository
             return kunde;
         }
 
-
+        //Saving customer / making a new customer 
         public void SaveNewKunde(Kunde kunde)
         {
             Database.Customer newCustomer = new Database.Customer();
@@ -74,8 +80,9 @@ namespace DataManagement.Repository
             DataContext.SubmitChanges();
         }
 
+        //Making a edit funktion that can edit fx Phonenumber or City
 
-        public void EditEmployee(Kunde kunde)
+        public void EditKunde(Kunde kunde)
         {
             var targetKunde = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == kunde.KundeID);
 
@@ -92,5 +99,25 @@ namespace DataManagement.Repository
                 DataContext.SubmitChanges();
             }
         }
+
+        // a delete funktion in the Database 
+        public void DeleteKunde(Kunde kunde)
+        {
+            if (kunde != null)
+            {
+                var targetKunde = DataContext.Customers.FirstOrDefault(i => i.Customer_Id == kunde.KundeID);
+
+                if (targetKunde != null)
+                {
+                    DataContext.Customers.DeleteOnSubmit(targetKunde);
+                    DataContext.SubmitChanges();
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(kunde));
+            }
+        }
+
     }
 }

@@ -595,6 +595,7 @@
             this.RedigerVareButton.TabIndex = 1;
             this.RedigerVareButton.Text = "Rediger Vare";
             this.RedigerVareButton.UseVisualStyleBackColor = false;
+            this.RedigerVareButton.Click += new System.EventHandler(this.RedigerVareButton_Click);
             // 
             // NyVareButton
             // 
