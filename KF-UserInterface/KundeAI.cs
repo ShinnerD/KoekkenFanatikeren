@@ -221,5 +221,10 @@ namespace KF_UserInterface
             StartOverBtn.Visible = false;
             LandingPanel.BringToFront();
         }
+
+        private void KundeAI_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

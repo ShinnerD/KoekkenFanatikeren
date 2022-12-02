@@ -46,18 +46,15 @@
             this.HeaderLabel = new System.Windows.Forms.Label();
             this.HeaderImageLabel = new System.Windows.Forms.Label();
             this.BottomPanel = new System.Windows.Forms.Panel();
+            this.ResetBtn = new System.Windows.Forms.Button();
             this.StartOverBtn = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.Question1Panel = new System.Windows.Forms.Panel();
-            this.EksklusivtBtn = new System.Windows.Forms.Button();
-            this.BalanceBtn = new System.Windows.Forms.Button();
-            this.SparerundeBtn = new System.Windows.Forms.Button();
-            this.Question1Lbl = new System.Windows.Forms.Label();
             this.LandingPanel = new System.Windows.Forms.Panel();
             this.StartBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Question4Panel = new System.Windows.Forms.Panel();
+            this.OtherBtn = new System.Windows.Forms.Button();
             this.MelaminBtn = new System.Windows.Forms.Button();
             this.LaminatBtn = new System.Windows.Forms.Button();
             this.TræBtn = new System.Windows.Forms.Button();
@@ -71,6 +68,11 @@
             this.DarkBtn = new System.Windows.Forms.Button();
             this.LightBtn = new System.Windows.Forms.Button();
             this.Question2Label = new System.Windows.Forms.Label();
+            this.Question1Panel = new System.Windows.Forms.Panel();
+            this.EksklusivtBtn = new System.Windows.Forms.Button();
+            this.BalanceBtn = new System.Windows.Forms.Button();
+            this.SparerundeBtn = new System.Windows.Forms.Button();
+            this.Question1Lbl = new System.Windows.Forms.Label();
             this.ResultPanel = new System.Windows.Forms.Panel();
             this.ResultUpperPanel = new System.Windows.Forms.Panel();
             this.VareListeGrpBox = new System.Windows.Forms.GroupBox();
@@ -96,16 +98,14 @@
             this.NameContentLabel = new System.Windows.Forms.Label();
             this.PrisTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
-            this.OtherBtn = new System.Windows.Forms.Button();
-            this.ResetBtn = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.Question1Panel.SuspendLayout();
             this.LandingPanel.SuspendLayout();
             this.Question4Panel.SuspendLayout();
             this.Question3Panel.SuspendLayout();
             this.Question2Panel.SuspendLayout();
+            this.Question1Panel.SuspendLayout();
             this.ResultPanel.SuspendLayout();
             this.ResultUpperPanel.SuspendLayout();
             this.VareListeGrpBox.SuspendLayout();
@@ -166,6 +166,22 @@
             this.BottomPanel.Size = new System.Drawing.Size(1284, 80);
             this.BottomPanel.TabIndex = 1;
             // 
+            // ResetBtn
+            // 
+            this.ResetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.ResetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ResetBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetBtn.ForeColor = System.Drawing.Color.White;
+            this.ResetBtn.Location = new System.Drawing.Point(1078, 31);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(154, 37);
+            this.ResetBtn.TabIndex = 1;
+            this.ResetBtn.Text = "Nulstil";
+            this.ResetBtn.UseVisualStyleBackColor = false;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            // 
             // StartOverBtn
             // 
             this.StartOverBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -195,78 +211,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1284, 601);
             this.MainPanel.TabIndex = 2;
-            // 
-            // Question1Panel
-            // 
-            this.Question1Panel.Controls.Add(this.EksklusivtBtn);
-            this.Question1Panel.Controls.Add(this.BalanceBtn);
-            this.Question1Panel.Controls.Add(this.SparerundeBtn);
-            this.Question1Panel.Controls.Add(this.Question1Lbl);
-            this.Question1Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Question1Panel.Location = new System.Drawing.Point(0, 0);
-            this.Question1Panel.Name = "Question1Panel";
-            this.Question1Panel.Size = new System.Drawing.Size(1284, 601);
-            this.Question1Panel.TabIndex = 3;
-            // 
-            // EksklusivtBtn
-            // 
-            this.EksklusivtBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EksklusivtBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.EksklusivtBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.EksklusivtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EksklusivtBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EksklusivtBtn.ForeColor = System.Drawing.Color.White;
-            this.EksklusivtBtn.Location = new System.Drawing.Point(797, 323);
-            this.EksklusivtBtn.Name = "EksklusivtBtn";
-            this.EksklusivtBtn.Size = new System.Drawing.Size(154, 37);
-            this.EksklusivtBtn.TabIndex = 13;
-            this.EksklusivtBtn.Text = "Eksklusivt";
-            this.EksklusivtBtn.UseVisualStyleBackColor = false;
-            this.EksklusivtBtn.Click += new System.EventHandler(this.EksklusivtBtn_Click);
-            // 
-            // BalanceBtn
-            // 
-            this.BalanceBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BalanceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.BalanceBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BalanceBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BalanceBtn.ForeColor = System.Drawing.Color.White;
-            this.BalanceBtn.Location = new System.Drawing.Point(570, 323);
-            this.BalanceBtn.Name = "BalanceBtn";
-            this.BalanceBtn.Size = new System.Drawing.Size(154, 37);
-            this.BalanceBtn.TabIndex = 11;
-            this.BalanceBtn.Text = "Balance";
-            this.BalanceBtn.UseVisualStyleBackColor = false;
-            this.BalanceBtn.Click += new System.EventHandler(this.BalanceBtn_Click);
-            // 
-            // SparerundeBtn
-            // 
-            this.SparerundeBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.SparerundeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.SparerundeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SparerundeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SparerundeBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SparerundeBtn.ForeColor = System.Drawing.Color.White;
-            this.SparerundeBtn.Location = new System.Drawing.Point(340, 323);
-            this.SparerundeBtn.Name = "SparerundeBtn";
-            this.SparerundeBtn.Size = new System.Drawing.Size(154, 37);
-            this.SparerundeBtn.TabIndex = 12;
-            this.SparerundeBtn.Text = "Sparerunde";
-            this.SparerundeBtn.UseVisualStyleBackColor = false;
-            this.SparerundeBtn.Click += new System.EventHandler(this.SparerundeBtn_Click);
-            // 
-            // Question1Lbl
-            // 
-            this.Question1Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Question1Lbl.AutoSize = true;
-            this.Question1Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Question1Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
-            this.Question1Lbl.Location = new System.Drawing.Point(385, 242);
-            this.Question1Lbl.Name = "Question1Lbl";
-            this.Question1Lbl.Size = new System.Drawing.Size(527, 32);
-            this.Question1Lbl.TabIndex = 10;
-            this.Question1Lbl.Text = "Hvor meget burde nye Køkkenelementer koste?";
             // 
             // LandingPanel
             // 
@@ -331,6 +275,22 @@
             this.Question4Panel.Name = "Question4Panel";
             this.Question4Panel.Size = new System.Drawing.Size(1284, 601);
             this.Question4Panel.TabIndex = 4;
+            // 
+            // OtherBtn
+            // 
+            this.OtherBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OtherBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.OtherBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.OtherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OtherBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OtherBtn.ForeColor = System.Drawing.Color.White;
+            this.OtherBtn.Location = new System.Drawing.Point(678, 360);
+            this.OtherBtn.Name = "OtherBtn";
+            this.OtherBtn.Size = new System.Drawing.Size(154, 37);
+            this.OtherBtn.TabIndex = 13;
+            this.OtherBtn.Text = "Andet";
+            this.OtherBtn.UseVisualStyleBackColor = false;
+            this.OtherBtn.Click += new System.EventHandler(this.OtherBtn_Click);
             // 
             // MelaminBtn
             // 
@@ -518,6 +478,78 @@
             this.Question2Label.Size = new System.Drawing.Size(462, 32);
             this.Question2Label.TabIndex = 5;
             this.Question2Label.Text = "Foretrækker du Lyse eller Mørke nuancer?";
+            // 
+            // Question1Panel
+            // 
+            this.Question1Panel.Controls.Add(this.EksklusivtBtn);
+            this.Question1Panel.Controls.Add(this.BalanceBtn);
+            this.Question1Panel.Controls.Add(this.SparerundeBtn);
+            this.Question1Panel.Controls.Add(this.Question1Lbl);
+            this.Question1Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Question1Panel.Location = new System.Drawing.Point(0, 0);
+            this.Question1Panel.Name = "Question1Panel";
+            this.Question1Panel.Size = new System.Drawing.Size(1284, 601);
+            this.Question1Panel.TabIndex = 3;
+            // 
+            // EksklusivtBtn
+            // 
+            this.EksklusivtBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EksklusivtBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.EksklusivtBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.EksklusivtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EksklusivtBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EksklusivtBtn.ForeColor = System.Drawing.Color.White;
+            this.EksklusivtBtn.Location = new System.Drawing.Point(797, 323);
+            this.EksklusivtBtn.Name = "EksklusivtBtn";
+            this.EksklusivtBtn.Size = new System.Drawing.Size(154, 37);
+            this.EksklusivtBtn.TabIndex = 13;
+            this.EksklusivtBtn.Text = "Eksklusivt";
+            this.EksklusivtBtn.UseVisualStyleBackColor = false;
+            this.EksklusivtBtn.Click += new System.EventHandler(this.EksklusivtBtn_Click);
+            // 
+            // BalanceBtn
+            // 
+            this.BalanceBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BalanceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.BalanceBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BalanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BalanceBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BalanceBtn.ForeColor = System.Drawing.Color.White;
+            this.BalanceBtn.Location = new System.Drawing.Point(570, 323);
+            this.BalanceBtn.Name = "BalanceBtn";
+            this.BalanceBtn.Size = new System.Drawing.Size(154, 37);
+            this.BalanceBtn.TabIndex = 11;
+            this.BalanceBtn.Text = "Balance";
+            this.BalanceBtn.UseVisualStyleBackColor = false;
+            this.BalanceBtn.Click += new System.EventHandler(this.BalanceBtn_Click);
+            // 
+            // SparerundeBtn
+            // 
+            this.SparerundeBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SparerundeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.SparerundeBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SparerundeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SparerundeBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SparerundeBtn.ForeColor = System.Drawing.Color.White;
+            this.SparerundeBtn.Location = new System.Drawing.Point(340, 323);
+            this.SparerundeBtn.Name = "SparerundeBtn";
+            this.SparerundeBtn.Size = new System.Drawing.Size(154, 37);
+            this.SparerundeBtn.TabIndex = 12;
+            this.SparerundeBtn.Text = "Sparerunde";
+            this.SparerundeBtn.UseVisualStyleBackColor = false;
+            this.SparerundeBtn.Click += new System.EventHandler(this.SparerundeBtn_Click);
+            // 
+            // Question1Lbl
+            // 
+            this.Question1Lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Question1Lbl.AutoSize = true;
+            this.Question1Lbl.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Question1Lbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.Question1Lbl.Location = new System.Drawing.Point(385, 242);
+            this.Question1Lbl.Name = "Question1Lbl";
+            this.Question1Lbl.Size = new System.Drawing.Size(527, 32);
+            this.Question1Lbl.TabIndex = 10;
+            this.Question1Lbl.Text = "Hvor meget burde nye Køkkenelementer koste?";
             // 
             // ResultPanel
             // 
@@ -827,38 +859,6 @@
             this.NameTxtLbl.TabIndex = 0;
             this.NameTxtLbl.Text = "Vare:";
             // 
-            // OtherBtn
-            // 
-            this.OtherBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OtherBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.OtherBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.OtherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OtherBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OtherBtn.ForeColor = System.Drawing.Color.White;
-            this.OtherBtn.Location = new System.Drawing.Point(678, 360);
-            this.OtherBtn.Name = "OtherBtn";
-            this.OtherBtn.Size = new System.Drawing.Size(154, 37);
-            this.OtherBtn.TabIndex = 13;
-            this.OtherBtn.Text = "Andet";
-            this.OtherBtn.UseVisualStyleBackColor = false;
-            this.OtherBtn.Click += new System.EventHandler(this.OtherBtn_Click);
-            // 
-            // ResetBtn
-            // 
-            this.ResetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.ResetBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.ResetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResetBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetBtn.ForeColor = System.Drawing.Color.White;
-            this.ResetBtn.Location = new System.Drawing.Point(1078, 31);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(154, 37);
-            this.ResetBtn.TabIndex = 1;
-            this.ResetBtn.Text = "Nulstil";
-            this.ResetBtn.UseVisualStyleBackColor = false;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
-            // 
             // KundeAI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -872,11 +872,10 @@
             this.Name = "KundeAI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Kundevejledning";
+            this.Load += new System.EventHandler(this.KundeAI_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.BottomPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
-            this.Question1Panel.ResumeLayout(false);
-            this.Question1Panel.PerformLayout();
             this.LandingPanel.ResumeLayout(false);
             this.LandingPanel.PerformLayout();
             this.Question4Panel.ResumeLayout(false);
@@ -885,6 +884,8 @@
             this.Question3Panel.PerformLayout();
             this.Question2Panel.ResumeLayout(false);
             this.Question2Panel.PerformLayout();
+            this.Question1Panel.ResumeLayout(false);
+            this.Question1Panel.PerformLayout();
             this.ResultPanel.ResumeLayout(false);
             this.ResultUpperPanel.ResumeLayout(false);
             this.VareListeGrpBox.ResumeLayout(false);
