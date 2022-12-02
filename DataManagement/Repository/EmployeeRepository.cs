@@ -57,7 +57,7 @@ namespace DataManagement.Repository
         public void SaveNewEmployee(Model.Employee employee)
         {
             Database.Employee newEmployee = new Database.Employee();
-            newEmployee.Employee_Id = employee.EmployeeID;
+
             newEmployee.FirstName = employee.FirstName;
             newEmployee.LastName = employee.LastName;
             newEmployee.Phonenumber = employee.PhoneNumber;
@@ -76,8 +76,11 @@ namespace DataManagement.Repository
             
                 targetEmployee.FirstName = employee.FirstName;
                 targetEmployee.LastName = employee.LastName;
+                targetEmployee.Phonenumber= employee.PhoneNumber;
+                targetEmployee.Address = employee.Address;
+                targetEmployee.Salary = employee.Salary;
+                DataContext.SubmitChanges();
 
-            
             }
         
         }
