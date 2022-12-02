@@ -46,5 +46,15 @@ namespace KF_UserInterface
             vareModul.ShowDialog();
             this.Show();
         }
+
+        private void NewOrderButton_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            KundeAI kundeAIform = new KundeAI();
+            Cursor = Cursors.Default;
+            this.Hide();
+            kundeAIform.ShowDialog();
+            this.Show();
+        }
     }
 }

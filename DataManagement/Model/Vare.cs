@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,5 +33,26 @@ namespace DataManagement.Model
         public Grip ChosenGrip { get; set; }
         public string ChosenGripString { get { return ChosenGrip.Grip_Name; } }
 
+        public decimal Length { get; set; }
+        public decimal Height { get; set; }
+        public decimal Width { get; set; }
+
+        public string SizeCategory 
+        { get 
+            {
+                if (Length*Height*Width < 100000)
+                {
+                    return "small";
+                }
+                if (Length * Height * Width >= 1000000)
+                {
+                    return "large";
+                }
+                else
+                {
+                    return "medium";
+                }
+            } 
+        }
     }
 }
