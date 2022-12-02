@@ -99,10 +99,11 @@
             this.NewOrderButton.Name = "NewOrderButton";
             this.NewOrderButton.Size = new System.Drawing.Size(190, 170);
             this.NewOrderButton.TabIndex = 2;
-            this.NewOrderButton.Text = "Ny Ordre";
+            this.NewOrderButton.Text = "Kunde Vejledning";
             this.NewOrderButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.NewOrderButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.NewOrderButton.UseVisualStyleBackColor = false;
+            this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // VareModulButton
             // 
