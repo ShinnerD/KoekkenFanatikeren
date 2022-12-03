@@ -32,7 +32,7 @@ namespace DataManagement.Repository
             return result;
         }
 
-        public Vare GetOneVare(int Id)
+        public Model.Vare GetOneVare(int Id)
         {
             var dtovare = DataContext.Products.FirstOrDefault(i => i.Product_Id == Id);
 
@@ -79,6 +79,62 @@ namespace DataManagement.Repository
 
             return result;
         }
-       
+
+        public void SaveNewVare(Model.Vare vare)
+        {
+            var newProduct = new Database.Product();
+            newProduct.Product_Id = newProduct.Product_Id;
+
+
+            newProduct.Product_Id = vare.Product_ID;
+            newProduct.ProductGroup_Id = vare.ProductGroup_ID;
+            newProduct.ProductName = vare.ProductName;
+            newProduct.Price = vare.Price;
+            newProduct.Product_Description = vare.Description;
+            newProduct.Length = vare.Length;
+            newProduct.Width = vare.Width;
+            newProduct.Height = vare.Height;
+
+            DataContext.Products.InsertOnSubmit(newProduct);
+            DataContext.SubmitChanges();          
+        }
+        
+        public void EditVare(Model.Vare vare)
+        {
+            var targetProduct = DataContext.Products.FirstOrDefault(i => i.Product_Id == vare.Product_ID);
+
+            if (targetProduct != null)
+            {
+                targetProduct.Product_Id = vare.Product_ID;
+                targetProduct.ProductGroup_Id = vare.ProductGroup_ID;
+                targetProduct.ProductName = vare.ProductName;
+                targetProduct.Price = vare.Price;
+                targetProduct.Product_Description = vare.Description;
+                targetProduct.Length = vare.Length;
+                targetProduct.Width = vare.Width;
+                targetProduct.Height = vare.Height;
+
+            }
+        }
+        
+        public void DeleteVare(Model.Vare vare)
+        {
+            if (vare != null)
+            {
+                var targetProduct = DataContext.Products.FirstOrDefault(i => i.Product_Id == vare.Product_ID);
+
+                if( targetProduct != null)
+                {
+
+                    DataContext.Products.DeleteOnSubmit(targetProduct);
+                    DataContext.SubmitChanges();
+                }
+            }
+            else
+            {
+                throw new ArgumentNullException(nameof(vare));
+            }
+        }
+
     }
 }
