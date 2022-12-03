@@ -168,5 +168,10 @@ namespace KF_UserInterface
         {
             PerformTextSearchOnList();
         }
+
+        private void RedigerVareButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
