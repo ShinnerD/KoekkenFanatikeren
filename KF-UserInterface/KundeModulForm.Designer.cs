@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KundeModulForm));
             this.HeaderPanel = new System.Windows.Forms.Panel();
@@ -67,6 +68,27 @@
             this.AdresseContentLabel = new System.Windows.Forms.Label();
             this.AdresseTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
+            this.EditCustomerPanel = new System.Windows.Forms.Panel();
+            this.InformationGrpBox = new System.Windows.Forms.GroupBox();
+            this.TelefoneTxtLbl = new System.Windows.Forms.Label();
+            this.FirstnameTxtLbl = new System.Windows.Forms.Label();
+            this.FirstnameTextBox = new System.Windows.Forms.TextBox();
+            this.LastnameTxtLbl = new System.Windows.Forms.Label();
+            this.LastnameTextBox = new System.Windows.Forms.TextBox();
+            this.TelefonTextBox = new System.Windows.Forms.TextBox();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.MailTxtLbl = new System.Windows.Forms.Label();
+            this.AdresseGrpBox = new System.Windows.Forms.GroupBox();
+            this.ZipCodeTextBox = new System.Windows.Forms.TextBox();
+            this.CityTextBox = new System.Windows.Forms.TextBox();
+            this.CityTxtLbl = new System.Windows.Forms.Label();
+            this.StreetTxtLbl = new System.Windows.Forms.Label();
+            this.ZipCodeTxtLbl = new System.Windows.Forms.Label();
+            this.StreetNameTextBox = new System.Windows.Forms.TextBox();
+            this.SaveCustomerButton = new System.Windows.Forms.Button();
+            this.CancelCustomerEditButton = new System.Windows.Forms.Button();
+            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.ErrorLabelTimer = new System.Windows.Forms.Timer(this.components);
             this.HeaderPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -79,6 +101,9 @@
             this.OrdreGrpBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.KundeOrdreGridView)).BeginInit();
             this.KundeInfoGrpBox.SuspendLayout();
+            this.EditCustomerPanel.SuspendLayout();
+            this.InformationGrpBox.SuspendLayout();
+            this.AdresseGrpBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -159,6 +184,7 @@
             this.NyKundeButton.TabIndex = 1;
             this.NyKundeButton.Text = "Ny Kunde";
             this.NyKundeButton.UseVisualStyleBackColor = false;
+            this.NyKundeButton.Click += new System.EventHandler(this.NyKundeButton_Click);
             // 
             // MainPanel
             // 
@@ -367,6 +393,7 @@
             this.RedigerKundeButton.TabIndex = 1;
             this.RedigerKundeButton.Text = "Rediger Kunde";
             this.RedigerKundeButton.UseVisualStyleBackColor = false;
+            this.RedigerKundeButton.Click += new System.EventHandler(this.RedigerKundeButton_Click);
             // 
             // OrdreGrpBox
             // 
@@ -533,6 +560,225 @@
             this.NameTxtLbl.TabIndex = 0;
             this.NameTxtLbl.Text = "Navn:";
             // 
+            // EditCustomerPanel
+            // 
+            this.EditCustomerPanel.Controls.Add(this.ErrorLabel);
+            this.EditCustomerPanel.Controls.Add(this.CancelCustomerEditButton);
+            this.EditCustomerPanel.Controls.Add(this.SaveCustomerButton);
+            this.EditCustomerPanel.Controls.Add(this.AdresseGrpBox);
+            this.EditCustomerPanel.Controls.Add(this.InformationGrpBox);
+            this.EditCustomerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditCustomerPanel.Location = new System.Drawing.Point(0, 80);
+            this.EditCustomerPanel.Name = "EditCustomerPanel";
+            this.EditCustomerPanel.Size = new System.Drawing.Size(1284, 601);
+            this.EditCustomerPanel.TabIndex = 3;
+            // 
+            // InformationGrpBox
+            // 
+            this.InformationGrpBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.InformationGrpBox.Controls.Add(this.EmailTextBox);
+            this.InformationGrpBox.Controls.Add(this.TelefonTextBox);
+            this.InformationGrpBox.Controls.Add(this.LastnameTextBox);
+            this.InformationGrpBox.Controls.Add(this.FirstnameTextBox);
+            this.InformationGrpBox.Controls.Add(this.MailTxtLbl);
+            this.InformationGrpBox.Controls.Add(this.TelefoneTxtLbl);
+            this.InformationGrpBox.Controls.Add(this.LastnameTxtLbl);
+            this.InformationGrpBox.Controls.Add(this.FirstnameTxtLbl);
+            this.InformationGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InformationGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.InformationGrpBox.Location = new System.Drawing.Point(66, 66);
+            this.InformationGrpBox.Name = "InformationGrpBox";
+            this.InformationGrpBox.Size = new System.Drawing.Size(510, 186);
+            this.InformationGrpBox.TabIndex = 1;
+            this.InformationGrpBox.TabStop = false;
+            this.InformationGrpBox.Text = "Kunde Information";
+            // 
+            // TelefoneTxtLbl
+            // 
+            this.TelefoneTxtLbl.AutoSize = true;
+            this.TelefoneTxtLbl.Location = new System.Drawing.Point(30, 95);
+            this.TelefoneTxtLbl.Name = "TelefoneTxtLbl";
+            this.TelefoneTxtLbl.Size = new System.Drawing.Size(62, 21);
+            this.TelefoneTxtLbl.TabIndex = 0;
+            this.TelefoneTxtLbl.Text = "Telefon:";
+            // 
+            // FirstnameTxtLbl
+            // 
+            this.FirstnameTxtLbl.AutoSize = true;
+            this.FirstnameTxtLbl.Location = new System.Drawing.Point(30, 35);
+            this.FirstnameTxtLbl.Name = "FirstnameTxtLbl";
+            this.FirstnameTxtLbl.Size = new System.Drawing.Size(70, 21);
+            this.FirstnameTxtLbl.TabIndex = 0;
+            this.FirstnameTxtLbl.Text = "Fornavn:";
+            // 
+            // FirstnameTextBox
+            // 
+            this.FirstnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstnameTextBox.Location = new System.Drawing.Point(106, 33);
+            this.FirstnameTextBox.Name = "FirstnameTextBox";
+            this.FirstnameTextBox.Size = new System.Drawing.Size(372, 29);
+            this.FirstnameTextBox.TabIndex = 1;
+            // 
+            // LastnameTxtLbl
+            // 
+            this.LastnameTxtLbl.AutoSize = true;
+            this.LastnameTxtLbl.Location = new System.Drawing.Point(30, 65);
+            this.LastnameTxtLbl.Name = "LastnameTxtLbl";
+            this.LastnameTxtLbl.Size = new System.Drawing.Size(79, 21);
+            this.LastnameTxtLbl.TabIndex = 0;
+            this.LastnameTxtLbl.Text = "Efternavn:";
+            // 
+            // LastnameTextBox
+            // 
+            this.LastnameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LastnameTextBox.Location = new System.Drawing.Point(106, 63);
+            this.LastnameTextBox.Name = "LastnameTextBox";
+            this.LastnameTextBox.Size = new System.Drawing.Size(372, 29);
+            this.LastnameTextBox.TabIndex = 1;
+            // 
+            // TelefonTextBox
+            // 
+            this.TelefonTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TelefonTextBox.Location = new System.Drawing.Point(106, 93);
+            this.TelefonTextBox.Name = "TelefonTextBox";
+            this.TelefonTextBox.Size = new System.Drawing.Size(372, 29);
+            this.TelefonTextBox.TabIndex = 1;
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EmailTextBox.Location = new System.Drawing.Point(106, 123);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(372, 29);
+            this.EmailTextBox.TabIndex = 1;
+            // 
+            // MailTxtLbl
+            // 
+            this.MailTxtLbl.AutoSize = true;
+            this.MailTxtLbl.Location = new System.Drawing.Point(30, 125);
+            this.MailTxtLbl.Name = "MailTxtLbl";
+            this.MailTxtLbl.Size = new System.Drawing.Size(57, 21);
+            this.MailTxtLbl.TabIndex = 0;
+            this.MailTxtLbl.Text = "E-Mail:";
+            // 
+            // AdresseGrpBox
+            // 
+            this.AdresseGrpBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AdresseGrpBox.Controls.Add(this.ZipCodeTextBox);
+            this.AdresseGrpBox.Controls.Add(this.CityTextBox);
+            this.AdresseGrpBox.Controls.Add(this.StreetNameTextBox);
+            this.AdresseGrpBox.Controls.Add(this.ZipCodeTxtLbl);
+            this.AdresseGrpBox.Controls.Add(this.CityTxtLbl);
+            this.AdresseGrpBox.Controls.Add(this.StreetTxtLbl);
+            this.AdresseGrpBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdresseGrpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.AdresseGrpBox.Location = new System.Drawing.Point(636, 66);
+            this.AdresseGrpBox.Name = "AdresseGrpBox";
+            this.AdresseGrpBox.Size = new System.Drawing.Size(549, 186);
+            this.AdresseGrpBox.TabIndex = 2;
+            this.AdresseGrpBox.TabStop = false;
+            this.AdresseGrpBox.Text = "Adresse";
+            // 
+            // ZipCodeTextBox
+            // 
+            this.ZipCodeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ZipCodeTextBox.Location = new System.Drawing.Point(138, 93);
+            this.ZipCodeTextBox.Name = "ZipCodeTextBox";
+            this.ZipCodeTextBox.Size = new System.Drawing.Size(372, 29);
+            this.ZipCodeTextBox.TabIndex = 1;
+            // 
+            // CityTextBox
+            // 
+            this.CityTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CityTextBox.Location = new System.Drawing.Point(138, 63);
+            this.CityTextBox.Name = "CityTextBox";
+            this.CityTextBox.Size = new System.Drawing.Size(372, 29);
+            this.CityTextBox.TabIndex = 1;
+            // 
+            // CityTxtLbl
+            // 
+            this.CityTxtLbl.AutoSize = true;
+            this.CityTxtLbl.Location = new System.Drawing.Point(30, 65);
+            this.CityTxtLbl.Name = "CityTxtLbl";
+            this.CityTxtLbl.Size = new System.Drawing.Size(30, 21);
+            this.CityTxtLbl.TabIndex = 0;
+            this.CityTxtLbl.Text = "By:";
+            // 
+            // StreetTxtLbl
+            // 
+            this.StreetTxtLbl.AutoSize = true;
+            this.StreetTxtLbl.Location = new System.Drawing.Point(30, 35);
+            this.StreetTxtLbl.Name = "StreetTxtLbl";
+            this.StreetTxtLbl.Size = new System.Drawing.Size(93, 21);
+            this.StreetTxtLbl.TabIndex = 0;
+            this.StreetTxtLbl.Text = "Gade og Nr:";
+            // 
+            // ZipCodeTxtLbl
+            // 
+            this.ZipCodeTxtLbl.AutoSize = true;
+            this.ZipCodeTxtLbl.Location = new System.Drawing.Point(30, 95);
+            this.ZipCodeTxtLbl.Name = "ZipCodeTxtLbl";
+            this.ZipCodeTxtLbl.Size = new System.Drawing.Size(102, 21);
+            this.ZipCodeTxtLbl.TabIndex = 0;
+            this.ZipCodeTxtLbl.Text = "Postnummer:";
+            // 
+            // StreetNameTextBox
+            // 
+            this.StreetNameTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.StreetNameTextBox.Location = new System.Drawing.Point(138, 33);
+            this.StreetNameTextBox.Name = "StreetNameTextBox";
+            this.StreetNameTextBox.Size = new System.Drawing.Size(372, 29);
+            this.StreetNameTextBox.TabIndex = 1;
+            // 
+            // SaveCustomerButton
+            // 
+            this.SaveCustomerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SaveCustomerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.SaveCustomerButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveCustomerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveCustomerButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveCustomerButton.ForeColor = System.Drawing.Color.White;
+            this.SaveCustomerButton.Location = new System.Drawing.Point(390, 500);
+            this.SaveCustomerButton.Name = "SaveCustomerButton";
+            this.SaveCustomerButton.Size = new System.Drawing.Size(154, 37);
+            this.SaveCustomerButton.TabIndex = 1;
+            this.SaveCustomerButton.Text = "Gem";
+            this.SaveCustomerButton.UseVisualStyleBackColor = false;
+            this.SaveCustomerButton.Click += new System.EventHandler(this.SaveCustomerButton_Click);
+            // 
+            // CancelCustomerEditButton
+            // 
+            this.CancelCustomerEditButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CancelCustomerEditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.CancelCustomerEditButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CancelCustomerEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelCustomerEditButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelCustomerEditButton.ForeColor = System.Drawing.Color.White;
+            this.CancelCustomerEditButton.Location = new System.Drawing.Point(614, 500);
+            this.CancelCustomerEditButton.Name = "CancelCustomerEditButton";
+            this.CancelCustomerEditButton.Size = new System.Drawing.Size(154, 37);
+            this.CancelCustomerEditButton.TabIndex = 1;
+            this.CancelCustomerEditButton.Text = "Tilbage";
+            this.CancelCustomerEditButton.UseVisualStyleBackColor = false;
+            this.CancelCustomerEditButton.Click += new System.EventHandler(this.CancelCustomerEditButton_Click);
+            // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.ErrorLabel.Location = new System.Drawing.Point(408, 374);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(334, 21);
+            this.ErrorLabel.TabIndex = 2;
+            this.ErrorLabel.Text = "Udfyld venligst alle felter korrekt, og prøv igen.";
+            // 
+            // ErrorLabelTimer
+            // 
+            this.ErrorLabelTimer.Interval = 3000;
+            this.ErrorLabelTimer.Tick += new System.EventHandler(this.ErrorLabelTimer_Tick);
+            // 
             // KundeModulForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,6 +786,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1284, 761);
             this.Controls.Add(this.MainPanel);
+            this.Controls.Add(this.EditCustomerPanel);
             this.Controls.Add(this.HeaderPanel);
             this.Controls.Add(this.BottomPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -547,7 +794,6 @@
             this.Name = "KundeModulForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Kunde Modul";
-            this.Load += new System.EventHandler(this.KundeModulForm_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.BottomPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
@@ -562,6 +808,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.KundeOrdreGridView)).EndInit();
             this.KundeInfoGrpBox.ResumeLayout(false);
             this.KundeInfoGrpBox.PerformLayout();
+            this.EditCustomerPanel.ResumeLayout(false);
+            this.EditCustomerPanel.PerformLayout();
+            this.InformationGrpBox.ResumeLayout(false);
+            this.InformationGrpBox.PerformLayout();
+            this.AdresseGrpBox.ResumeLayout(false);
+            this.AdresseGrpBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -605,6 +857,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AntalVare;
         private System.Windows.Forms.DataGridViewTextBoxColumn Afsendt;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
+        private System.Windows.Forms.Panel EditCustomerPanel;
+        private System.Windows.Forms.GroupBox InformationGrpBox;
+        private System.Windows.Forms.Label TelefoneTxtLbl;
+        private System.Windows.Forms.Label FirstnameTxtLbl;
+        private System.Windows.Forms.GroupBox AdresseGrpBox;
+        private System.Windows.Forms.TextBox ZipCodeTextBox;
+        private System.Windows.Forms.TextBox CityTextBox;
+        private System.Windows.Forms.TextBox StreetNameTextBox;
+        private System.Windows.Forms.Label ZipCodeTxtLbl;
+        private System.Windows.Forms.Label CityTxtLbl;
+        private System.Windows.Forms.Label StreetTxtLbl;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.TextBox TelefonTextBox;
+        private System.Windows.Forms.TextBox LastnameTextBox;
+        private System.Windows.Forms.TextBox FirstnameTextBox;
+        private System.Windows.Forms.Label MailTxtLbl;
+        private System.Windows.Forms.Label LastnameTxtLbl;
+        private System.Windows.Forms.Button CancelCustomerEditButton;
+        private System.Windows.Forms.Button SaveCustomerButton;
+        private System.Windows.Forms.Label ErrorLabel;
+        private System.Windows.Forms.Timer ErrorLabelTimer;
     }
 }
 

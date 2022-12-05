@@ -16,8 +16,10 @@ namespace KF_UserInterface
         public List<Kunde> KundeListe { get; set; }
         public List<Kunde> FiltreretKundeListe { get; set; }
         public Kunde ValgteKunde { get; set; }
+        public Kunde EditedCustomer { get; set; }
         public List<Order> ValgteKundeOrders { get; set; }
 
+        //Constructor
         public KundeModulForm()
         {
             InitializeComponent();
@@ -105,6 +107,112 @@ namespace KF_UserInterface
             }
         }
 
+        /// <summary>
+        /// Clears the textboxes that populate the customer edit panel.
+        /// </summary>
+        private void ClearCustomerEditTextBoxes()
+        {
+            FirstnameTextBox.Text = string.Empty;
+            LastnameTextBox.Text = string.Empty;
+            TelefonTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+            StreetNameTextBox.Text = string.Empty;
+            CityTextBox.Text = string.Empty;
+            ZipCodeTextBox.Text = string.Empty;
+        }
+
+        /// <summary>
+        /// Sets up the TextBoxes in the Edit Customer Panel to represent the values of EditedCustomer.
+        /// </summary>
+        private void EditChosenCustomer()
+        {
+            EditCustomerPanel.BringToFront();
+            NyKundeButton.Visible = false;
+
+            FirstnameTextBox.Text = EditedCustomer.FirstName;
+            LastnameTextBox.Text = EditedCustomer.LastName;
+            TelefonTextBox.Text = EditedCustomer.PhoneNumber.ToString();
+            EmailTextBox.Text = EditedCustomer.Email;
+            StreetNameTextBox.Text = EditedCustomer.Street;
+            CityTextBox.Text = EditedCustomer.City;
+            ZipCodeTextBox.Text = EditedCustomer.Zipcode.ToString();
+        }
+
+        /// <summary>
+        /// Verifies that all textboxes are filled. Checks that ZipCode and Phonenumber can be parsed as ints.
+        /// Shows error label warning on failure. Saves or Updates Customer on success and brings you back to the customer list.
+        /// </summary>
+        private void VerifyFieldsAndUpdateCustomer()
+        {
+            int phoneNumber;
+            int zipCode;
+
+            if (!AllTextBoxesFilled() ||
+                !int.TryParse(TelefonTextBox.Text, out phoneNumber) ||
+                !int.TryParse(ZipCodeTextBox.Text, out zipCode)
+                )
+            {
+                ErrorLabel.Visible = true;
+                ErrorLabelTimer.Enabled = true;
+            }
+            else
+            {
+                EditedCustomer.FirstName = FirstnameTextBox.Text;
+                EditedCustomer.LastName = LastnameTextBox.Text;
+                EditedCustomer.PhoneNumber = phoneNumber;
+                EditedCustomer.Email = EmailTextBox.Text;
+                EditedCustomer.Street = StreetNameTextBox.Text;
+                EditedCustomer.City = CityTextBox.Text;
+                EditedCustomer.Zipcode = zipCode;
+
+                if (EditedCustomer.KundeID == 0)
+                {
+                    new KundeService().SaveNewKunde(EditedCustomer);
+                    SetupKundeListe();
+                    UpdateCustomerInfo();
+                    MainPanel.BringToFront();
+                    NyKundeButton.Visible = true;
+                }
+                else
+                {
+                    new KundeService().EditKunde(EditedCustomer);
+                    SetupKundeListe();
+                    UpdateCustomerInfo();
+                    MainPanel.BringToFront();
+                    NyKundeButton.Visible = true;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Verifies that all textboxes are filled in the editcustomer panel.
+        /// </summary>
+        /// <returns></returns>
+        private bool AllTextBoxesFilled()
+        {
+            if (FirstnameTextBox.Text != string.Empty || LastnameTextBox.Text != string.Empty || TelefonTextBox.Text != string.Empty
+                || EmailTextBox.Text != string.Empty || StreetNameTextBox.Text != string.Empty || CityTextBox.Text != string.Empty
+                || ZipCodeTextBox.Text != string.Empty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Timer which runs and shows the error label for 1 tick.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ErrorLabelTimer_Tick(object sender, EventArgs e)
+        {
+            ErrorLabel.Visible = false;
+            ErrorLabelTimer.Enabled = false;
+        }
+
         //Click Events for Buttons and Mouse.
         private void LukModulButton_Click(object sender, EventArgs e)
         {
@@ -137,12 +245,31 @@ namespace KF_UserInterface
                 VisOrdreForm ordreVindue = new VisOrdreForm(valgtOrder);
                 ordreVindue.Show();
             }
-
         }
 
-        private void KundeModulForm_Load(object sender, EventArgs e)
+        private void NyKundeButton_Click(object sender, EventArgs e)
         {
+            EditedCustomer = new Kunde();
+            EditChosenCustomer();
+            ClearCustomerEditTextBoxes();
+        }
 
+        private void CancelCustomerEditButton_Click(object sender, EventArgs e)
+        {
+            ClearCustomerEditTextBoxes();
+            MainPanel.BringToFront();
+            NyKundeButton.Visible = true;
+        }
+
+        private void RedigerKundeButton_Click(object sender, EventArgs e)
+        {
+            EditedCustomer = ValgteKunde;
+            EditChosenCustomer();
+        }
+
+        private void SaveCustomerButton_Click(object sender, EventArgs e)
+        {
+            VerifyFieldsAndUpdateCustomer();
         }
     }
 }
