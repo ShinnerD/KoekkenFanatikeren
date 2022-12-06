@@ -207,7 +207,7 @@ namespace DataManagement.Repository
             //Der udtrækkes en liste af de Order_Products som ligger i databasen, men som ikke er i nuværende ordres vareliste.
             //Disse slettes.
             List<int> currentOrderProductIDs = order.OrderProducts.Select(i => i.OdreListe_ID).ToList();
-            var deletedOrders = targetOrder.Order_Products.Where(i => currentOrderProductIDs.Contains(i.Junction_Id)).ToList();
+            var deletedOrders = targetOrder.Order_Products.Where(i => !currentOrderProductIDs.Contains(i.Junction_Id)).ToList();
             DataContext.Order_Products.DeleteAllOnSubmit(deletedOrders);
             DataContext.SubmitChanges();
 

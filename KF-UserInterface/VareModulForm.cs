@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Management.Instrumentation;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -12,9 +11,21 @@ namespace KF_UserInterface
     {
         public List<Vare> VareListe { get; set; }
         public List<Vare> FiltreretVareListe { get; set; }
-        public Vare ValgteVare { get; set; }
-        public List<Varegruppe> VareGrupper { get; set; }
 
+        public List<Varegruppe> VareGrupper { get; set; }
+        public List<Varegruppe> EditVaregrupper { get; set; }
+
+        public Vare ValgteVare { get; set; }
+        public Vare EditedVare { get; set; }
+
+        public List<KitchenColor> AllColors { get; set; }
+        public List<KitchenColor> ChosenColors { get; set; }
+        public List<Material> AllMaterials { get; set; }
+        public List<Material> ChosenMaterials { get; set; }
+        public List<Grip> AllGrips { get; set; }
+        public List<Grip> ChosenGrips { get; set; }
+
+        //Constructor
         public VareModulForm()
         {
             InitializeComponent();
@@ -23,11 +34,30 @@ namespace KF_UserInterface
             {
                 SetupVareListe();
                 SetupVaregruppeDropDown();
+                SetupEditPanel();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        /// <summary>
+        /// Sets up the Edit Panel and its components. (Comboboxes and ListViews).
+        /// </summary>
+        private void SetupEditPanel()
+        {
+            DataManagement.Service.VareService vareService = new DataManagement.Service.VareService();
+
+            AllColors = vareService.GetAllColors();
+            AllMaterials = vareService.GetAllMaterials();
+            AllGrips = vareService.GetAllGrips();
+
+            VareGruppeEditComboBox.DataSource = new DataManagement.Service.VareGruppeService().RetunererAlleVaregruppeService();
+
+            ColorEditComboBox.DataSource = AllColors;
+            AddMaterialComboBox.DataSource = AllMaterials;
+            AddGripComboBox.DataSource = AllGrips;
         }
 
         /// <summary>
@@ -78,6 +108,9 @@ namespace KF_UserInterface
             VareIdContentLabel.Text = ValgteVare.ProductGroup_ID.ToString();
             VareGruppeContentLabel.Text = ValgteVare.VaregruppeNavn;
             PrisContentLabel.Text = ValgteVare.Price.ToString();
+            HeightContentLabel.Text = ValgteVare.Height.ToString();
+            WidthContentLabel.Text = ValgteVare.Width.ToString();
+            DepthContentLabel.Text = ValgteVare.Length.ToString();
 
             FarverListView.Items.Clear();
             foreach (KitchenColor color in ValgteVare.AvailableColors)
@@ -140,6 +173,153 @@ namespace KF_UserInterface
             }
         }
 
+        /// <summary>
+        /// Sets the Textboxes and Listviews in the Editpanel to reflect the values of the selected Vare.
+        /// </summary>
+        private void EditExistingVare()
+        {
+            if (VareListeDataGrid.SelectedRows.Count > 0)
+            {
+                EditedVare = ValgteVare;
+                VareNavnTextBox.Text = EditedVare.ProductName;
+                PriceTextBox.Text = EditedVare.Price.ToString();
+                EditDescriptionTextBox.Text = EditedVare.Description;
+                EditHeightTextBox.Text = EditedVare.Height.ToString();
+                EditWidthTextBox.Text = EditedVare.Width.ToString();
+                EditDepthTextBox.Text = EditedVare.Length.ToString();
+
+                VareGruppeEditComboBox.SelectedIndex = VareGruppeEditComboBox.FindString(EditedVare.VaregruppeNavn);
+
+                ChosenColors = EditedVare.AvailableColors;
+                ChosenMaterials = EditedVare.AvailableMaterials;
+                ChosenGrips = EditedVare.AvailableGrips;
+
+                foreach (KitchenColor color in ChosenColors)
+                {
+                    EditColorListView.Items.Add(color.Color_Name);
+                }
+                foreach (Material material in ChosenMaterials)
+                {
+                    EditMaterialListView.Items.Add(material.MaterialName);
+                }
+                foreach (Grip grip in ChosenGrips)
+                {
+                    EditGripListView.Items.Add(grip.Grip_Name);
+                }
+                VareEditPanel.BringToFront();
+            }
+        }
+
+        /// <summary>
+        /// Creates a new Vare to be edited in the editpanel.
+        /// </summary>
+        private void StartNewVareCreation()
+        {
+            EditedVare = new Vare();
+            ChosenColors = new List<KitchenColor>();
+            ChosenGrips = new List<Grip>();
+            ChosenMaterials = new List<Material>();
+            VareEditPanel.BringToFront();
+        }
+
+        /// <summary>
+        /// Clears the Textboxes and Listviews in the Edit Panel.
+        /// </summary>
+        private void ClearEditPanelFields()
+        {
+            VareNavnTextBox.Clear();
+            PriceTextBox.Clear();
+            EditDescriptionTextBox.Clear();
+            EditColorListView.Clear();
+            EditGripListView.Clear();
+            EditMaterialListView.Clear();
+            EditHeightTextBox.Clear();
+            EditWidthTextBox.Clear();
+            EditDepthTextBox.Clear();
+        }
+
+        /// <summary>
+        /// Saves the Info currently entered into the EditPanel if it passes validation.
+        /// If the Vare is new a new vare is created in the database. If the vare already
+        /// exists in the database its properties are edited.
+        /// </summary>
+        private void SaveVareInfo()
+        {
+            if (ValidateInputs())
+            {
+                var valgteVaregruppe = VareGruppeEditComboBox.SelectedItem as Varegruppe;
+
+                EditedVare.ProductName = VareNavnTextBox.Text;
+                EditedVare.Price = int.Parse(PriceTextBox.Text);
+                EditedVare.Description = EditDescriptionTextBox.Text;
+
+                EditedVare.ProductGroup_ID = valgteVaregruppe.ProductGroup_Id;
+                EditedVare.Varegruppe = valgteVaregruppe;
+
+                EditedVare.AvailableColors = ChosenColors;
+                EditedVare.AvailableMaterials = ChosenMaterials;
+                EditedVare.AvailableGrips = ChosenGrips;
+
+                EditedVare.Height = decimal.Parse(EditHeightTextBox.Text);
+                EditedVare.Width = decimal.Parse(EditWidthTextBox.Text);
+                EditedVare.Length = decimal.Parse(EditDepthTextBox.Text);
+
+                if (EditedVare.Product_ID != 0)
+                {
+                    new DataManagement.Service.VareService().EditVare(EditedVare);
+                    SetupVareListe();
+                    ClearEditPanelFields();
+                    MainPanel.BringToFront();
+                }
+                else
+                {
+                    new DataManagement.Service.VareService().SaveNewVare(EditedVare);
+                    SetupVareListe();
+                    ClearEditPanelFields();
+                    MainPanel.BringToFront();
+                }
+            }
+            else
+            {
+                ErrorLabel.Visible = true;
+                ErrorLabelTimer.Enabled = true;
+            }
+        }
+
+        /// <summary>
+        /// Validates that all fields have input in the Edit Panel. Checks that ints can parse as ints and decimals as decimals.
+        /// </summary>
+        /// <returns></returns>
+        private bool ValidateInputs()
+        {
+            if (VareNavnTextBox.Text == string.Empty || PriceTextBox.Text == string.Empty || EditDescriptionTextBox.Text == string.Empty
+                || EditColorListView.Items.Count == 0 || EditMaterialListView.Items.Count == 0 || EditGripListView.Items.Count == 0
+                || EditHeightTextBox.Text == string.Empty || EditWidthTextBox.Text == string.Empty || EditDepthTextBox.Text == string.Empty)
+            {
+                return false;
+            }
+            if (!int.TryParse(PriceTextBox.Text, out int priceResult) || !decimal.TryParse(EditHeightTextBox.Text, out decimal heightResult)
+                || !decimal.TryParse(EditWidthTextBox.Text, out decimal widthResult) || !decimal.TryParse(EditDepthTextBox.Text, out decimal depthResult))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        /// <summary>
+        /// Is set to tick when there is a failure to validate inputs in the edit panel. Shows an error message for 3000ms.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ErrorLabelTimer_Tick(object sender, EventArgs e)
+        {
+            ErrorLabel.Visible = false;
+            ErrorLabelTimer.Enabled = false;
+        }
+
         //Click Events For Buttons.
         private void LukModulButton_Click(object sender, EventArgs e)
         {
@@ -171,7 +351,80 @@ namespace KF_UserInterface
 
         private void RedigerVareButton_Click(object sender, EventArgs e)
         {
+            EditExistingVare();
+        }
 
+        private void NyVareButton_Click(object sender, EventArgs e)
+        {
+            StartNewVareCreation();
+        }
+
+        private void CancelEditButton_Click(object sender, EventArgs e)
+        {
+            ClearEditPanelFields();
+            MainPanel.BringToFront();
+        }
+
+        private void AddColorButton_Click(object sender, EventArgs e)
+        {
+            KitchenColor selectedColor = ColorEditComboBox.SelectedItem as KitchenColor;
+            if (!ChosenColors.Contains(selectedColor))
+            {
+                ChosenColors.Add(selectedColor);
+                EditColorListView.Items.Add(selectedColor.Color_Name);
+            }
+        }
+
+        private void RemoveColorButton_Click(object sender, EventArgs e)
+        {
+            if (EditColorListView.SelectedItems.Count > 0)
+            {
+                ChosenColors.Remove(ChosenColors.FirstOrDefault(i => i.Color_Name == EditColorListView.SelectedItems[0].Text));
+                EditColorListView.Items.Remove(EditColorListView.SelectedItems[0]);
+            }
+        }
+
+        private void AddMaterialButton_Click(object sender, EventArgs e)
+        {
+            Material selectedMaterial = AddMaterialComboBox.SelectedItem as Material;
+            if (!ChosenMaterials.Contains(selectedMaterial))
+            {
+                ChosenMaterials.Add(selectedMaterial);
+                EditMaterialListView.Items.Add(selectedMaterial.MaterialName);
+            }
+        }
+
+        private void RemoveMaterialButton_Click(object sender, EventArgs e)
+        {
+            if (EditMaterialListView.SelectedItems.Count > 0)
+            {
+                ChosenMaterials.Remove(ChosenMaterials.FirstOrDefault(i => i.MaterialName == EditMaterialListView.SelectedItems[0].Text));
+                EditMaterialListView.Items.Remove(EditMaterialListView.SelectedItems[0]);
+            }
+        }
+
+        private void RemoveGripButton_Click(object sender, EventArgs e)
+        {
+            if (EditGripListView.SelectedItems.Count > 0)
+            {
+                ChosenGrips.Remove(ChosenGrips.FirstOrDefault(i => i.Grip_Name == EditGripListView.SelectedItems[0].Text));
+                EditGripListView.Items.Remove(EditGripListView.SelectedItems[0]);
+            }
+        }
+
+        private void AddGripButton_Click(object sender, EventArgs e)
+        {
+            Grip selectedGrip = AddGripComboBox.SelectedItem as Grip;
+            if (!ChosenGrips.Contains(selectedGrip))
+            {
+                ChosenGrips.Add(selectedGrip);
+                EditGripListView.Items.Add(selectedGrip.Grip_Name);
+            }
+        }
+
+        private void SaveVareButton_Click(object sender, EventArgs e)
+        {
+            SaveVareInfo();
         }
     }
 }
