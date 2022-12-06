@@ -16,10 +16,7 @@ namespace DataManagement.Repository
             DataContext = new KFDataClassesDataContext();
         }
 
-        /// <summary>
-        /// Retrieve a list of customer from the Database
-        /// </summary>
-        /// <returns></returns>
+        //Retrieve a list of customer from the Database
         public List<Kunde> GetAllKunder()
         {
             List<Kunde> result = new List<Kunde>();
