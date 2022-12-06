@@ -1,10 +1,14 @@
 ﻿using DataManagement.Database;
-using System.Collections.Generic;
 using DataManagement.Model;
-using System.Linq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+
 
 //Customer Repository made by Erik 
+
+//Skrevet og vedligeholdt af Erik
+
 namespace DataManagement.Repository
 {
     public class KundeRepository
@@ -16,7 +20,9 @@ namespace DataManagement.Repository
             DataContext = new KFDataClassesDataContext();
         }
 
+
         //Retrieve a list of customer from the Database
+
         public List<Kunde> GetAllKunder()
         {
             List<Kunde> result = new List<Kunde>();
@@ -60,7 +66,10 @@ namespace DataManagement.Repository
             return kunde;
         }
 
+
         //Saving customer / making a new customer 
+
+
         public void SaveNewKunde(Kunde kunde)
         {
             Database.Customer newCustomer = new Database.Customer();
@@ -77,7 +86,9 @@ namespace DataManagement.Repository
             DataContext.SubmitChanges();
         }
 
+
         //Making a edit funktion that can edit fx Phonenumber or City
+
 
         public void EditKunde(Kunde kunde)
         {
@@ -97,7 +108,9 @@ namespace DataManagement.Repository
             }
         }
 
+
         // a delete funktion in the Database 
+
         public void DeleteKunde(Kunde kunde)
         {
             if (kunde != null)
@@ -115,6 +128,5 @@ namespace DataManagement.Repository
                 throw new ArgumentNullException(nameof(kunde));
             }
         }
-
     }
 }
