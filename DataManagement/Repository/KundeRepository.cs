@@ -4,7 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+
+//Customer Repository made by Erik 
+
 //Skrevet og vedligeholdt af Erik
+
 namespace DataManagement.Repository
 {
     public class KundeRepository
@@ -15,6 +19,9 @@ namespace DataManagement.Repository
         {
             DataContext = new KFDataClassesDataContext();
         }
+
+
+        //Retrieve a list of customer from the Database
 
         public List<Kunde> GetAllKunder()
         {
@@ -39,6 +46,8 @@ namespace DataManagement.Repository
             return result;
         }
 
+
+        //Getting a Customer from Database
         public Kunde GetKunde(int kundeId)
         {
             Kunde kunde = new Kunde();
@@ -57,6 +66,10 @@ namespace DataManagement.Repository
             return kunde;
         }
 
+
+        //Saving customer / making a new customer 
+
+
         public void SaveNewKunde(Kunde kunde)
         {
             Database.Customer newCustomer = new Database.Customer();
@@ -72,6 +85,10 @@ namespace DataManagement.Repository
             DataContext.Customers.InsertOnSubmit(newCustomer);
             DataContext.SubmitChanges();
         }
+
+
+        //Making a edit funktion that can edit fx Phonenumber or City
+
 
         public void EditKunde(Kunde kunde)
         {
@@ -90,6 +107,9 @@ namespace DataManagement.Repository
                 DataContext.SubmitChanges();
             }
         }
+
+
+        // a delete funktion in the Database 
 
         public void DeleteKunde(Kunde kunde)
         {

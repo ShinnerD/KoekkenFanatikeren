@@ -1,5 +1,6 @@
 ﻿namespace DataManagement.Model
 {
+    //Customer Model 
     public class Kunde
     {
         public int KundeID { get; set; }
