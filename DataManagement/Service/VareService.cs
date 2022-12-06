@@ -30,5 +30,20 @@ namespace DataManagement.Service
         {
             new Repository.VareRepository().DeleteVare(vare);
         }
+
+        public List<KitchenColor> GetAllColors()
+        {
+            return new Repository.VareRepository().ListAllColors();
+        }
+
+        public List<Grip> GetAllGrips()
+        {
+            return new Repository.VareRepository().ListAllGrips();
+        }
+
+        public List<Material> GetAllMaterials()
+        {
+            return new Repository.VareRepository().ListAllMaterials();
+        }
     }
 }
