@@ -190,21 +190,24 @@ namespace KF_UserInterface
 
                 VareGruppeEditComboBox.SelectedIndex = VareGruppeEditComboBox.FindString(EditedVare.VaregruppeNavn);
 
-                ChosenColors = EditedVare.AvailableColors;
-                ChosenMaterials = EditedVare.AvailableMaterials;
-                ChosenGrips = EditedVare.AvailableGrips;
+                ChosenColors = new List<KitchenColor>();
+                ChosenMaterials = new List<Material>();
+                ChosenGrips = new List<Grip>();
 
-                foreach (KitchenColor color in ChosenColors)
+                foreach (KitchenColor color in EditedVare.AvailableColors)
                 {
                     EditColorListView.Items.Add(color.Color_Name);
+                    ChosenColors.Add(color);
                 }
-                foreach (Material material in ChosenMaterials)
+                foreach (Material material in EditedVare.AvailableMaterials)
                 {
                     EditMaterialListView.Items.Add(material.MaterialName);
+                    ChosenMaterials.Add(material);
                 }
-                foreach (Grip grip in ChosenGrips)
+                foreach (Grip grip in EditedVare.AvailableGrips)
                 {
                     EditGripListView.Items.Add(grip.Grip_Name);
+                    ChosenGrips.Add(grip);
                 }
                 VareEditPanel.BringToFront();
             }
