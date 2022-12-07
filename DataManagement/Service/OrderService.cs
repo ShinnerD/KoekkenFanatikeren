@@ -47,6 +47,24 @@ namespace DataManagement.Service
         }
 
         /// <summary>
+        /// Saves an Order in the Database.
+        /// </summary>
+        /// <param name="order"></param>
+        public void SaveOrder(Order order)
+        {
+            OrderRepository.SaveOrder(order);
+        }
+
+        /// <summary>
+        /// Deletes an Order in the Database.
+        /// </summary>
+        /// <param name="order"></param>
+        public void DeleteOrder(Order order)
+        {
+            OrderRepository.DeleteOrder(order);
+        }
+
+        /// <summary>
         /// Takes a List<Order> parameter and returns it sorted by date ascending.
         /// </summary>
         /// <param name="targetList">The List of Orders to sort.</param>

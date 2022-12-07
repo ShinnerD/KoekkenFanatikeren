@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Order class model skrevet og vedligeholdt af Dennis Kempf
 namespace DataManagement.Model
 {
     public class Order
@@ -15,7 +16,6 @@ namespace DataManagement.Model
         public string To_City { get; set; }
         public int To_ZipCode { get; set; }
         public string Order_Comment { get; set; }
-
 
         public DateTime DateOfSending { get; set; }
         public DateTime CreatedDate { get; set; }
@@ -43,5 +43,3 @@ namespace DataManagement.Model
         }
     }
 }
-
-//Order class model skrevet og vedligeholdt af Dennis Kempf

@@ -378,6 +378,7 @@
             this.OpretOrdreButton.TabIndex = 1;
             this.OpretOrdreButton.Text = "Opret Ordre";
             this.OpretOrdreButton.UseVisualStyleBackColor = false;
+            this.OpretOrdreButton.Click += new System.EventHandler(this.OpretOrdreButton_Click);
             // 
             // RedigerKundeButton
             // 

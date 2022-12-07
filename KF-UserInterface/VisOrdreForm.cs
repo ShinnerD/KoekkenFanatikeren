@@ -13,6 +13,7 @@ namespace KF_UserInterface
         public Order VisteOrder { get; set; }
         public Vare ValgteVare { get; set; }
 
+        //Constructor
         public VisOrdreForm(Order order)
         {
             InitializeComponent();
@@ -29,6 +30,9 @@ namespace KF_UserInterface
             }
         }
 
+        /// <summary>
+        /// Changes labels to fit customer order information.
+        /// </summary>
         private void SetupCustomerInfo()
         {
             OrdreIdContentLabel.Text = VisteOrder.Id.ToString();
@@ -49,6 +53,9 @@ namespace KF_UserInterface
             VareListeDataGrid.DataSource = VisteOrder.OrderProducts;
         }
 
+        /// <summary>
+        /// Changes labels to fit selected product details.
+        /// </summary>
         private void SetOrderProductDetailLabels()
         {
             ValgteVare = VareListeDataGrid.SelectedRows[0].DataBoundItem as Vare;
