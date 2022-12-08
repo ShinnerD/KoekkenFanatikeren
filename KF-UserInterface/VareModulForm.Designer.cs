@@ -75,8 +75,14 @@
             this.VareIdTxtLbl = new System.Windows.Forms.Label();
             this.VareGruppeContentLabel = new System.Windows.Forms.Label();
             this.VareIdContentLabel = new System.Windows.Forms.Label();
+            this.DepthContentLabel = new System.Windows.Forms.Label();
+            this.WidthContentLabel = new System.Windows.Forms.Label();
+            this.HeightContentLabel = new System.Windows.Forms.Label();
             this.PrisContentLabel = new System.Windows.Forms.Label();
             this.NameContentLabel = new System.Windows.Forms.Label();
+            this.DepthTxtLbl = new System.Windows.Forms.Label();
+            this.WidthTxtLbl = new System.Windows.Forms.Label();
+            this.HeighTxtLbl = new System.Windows.Forms.Label();
             this.PrisTxtLbl = new System.Windows.Forms.Label();
             this.NameTxtLbl = new System.Windows.Forms.Label();
             this.BottomRightPanel = new System.Windows.Forms.Panel();
@@ -84,6 +90,24 @@
             this.NyVareButton = new System.Windows.Forms.Button();
             this.VareEditPanel = new System.Windows.Forms.Panel();
             this.VareEditGrpBox = new System.Windows.Forms.GroupBox();
+            this.ErrorLabel = new System.Windows.Forms.Label();
+            this.CancelEditButton = new System.Windows.Forms.Button();
+            this.RemoveGripButton = new System.Windows.Forms.Button();
+            this.RemoveMaterialButton = new System.Windows.Forms.Button();
+            this.RemoveColorButton = new System.Windows.Forms.Button();
+            this.SaveVareButton = new System.Windows.Forms.Button();
+            this.AddGripButton = new System.Windows.Forms.Button();
+            this.AddGripComboBox = new System.Windows.Forms.ComboBox();
+            this.AddMaterialButton = new System.Windows.Forms.Button();
+            this.AddMaterialComboBox = new System.Windows.Forms.ComboBox();
+            this.AddColorButton = new System.Windows.Forms.Button();
+            this.ColorEditComboBox = new System.Windows.Forms.ComboBox();
+            this.PriceTextBox = new System.Windows.Forms.TextBox();
+            this.EditDepthTextBox = new System.Windows.Forms.TextBox();
+            this.EditWidthTextBox = new System.Windows.Forms.TextBox();
+            this.EditHeightTextBox = new System.Windows.Forms.TextBox();
+            this.VareNavnTextBox = new System.Windows.Forms.TextBox();
+            this.VareGruppeEditComboBox = new System.Windows.Forms.ComboBox();
             this.EditDescriptionGrpBox = new System.Windows.Forms.GroupBox();
             this.EditDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.EditGripsGrpBox = new System.Windows.Forms.GroupBox();
@@ -92,37 +116,14 @@
             this.EditMaterialListView = new System.Windows.Forms.ListView();
             this.EditColorsGrpBox = new System.Windows.Forms.GroupBox();
             this.EditColorListView = new System.Windows.Forms.ListView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.VareGruppeEditComboBox = new System.Windows.Forms.ComboBox();
-            this.VareNavnTextBox = new System.Windows.Forms.TextBox();
-            this.PriceTextBox = new System.Windows.Forms.TextBox();
-            this.ColorEditComboBox = new System.Windows.Forms.ComboBox();
-            this.AddColorButton = new System.Windows.Forms.Button();
-            this.RemoveColorButton = new System.Windows.Forms.Button();
-            this.AddMaterialComboBox = new System.Windows.Forms.ComboBox();
-            this.AddMaterialButton = new System.Windows.Forms.Button();
-            this.RemoveMaterialButton = new System.Windows.Forms.Button();
-            this.AddGripComboBox = new System.Windows.Forms.ComboBox();
-            this.AddGripButton = new System.Windows.Forms.Button();
-            this.RemoveGripButton = new System.Windows.Forms.Button();
-            this.SaveVareButton = new System.Windows.Forms.Button();
-            this.CancelEditButton = new System.Windows.Forms.Button();
-            this.ErrorLabel = new System.Windows.Forms.Label();
-            this.ErrorLabelTimer = new System.Windows.Forms.Timer(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.EditHeightTextBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.EditWidthTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.EditDepthTextBox = new System.Windows.Forms.TextBox();
-            this.HeighTxtLbl = new System.Windows.Forms.Label();
-            this.HeightContentLabel = new System.Windows.Forms.Label();
-            this.WidthTxtLbl = new System.Windows.Forms.Label();
-            this.WidthContentLabel = new System.Windows.Forms.Label();
-            this.DepthTxtLbl = new System.Windows.Forms.Label();
-            this.DepthContentLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ErrorLabelTimer = new System.Windows.Forms.Timer(this.components);
+            this.UdskrivTilTxtButton = new System.Windows.Forms.Button();
             this.HeaderPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.LeftMainPanel.SuspendLayout();
@@ -149,6 +150,7 @@
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.HeaderPanel.Controls.Add(this.UdskrivTilTxtButton);
             this.HeaderPanel.Controls.Add(this.LukModulButton);
             this.HeaderPanel.Controls.Add(this.HeaderLabel);
             this.HeaderPanel.Controls.Add(this.HeaderImageLabel);
@@ -570,6 +572,36 @@
             this.VareIdContentLabel.TabIndex = 0;
             this.VareIdContentLabel.Text = "1365884";
             // 
+            // DepthContentLabel
+            // 
+            this.DepthContentLabel.AutoSize = true;
+            this.DepthContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.DepthContentLabel.Location = new System.Drawing.Point(586, 71);
+            this.DepthContentLabel.Name = "DepthContentLabel";
+            this.DepthContentLabel.Size = new System.Drawing.Size(49, 21);
+            this.DepthContentLabel.TabIndex = 0;
+            this.DepthContentLabel.Text = "57.20";
+            // 
+            // WidthContentLabel
+            // 
+            this.WidthContentLabel.AutoSize = true;
+            this.WidthContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.WidthContentLabel.Location = new System.Drawing.Point(454, 71);
+            this.WidthContentLabel.Name = "WidthContentLabel";
+            this.WidthContentLabel.Size = new System.Drawing.Size(49, 21);
+            this.WidthContentLabel.TabIndex = 0;
+            this.WidthContentLabel.Text = "57.20";
+            // 
+            // HeightContentLabel
+            // 
+            this.HeightContentLabel.AutoSize = true;
+            this.HeightContentLabel.ForeColor = System.Drawing.Color.Black;
+            this.HeightContentLabel.Location = new System.Drawing.Point(315, 71);
+            this.HeightContentLabel.Name = "HeightContentLabel";
+            this.HeightContentLabel.Size = new System.Drawing.Size(49, 21);
+            this.HeightContentLabel.TabIndex = 0;
+            this.HeightContentLabel.Text = "57.20";
+            // 
             // PrisContentLabel
             // 
             this.PrisContentLabel.AutoSize = true;
@@ -589,6 +621,33 @@
             this.NameContentLabel.Size = new System.Drawing.Size(175, 21);
             this.NameContentLabel.TabIndex = 0;
             this.NameContentLabel.Text = "Classic Køkkenskab, Høj";
+            // 
+            // DepthTxtLbl
+            // 
+            this.DepthTxtLbl.AutoSize = true;
+            this.DepthTxtLbl.Location = new System.Drawing.Point(522, 71);
+            this.DepthTxtLbl.Name = "DepthTxtLbl";
+            this.DepthTxtLbl.Size = new System.Drawing.Size(58, 21);
+            this.DepthTxtLbl.TabIndex = 0;
+            this.DepthTxtLbl.Text = "Dybde:";
+            // 
+            // WidthTxtLbl
+            // 
+            this.WidthTxtLbl.AutoSize = true;
+            this.WidthTxtLbl.Location = new System.Drawing.Point(386, 71);
+            this.WidthTxtLbl.Name = "WidthTxtLbl";
+            this.WidthTxtLbl.Size = new System.Drawing.Size(62, 21);
+            this.WidthTxtLbl.TabIndex = 0;
+            this.WidthTxtLbl.Text = "Bredde:";
+            // 
+            // HeighTxtLbl
+            // 
+            this.HeighTxtLbl.AutoSize = true;
+            this.HeighTxtLbl.Location = new System.Drawing.Point(255, 71);
+            this.HeighTxtLbl.Name = "HeighTxtLbl";
+            this.HeighTxtLbl.Size = new System.Drawing.Size(54, 21);
+            this.HeighTxtLbl.TabIndex = 0;
+            this.HeighTxtLbl.Text = "Højde:";
             // 
             // PrisTxtLbl
             // 
@@ -700,6 +759,291 @@
             this.VareEditGrpBox.TabStop = false;
             this.VareEditGrpBox.Text = "Vare Redigering";
             // 
+            // ErrorLabel
+            // 
+            this.ErrorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ErrorLabel.AutoSize = true;
+            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLabel.ForeColor = System.Drawing.Color.IndianRed;
+            this.ErrorLabel.Location = new System.Drawing.Point(362, 517);
+            this.ErrorLabel.Name = "ErrorLabel";
+            this.ErrorLabel.Size = new System.Drawing.Size(334, 21);
+            this.ErrorLabel.TabIndex = 9;
+            this.ErrorLabel.Text = "Udfyld venligst alle felter korrekt, og prøv igen.";
+            this.ErrorLabel.Visible = false;
+            // 
+            // CancelEditButton
+            // 
+            this.CancelEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CancelEditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.CancelEditButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CancelEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelEditButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelEditButton.ForeColor = System.Drawing.Color.White;
+            this.CancelEditButton.Location = new System.Drawing.Point(1077, 544);
+            this.CancelEditButton.Name = "CancelEditButton";
+            this.CancelEditButton.Size = new System.Drawing.Size(154, 42);
+            this.CancelEditButton.TabIndex = 8;
+            this.CancelEditButton.Text = "Tilbage";
+            this.CancelEditButton.UseVisualStyleBackColor = false;
+            this.CancelEditButton.Click += new System.EventHandler(this.CancelEditButton_Click);
+            // 
+            // RemoveGripButton
+            // 
+            this.RemoveGripButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveGripButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.RemoveGripButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RemoveGripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveGripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveGripButton.ForeColor = System.Drawing.Color.White;
+            this.RemoveGripButton.Location = new System.Drawing.Point(1001, 419);
+            this.RemoveGripButton.Name = "RemoveGripButton";
+            this.RemoveGripButton.Size = new System.Drawing.Size(154, 33);
+            this.RemoveGripButton.TabIndex = 8;
+            this.RemoveGripButton.Text = "Fjern";
+            this.RemoveGripButton.UseVisualStyleBackColor = false;
+            this.RemoveGripButton.Click += new System.EventHandler(this.RemoveGripButton_Click);
+            // 
+            // RemoveMaterialButton
+            // 
+            this.RemoveMaterialButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveMaterialButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.RemoveMaterialButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RemoveMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveMaterialButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveMaterialButton.ForeColor = System.Drawing.Color.White;
+            this.RemoveMaterialButton.Location = new System.Drawing.Point(1001, 270);
+            this.RemoveMaterialButton.Name = "RemoveMaterialButton";
+            this.RemoveMaterialButton.Size = new System.Drawing.Size(154, 33);
+            this.RemoveMaterialButton.TabIndex = 8;
+            this.RemoveMaterialButton.Text = "Fjern";
+            this.RemoveMaterialButton.UseVisualStyleBackColor = false;
+            this.RemoveMaterialButton.Click += new System.EventHandler(this.RemoveMaterialButton_Click);
+            // 
+            // RemoveColorButton
+            // 
+            this.RemoveColorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RemoveColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.RemoveColorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RemoveColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveColorButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveColorButton.ForeColor = System.Drawing.Color.White;
+            this.RemoveColorButton.Location = new System.Drawing.Point(1001, 129);
+            this.RemoveColorButton.Name = "RemoveColorButton";
+            this.RemoveColorButton.Size = new System.Drawing.Size(154, 33);
+            this.RemoveColorButton.TabIndex = 8;
+            this.RemoveColorButton.Text = "Fjern";
+            this.RemoveColorButton.UseVisualStyleBackColor = false;
+            this.RemoveColorButton.Click += new System.EventHandler(this.RemoveColorButton_Click);
+            // 
+            // SaveVareButton
+            // 
+            this.SaveVareButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveVareButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.SaveVareButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.SaveVareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveVareButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveVareButton.ForeColor = System.Drawing.Color.White;
+            this.SaveVareButton.Location = new System.Drawing.Point(876, 544);
+            this.SaveVareButton.Name = "SaveVareButton";
+            this.SaveVareButton.Size = new System.Drawing.Size(154, 42);
+            this.SaveVareButton.TabIndex = 8;
+            this.SaveVareButton.Text = "Gem Vare";
+            this.SaveVareButton.UseVisualStyleBackColor = false;
+            this.SaveVareButton.Click += new System.EventHandler(this.SaveVareButton_Click);
+            // 
+            // AddGripButton
+            // 
+            this.AddGripButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddGripButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.AddGripButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AddGripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddGripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddGripButton.ForeColor = System.Drawing.Color.White;
+            this.AddGripButton.Location = new System.Drawing.Point(831, 419);
+            this.AddGripButton.Name = "AddGripButton";
+            this.AddGripButton.Size = new System.Drawing.Size(154, 33);
+            this.AddGripButton.TabIndex = 8;
+            this.AddGripButton.Text = "Tilføj";
+            this.AddGripButton.UseVisualStyleBackColor = false;
+            this.AddGripButton.Click += new System.EventHandler(this.AddGripButton_Click);
+            // 
+            // AddGripComboBox
+            // 
+            this.AddGripComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddGripComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.AddGripComboBox.DisplayMember = "Grip_Name";
+            this.AddGripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AddGripComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddGripComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddGripComboBox.ForeColor = System.Drawing.Color.White;
+            this.AddGripComboBox.FormattingEnabled = true;
+            this.AddGripComboBox.ItemHeight = 25;
+            this.AddGripComboBox.Items.AddRange(new object[] {
+            "Alle",
+            "Højskab",
+            "Overskab",
+            "Underskab",
+            "Hjørneskab",
+            "Skuffeelement",
+            "Skabslåge",
+            "Bordplade"});
+            this.AddGripComboBox.Location = new System.Drawing.Point(539, 419);
+            this.AddGripComboBox.MaxDropDownItems = 10;
+            this.AddGripComboBox.Name = "AddGripComboBox";
+            this.AddGripComboBox.Size = new System.Drawing.Size(261, 33);
+            this.AddGripComboBox.TabIndex = 7;
+            // 
+            // AddMaterialButton
+            // 
+            this.AddMaterialButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddMaterialButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.AddMaterialButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AddMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMaterialButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMaterialButton.ForeColor = System.Drawing.Color.White;
+            this.AddMaterialButton.Location = new System.Drawing.Point(831, 270);
+            this.AddMaterialButton.Name = "AddMaterialButton";
+            this.AddMaterialButton.Size = new System.Drawing.Size(154, 33);
+            this.AddMaterialButton.TabIndex = 8;
+            this.AddMaterialButton.Text = "Tilføj";
+            this.AddMaterialButton.UseVisualStyleBackColor = false;
+            this.AddMaterialButton.Click += new System.EventHandler(this.AddMaterialButton_Click);
+            // 
+            // AddMaterialComboBox
+            // 
+            this.AddMaterialComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddMaterialComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.AddMaterialComboBox.DisplayMember = "MaterialName";
+            this.AddMaterialComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AddMaterialComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMaterialComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddMaterialComboBox.ForeColor = System.Drawing.Color.White;
+            this.AddMaterialComboBox.FormattingEnabled = true;
+            this.AddMaterialComboBox.ItemHeight = 25;
+            this.AddMaterialComboBox.Items.AddRange(new object[] {
+            "Alle",
+            "Højskab",
+            "Overskab",
+            "Underskab",
+            "Hjørneskab",
+            "Skuffeelement",
+            "Skabslåge",
+            "Bordplade"});
+            this.AddMaterialComboBox.Location = new System.Drawing.Point(539, 270);
+            this.AddMaterialComboBox.MaxDropDownItems = 10;
+            this.AddMaterialComboBox.Name = "AddMaterialComboBox";
+            this.AddMaterialComboBox.Size = new System.Drawing.Size(261, 33);
+            this.AddMaterialComboBox.TabIndex = 7;
+            // 
+            // AddColorButton
+            // 
+            this.AddColorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.AddColorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AddColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddColorButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddColorButton.ForeColor = System.Drawing.Color.White;
+            this.AddColorButton.Location = new System.Drawing.Point(831, 129);
+            this.AddColorButton.Name = "AddColorButton";
+            this.AddColorButton.Size = new System.Drawing.Size(154, 33);
+            this.AddColorButton.TabIndex = 8;
+            this.AddColorButton.Text = "Tilføj";
+            this.AddColorButton.UseVisualStyleBackColor = false;
+            this.AddColorButton.Click += new System.EventHandler(this.AddColorButton_Click);
+            // 
+            // ColorEditComboBox
+            // 
+            this.ColorEditComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ColorEditComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.ColorEditComboBox.DisplayMember = "Color_Name";
+            this.ColorEditComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ColorEditComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ColorEditComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColorEditComboBox.ForeColor = System.Drawing.Color.White;
+            this.ColorEditComboBox.FormattingEnabled = true;
+            this.ColorEditComboBox.ItemHeight = 25;
+            this.ColorEditComboBox.Items.AddRange(new object[] {
+            "Alle",
+            "Højskab",
+            "Overskab",
+            "Underskab",
+            "Hjørneskab",
+            "Skuffeelement",
+            "Skabslåge",
+            "Bordplade"});
+            this.ColorEditComboBox.Location = new System.Drawing.Point(539, 129);
+            this.ColorEditComboBox.MaxDropDownItems = 10;
+            this.ColorEditComboBox.Name = "ColorEditComboBox";
+            this.ColorEditComboBox.Size = new System.Drawing.Size(261, 33);
+            this.ColorEditComboBox.TabIndex = 7;
+            // 
+            // PriceTextBox
+            // 
+            this.PriceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PriceTextBox.Location = new System.Drawing.Point(119, 94);
+            this.PriceTextBox.Name = "PriceTextBox";
+            this.PriceTextBox.Size = new System.Drawing.Size(261, 29);
+            this.PriceTextBox.TabIndex = 6;
+            // 
+            // EditDepthTextBox
+            // 
+            this.EditDepthTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditDepthTextBox.Location = new System.Drawing.Point(119, 384);
+            this.EditDepthTextBox.Name = "EditDepthTextBox";
+            this.EditDepthTextBox.Size = new System.Drawing.Size(261, 29);
+            this.EditDepthTextBox.TabIndex = 5;
+            // 
+            // EditWidthTextBox
+            // 
+            this.EditWidthTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditWidthTextBox.Location = new System.Drawing.Point(119, 349);
+            this.EditWidthTextBox.Name = "EditWidthTextBox";
+            this.EditWidthTextBox.Size = new System.Drawing.Size(261, 29);
+            this.EditWidthTextBox.TabIndex = 5;
+            // 
+            // EditHeightTextBox
+            // 
+            this.EditHeightTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.EditHeightTextBox.Location = new System.Drawing.Point(119, 314);
+            this.EditHeightTextBox.Name = "EditHeightTextBox";
+            this.EditHeightTextBox.Size = new System.Drawing.Size(261, 29);
+            this.EditHeightTextBox.TabIndex = 5;
+            // 
+            // VareNavnTextBox
+            // 
+            this.VareNavnTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.VareNavnTextBox.Location = new System.Drawing.Point(119, 27);
+            this.VareNavnTextBox.Name = "VareNavnTextBox";
+            this.VareNavnTextBox.Size = new System.Drawing.Size(261, 29);
+            this.VareNavnTextBox.TabIndex = 5;
+            // 
+            // VareGruppeEditComboBox
+            // 
+            this.VareGruppeEditComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.VareGruppeEditComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.VareGruppeEditComboBox.DisplayMember = "ProductGroupName";
+            this.VareGruppeEditComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VareGruppeEditComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.VareGruppeEditComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VareGruppeEditComboBox.ForeColor = System.Drawing.Color.White;
+            this.VareGruppeEditComboBox.FormattingEnabled = true;
+            this.VareGruppeEditComboBox.ItemHeight = 25;
+            this.VareGruppeEditComboBox.Items.AddRange(new object[] {
+            "Alle",
+            "Højskab",
+            "Overskab",
+            "Underskab",
+            "Hjørneskab",
+            "Skuffeelement",
+            "Skabslåge",
+            "Bordplade"});
+            this.VareGruppeEditComboBox.Location = new System.Drawing.Point(119, 59);
+            this.VareGruppeEditComboBox.MaxDropDownItems = 10;
+            this.VareGruppeEditComboBox.Name = "VareGruppeEditComboBox";
+            this.VareGruppeEditComboBox.Size = new System.Drawing.Size(261, 33);
+            this.VareGruppeEditComboBox.TabIndex = 4;
+            // 
             // EditDescriptionGrpBox
             // 
             this.EditDescriptionGrpBox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -791,6 +1135,7 @@
             this.EditColorListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EditColorListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditColorListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.EditColorListView.HideSelection = false;
             this.EditColorListView.HoverSelection = true;
             this.EditColorListView.Location = new System.Drawing.Point(3, 25);
             this.EditColorListView.MultiSelect = false;
@@ -800,338 +1145,6 @@
             this.EditColorListView.TabIndex = 0;
             this.EditColorListView.UseCompatibleStateImageBehavior = false;
             this.EditColorListView.View = System.Windows.Forms.View.List;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Varegruppe:";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 97);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 21);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Pris:";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 21);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Varenavn:";
-            // 
-            // VareGruppeEditComboBox
-            // 
-            this.VareGruppeEditComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VareGruppeEditComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.VareGruppeEditComboBox.DisplayMember = "ProductGroupName";
-            this.VareGruppeEditComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VareGruppeEditComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VareGruppeEditComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VareGruppeEditComboBox.ForeColor = System.Drawing.Color.White;
-            this.VareGruppeEditComboBox.FormattingEnabled = true;
-            this.VareGruppeEditComboBox.ItemHeight = 25;
-            this.VareGruppeEditComboBox.Items.AddRange(new object[] {
-            "Alle",
-            "Højskab",
-            "Overskab",
-            "Underskab",
-            "Hjørneskab",
-            "Skuffeelement",
-            "Skabslåge",
-            "Bordplade"});
-            this.VareGruppeEditComboBox.Location = new System.Drawing.Point(119, 59);
-            this.VareGruppeEditComboBox.MaxDropDownItems = 10;
-            this.VareGruppeEditComboBox.Name = "VareGruppeEditComboBox";
-            this.VareGruppeEditComboBox.Size = new System.Drawing.Size(261, 33);
-            this.VareGruppeEditComboBox.TabIndex = 4;
-            // 
-            // VareNavnTextBox
-            // 
-            this.VareNavnTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.VareNavnTextBox.Location = new System.Drawing.Point(119, 27);
-            this.VareNavnTextBox.Name = "VareNavnTextBox";
-            this.VareNavnTextBox.Size = new System.Drawing.Size(261, 29);
-            this.VareNavnTextBox.TabIndex = 5;
-            // 
-            // PriceTextBox
-            // 
-            this.PriceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PriceTextBox.Location = new System.Drawing.Point(119, 94);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(261, 29);
-            this.PriceTextBox.TabIndex = 6;
-            // 
-            // ColorEditComboBox
-            // 
-            this.ColorEditComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ColorEditComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.ColorEditComboBox.DisplayMember = "Color_Name";
-            this.ColorEditComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ColorEditComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ColorEditComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColorEditComboBox.ForeColor = System.Drawing.Color.White;
-            this.ColorEditComboBox.FormattingEnabled = true;
-            this.ColorEditComboBox.ItemHeight = 25;
-            this.ColorEditComboBox.Items.AddRange(new object[] {
-            "Alle",
-            "Højskab",
-            "Overskab",
-            "Underskab",
-            "Hjørneskab",
-            "Skuffeelement",
-            "Skabslåge",
-            "Bordplade"});
-            this.ColorEditComboBox.Location = new System.Drawing.Point(539, 129);
-            this.ColorEditComboBox.MaxDropDownItems = 10;
-            this.ColorEditComboBox.Name = "ColorEditComboBox";
-            this.ColorEditComboBox.Size = new System.Drawing.Size(261, 33);
-            this.ColorEditComboBox.TabIndex = 7;
-            // 
-            // AddColorButton
-            // 
-            this.AddColorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.AddColorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AddColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddColorButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddColorButton.ForeColor = System.Drawing.Color.White;
-            this.AddColorButton.Location = new System.Drawing.Point(831, 129);
-            this.AddColorButton.Name = "AddColorButton";
-            this.AddColorButton.Size = new System.Drawing.Size(154, 33);
-            this.AddColorButton.TabIndex = 8;
-            this.AddColorButton.Text = "Tilføj";
-            this.AddColorButton.UseVisualStyleBackColor = false;
-            this.AddColorButton.Click += new System.EventHandler(this.AddColorButton_Click);
-            // 
-            // RemoveColorButton
-            // 
-            this.RemoveColorButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.RemoveColorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.RemoveColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveColorButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveColorButton.ForeColor = System.Drawing.Color.White;
-            this.RemoveColorButton.Location = new System.Drawing.Point(1001, 129);
-            this.RemoveColorButton.Name = "RemoveColorButton";
-            this.RemoveColorButton.Size = new System.Drawing.Size(154, 33);
-            this.RemoveColorButton.TabIndex = 8;
-            this.RemoveColorButton.Text = "Fjern";
-            this.RemoveColorButton.UseVisualStyleBackColor = false;
-            this.RemoveColorButton.Click += new System.EventHandler(this.RemoveColorButton_Click);
-            // 
-            // AddMaterialComboBox
-            // 
-            this.AddMaterialComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddMaterialComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.AddMaterialComboBox.DisplayMember = "MaterialName";
-            this.AddMaterialComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AddMaterialComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMaterialComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMaterialComboBox.ForeColor = System.Drawing.Color.White;
-            this.AddMaterialComboBox.FormattingEnabled = true;
-            this.AddMaterialComboBox.ItemHeight = 25;
-            this.AddMaterialComboBox.Items.AddRange(new object[] {
-            "Alle",
-            "Højskab",
-            "Overskab",
-            "Underskab",
-            "Hjørneskab",
-            "Skuffeelement",
-            "Skabslåge",
-            "Bordplade"});
-            this.AddMaterialComboBox.Location = new System.Drawing.Point(539, 270);
-            this.AddMaterialComboBox.MaxDropDownItems = 10;
-            this.AddMaterialComboBox.Name = "AddMaterialComboBox";
-            this.AddMaterialComboBox.Size = new System.Drawing.Size(261, 33);
-            this.AddMaterialComboBox.TabIndex = 7;
-            // 
-            // AddMaterialButton
-            // 
-            this.AddMaterialButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddMaterialButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.AddMaterialButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AddMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMaterialButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddMaterialButton.ForeColor = System.Drawing.Color.White;
-            this.AddMaterialButton.Location = new System.Drawing.Point(831, 270);
-            this.AddMaterialButton.Name = "AddMaterialButton";
-            this.AddMaterialButton.Size = new System.Drawing.Size(154, 33);
-            this.AddMaterialButton.TabIndex = 8;
-            this.AddMaterialButton.Text = "Tilføj";
-            this.AddMaterialButton.UseVisualStyleBackColor = false;
-            this.AddMaterialButton.Click += new System.EventHandler(this.AddMaterialButton_Click);
-            // 
-            // RemoveMaterialButton
-            // 
-            this.RemoveMaterialButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveMaterialButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.RemoveMaterialButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.RemoveMaterialButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveMaterialButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveMaterialButton.ForeColor = System.Drawing.Color.White;
-            this.RemoveMaterialButton.Location = new System.Drawing.Point(1001, 270);
-            this.RemoveMaterialButton.Name = "RemoveMaterialButton";
-            this.RemoveMaterialButton.Size = new System.Drawing.Size(154, 33);
-            this.RemoveMaterialButton.TabIndex = 8;
-            this.RemoveMaterialButton.Text = "Fjern";
-            this.RemoveMaterialButton.UseVisualStyleBackColor = false;
-            this.RemoveMaterialButton.Click += new System.EventHandler(this.RemoveMaterialButton_Click);
-            // 
-            // AddGripComboBox
-            // 
-            this.AddGripComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddGripComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.AddGripComboBox.DisplayMember = "Grip_Name";
-            this.AddGripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AddGripComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddGripComboBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddGripComboBox.ForeColor = System.Drawing.Color.White;
-            this.AddGripComboBox.FormattingEnabled = true;
-            this.AddGripComboBox.ItemHeight = 25;
-            this.AddGripComboBox.Items.AddRange(new object[] {
-            "Alle",
-            "Højskab",
-            "Overskab",
-            "Underskab",
-            "Hjørneskab",
-            "Skuffeelement",
-            "Skabslåge",
-            "Bordplade"});
-            this.AddGripComboBox.Location = new System.Drawing.Point(539, 419);
-            this.AddGripComboBox.MaxDropDownItems = 10;
-            this.AddGripComboBox.Name = "AddGripComboBox";
-            this.AddGripComboBox.Size = new System.Drawing.Size(261, 33);
-            this.AddGripComboBox.TabIndex = 7;
-            // 
-            // AddGripButton
-            // 
-            this.AddGripButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddGripButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.AddGripButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.AddGripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddGripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddGripButton.ForeColor = System.Drawing.Color.White;
-            this.AddGripButton.Location = new System.Drawing.Point(831, 419);
-            this.AddGripButton.Name = "AddGripButton";
-            this.AddGripButton.Size = new System.Drawing.Size(154, 33);
-            this.AddGripButton.TabIndex = 8;
-            this.AddGripButton.Text = "Tilføj";
-            this.AddGripButton.UseVisualStyleBackColor = false;
-            this.AddGripButton.Click += new System.EventHandler(this.AddGripButton_Click);
-            // 
-            // RemoveGripButton
-            // 
-            this.RemoveGripButton.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveGripButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.RemoveGripButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.RemoveGripButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RemoveGripButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveGripButton.ForeColor = System.Drawing.Color.White;
-            this.RemoveGripButton.Location = new System.Drawing.Point(1001, 419);
-            this.RemoveGripButton.Name = "RemoveGripButton";
-            this.RemoveGripButton.Size = new System.Drawing.Size(154, 33);
-            this.RemoveGripButton.TabIndex = 8;
-            this.RemoveGripButton.Text = "Fjern";
-            this.RemoveGripButton.UseVisualStyleBackColor = false;
-            this.RemoveGripButton.Click += new System.EventHandler(this.RemoveGripButton_Click);
-            // 
-            // SaveVareButton
-            // 
-            this.SaveVareButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveVareButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.SaveVareButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.SaveVareButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveVareButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveVareButton.ForeColor = System.Drawing.Color.White;
-            this.SaveVareButton.Location = new System.Drawing.Point(876, 544);
-            this.SaveVareButton.Name = "SaveVareButton";
-            this.SaveVareButton.Size = new System.Drawing.Size(154, 42);
-            this.SaveVareButton.TabIndex = 8;
-            this.SaveVareButton.Text = "Gem Vare";
-            this.SaveVareButton.UseVisualStyleBackColor = false;
-            this.SaveVareButton.Click += new System.EventHandler(this.SaveVareButton_Click);
-            // 
-            // CancelEditButton
-            // 
-            this.CancelEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CancelEditButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
-            this.CancelEditButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CancelEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelEditButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelEditButton.ForeColor = System.Drawing.Color.White;
-            this.CancelEditButton.Location = new System.Drawing.Point(1077, 544);
-            this.CancelEditButton.Name = "CancelEditButton";
-            this.CancelEditButton.Size = new System.Drawing.Size(154, 42);
-            this.CancelEditButton.TabIndex = 8;
-            this.CancelEditButton.Text = "Tilbage";
-            this.CancelEditButton.UseVisualStyleBackColor = false;
-            this.CancelEditButton.Click += new System.EventHandler(this.CancelEditButton_Click);
-            // 
-            // ErrorLabel
-            // 
-            this.ErrorLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ErrorLabel.AutoSize = true;
-            this.ErrorLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ErrorLabel.ForeColor = System.Drawing.Color.IndianRed;
-            this.ErrorLabel.Location = new System.Drawing.Point(362, 517);
-            this.ErrorLabel.Name = "ErrorLabel";
-            this.ErrorLabel.Size = new System.Drawing.Size(334, 21);
-            this.ErrorLabel.TabIndex = 9;
-            this.ErrorLabel.Text = "Udfyld venligst alle felter korrekt, og prøv igen.";
-            this.ErrorLabel.Visible = false;
-            // 
-            // ErrorLabelTimer
-            // 
-            this.ErrorLabelTimer.Interval = 3000;
-            this.ErrorLabelTimer.Tick += new System.EventHandler(this.ErrorLabelTimer_Tick);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 317);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Højde:";
-            // 
-            // EditHeightTextBox
-            // 
-            this.EditHeightTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EditHeightTextBox.Location = new System.Drawing.Point(119, 314);
-            this.EditHeightTextBox.Name = "EditHeightTextBox";
-            this.EditHeightTextBox.Size = new System.Drawing.Size(261, 29);
-            this.EditHeightTextBox.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Bredde:";
-            // 
-            // EditWidthTextBox
-            // 
-            this.EditWidthTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EditWidthTextBox.Location = new System.Drawing.Point(119, 349);
-            this.EditWidthTextBox.Name = "EditWidthTextBox";
-            this.EditWidthTextBox.Size = new System.Drawing.Size(261, 29);
-            this.EditWidthTextBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -1143,70 +1156,76 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Dybde:";
             // 
-            // EditDepthTextBox
+            // label1
             // 
-            this.EditDepthTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.EditDepthTextBox.Location = new System.Drawing.Point(119, 384);
-            this.EditDepthTextBox.Name = "EditDepthTextBox";
-            this.EditDepthTextBox.Size = new System.Drawing.Size(261, 29);
-            this.EditDepthTextBox.TabIndex = 5;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Varegruppe:";
             // 
-            // HeighTxtLbl
+            // label3
             // 
-            this.HeighTxtLbl.AutoSize = true;
-            this.HeighTxtLbl.Location = new System.Drawing.Point(255, 71);
-            this.HeighTxtLbl.Name = "HeighTxtLbl";
-            this.HeighTxtLbl.Size = new System.Drawing.Size(54, 21);
-            this.HeighTxtLbl.TabIndex = 0;
-            this.HeighTxtLbl.Text = "Højde:";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 352);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Bredde:";
             // 
-            // HeightContentLabel
+            // label7
             // 
-            this.HeightContentLabel.AutoSize = true;
-            this.HeightContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.HeightContentLabel.Location = new System.Drawing.Point(315, 71);
-            this.HeightContentLabel.Name = "HeightContentLabel";
-            this.HeightContentLabel.Size = new System.Drawing.Size(49, 21);
-            this.HeightContentLabel.TabIndex = 0;
-            this.HeightContentLabel.Text = "57.20";
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(39, 21);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Pris:";
             // 
-            // WidthTxtLbl
+            // label2
             // 
-            this.WidthTxtLbl.AutoSize = true;
-            this.WidthTxtLbl.Location = new System.Drawing.Point(386, 71);
-            this.WidthTxtLbl.Name = "WidthTxtLbl";
-            this.WidthTxtLbl.Size = new System.Drawing.Size(62, 21);
-            this.WidthTxtLbl.TabIndex = 0;
-            this.WidthTxtLbl.Text = "Bredde:";
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 317);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 21);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Højde:";
             // 
-            // WidthContentLabel
+            // label8
             // 
-            this.WidthContentLabel.AutoSize = true;
-            this.WidthContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.WidthContentLabel.Location = new System.Drawing.Point(454, 71);
-            this.WidthContentLabel.Name = "WidthContentLabel";
-            this.WidthContentLabel.Size = new System.Drawing.Size(49, 21);
-            this.WidthContentLabel.TabIndex = 0;
-            this.WidthContentLabel.Text = "57.20";
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 21);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Varenavn:";
             // 
-            // DepthTxtLbl
+            // ErrorLabelTimer
             // 
-            this.DepthTxtLbl.AutoSize = true;
-            this.DepthTxtLbl.Location = new System.Drawing.Point(522, 71);
-            this.DepthTxtLbl.Name = "DepthTxtLbl";
-            this.DepthTxtLbl.Size = new System.Drawing.Size(58, 21);
-            this.DepthTxtLbl.TabIndex = 0;
-            this.DepthTxtLbl.Text = "Dybde:";
+            this.ErrorLabelTimer.Interval = 3000;
+            this.ErrorLabelTimer.Tick += new System.EventHandler(this.ErrorLabelTimer_Tick);
             // 
-            // DepthContentLabel
+            // UdskrivTilTxtButton
             // 
-            this.DepthContentLabel.AutoSize = true;
-            this.DepthContentLabel.ForeColor = System.Drawing.Color.Black;
-            this.DepthContentLabel.Location = new System.Drawing.Point(586, 71);
-            this.DepthContentLabel.Name = "DepthContentLabel";
-            this.DepthContentLabel.Size = new System.Drawing.Size(49, 21);
-            this.DepthContentLabel.TabIndex = 0;
-            this.DepthContentLabel.Text = "57.20";
+            this.UdskrivTilTxtButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UdskrivTilTxtButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.UdskrivTilTxtButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.UdskrivTilTxtButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UdskrivTilTxtButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UdskrivTilTxtButton.ForeColor = System.Drawing.Color.White;
+            this.UdskrivTilTxtButton.Location = new System.Drawing.Point(452, 23);
+            this.UdskrivTilTxtButton.Name = "UdskrivTilTxtButton";
+            this.UdskrivTilTxtButton.Size = new System.Drawing.Size(154, 37);
+            this.UdskrivTilTxtButton.TabIndex = 0;
+            this.UdskrivTilTxtButton.Text = "Udskriv Til Text";
+            this.UdskrivTilTxtButton.UseVisualStyleBackColor = false;
+            this.UdskrivTilTxtButton.Click += new System.EventHandler(this.UdskrivTilTxtButton_Click);
             // 
             // VareModulForm
             // 
@@ -1336,6 +1355,7 @@
         private System.Windows.Forms.Label DepthTxtLbl;
         private System.Windows.Forms.Label WidthTxtLbl;
         private System.Windows.Forms.Label HeighTxtLbl;
+        private System.Windows.Forms.Button UdskrivTilTxtButton;
     }
 }
 

@@ -52,6 +52,12 @@
     <Compile Include="KundeAI.Designer.cs">
       <DependentUpon>KundeAI.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalgsStatistikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalgsStatistikForm.Designer.cs">
+      <DependentUpon>SalgsStatistikForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NyOrdreForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="KundeAI.resx">
       <DependentUpon>KundeAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalgsStatistikForm.resx">
+      <DependentUpon>SalgsStatistikForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NyOrdreForm.resx">
       <DependentUpon>NyOrdreForm.cs</DependentUpon>
