@@ -83,7 +83,7 @@ namespace KF_UserInterface
         private void SetupVareListe()
         {
             VareListe = new DataManagement.Service.VareService().RetunererAlleVareService();
-            VareListe = VareListe.OrderBy(i => i.ProductName).ToList();
+            VareListe = VareListe.OrderBy(i => i.VaregruppeNavn).ToList();
             FiltreretVareListe = VareListe;
             VareListeDataGrid.AutoGenerateColumns = false;
             VareListeDataGrid.DataSource = FiltreretVareListe;
