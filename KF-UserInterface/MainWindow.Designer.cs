@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.SalesStatisticsButton = new System.Windows.Forms.Button();
             this.BottomPanel = new System.Windows.Forms.Panel();
             this.LogOffButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.NewOrderButton = new System.Windows.Forms.Button();
             this.VareModulButton = new System.Windows.Forms.Button();
             this.KundeModulButton = new System.Windows.Forms.Button();
+            this.HeaderPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -43,11 +45,28 @@
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            this.HeaderPanel.Controls.Add(this.SalesStatisticsButton);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
             this.HeaderPanel.Name = "HeaderPanel";
             this.HeaderPanel.Size = new System.Drawing.Size(914, 80);
             this.HeaderPanel.TabIndex = 0;
+            // 
+            // SalesStatisticsButton
+            // 
+            this.SalesStatisticsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SalesStatisticsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(119)))), ((int)(((byte)(182)))));
+            this.SalesStatisticsButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.SalesStatisticsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalesStatisticsButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesStatisticsButton.ForeColor = System.Drawing.Color.White;
+            this.SalesStatisticsButton.Location = new System.Drawing.Point(748, 12);
+            this.SalesStatisticsButton.Name = "SalesStatisticsButton";
+            this.SalesStatisticsButton.Size = new System.Drawing.Size(154, 37);
+            this.SalesStatisticsButton.TabIndex = 0;
+            this.SalesStatisticsButton.Text = "Salgsstatistik";
+            this.SalesStatisticsButton.UseVisualStyleBackColor = false;
+            this.SalesStatisticsButton.Click += new System.EventHandler(this.SalesStatisticsButton_Click);
             // 
             // BottomPanel
             // 
@@ -156,6 +175,7 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Køkken Fanatikeren Home";
+            this.HeaderPanel.ResumeLayout(false);
             this.BottomPanel.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -171,6 +191,7 @@
         private System.Windows.Forms.Button KundeModulButton;
         private System.Windows.Forms.Button NewOrderButton;
         private System.Windows.Forms.Button VareModulButton;
+        private System.Windows.Forms.Button SalesStatisticsButton;
     }
 }
 

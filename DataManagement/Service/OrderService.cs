@@ -71,7 +71,7 @@ namespace DataManagement.Service
         /// <returns></returns>
         public List<Model.Order> SortByDateAscending(List<Model.Order> targetList)
         {
-            return targetList.OrderBy(i => i.CreatedDate).ToList();
+            return targetList.OrderBy(i => i.DateOfSending).ToList();
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace DataManagement.Service
         /// <returns></returns>
         public List<Model.Order> SortByDateDescending(List<Model.Order> targetList)
         {
-            return targetList.OrderByDescending(i => i.CreatedDate).ToList();
+            return targetList.OrderByDescending(i => i.DateOfSending).ToList();
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace DataManagement.Service
         /// <returns></returns>
         public List<Model.Order> FilterByDate(List<Model.Order> targetList, DateTime startDate, DateTime endDate)
         {
-            return targetList.Where(i => i.CreatedDate >= startDate && i.CreatedDate <= endDate).ToList();
+            return targetList.Where(i => i.DateOfSending >= startDate && i.DateOfSending <= endDate).ToList();
         }
     }
 }

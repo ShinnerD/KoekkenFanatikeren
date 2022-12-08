@@ -53,7 +53,7 @@ namespace KF_UserInterface
             WorkingOrder.Kunde = Customer;
             WorkingOrder.CustomerId = Customer.KundeID;
             WorkingOrder.CreatedDate = DateTime.Now;
-            WorkingOrder.DateOfSending = DateTime.Now.AddDays(14);
+            WorkingOrder.DateOfSending = DateTime.Now;
 
             OrdreIndholdDataGrid.AutoGenerateColumns = false;
 

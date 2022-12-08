@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -323,6 +325,58 @@ namespace KF_UserInterface
             ErrorLabelTimer.Enabled = false;
         }
 
+        /// <summary>
+        /// Writes the products in the given product list to a textfile in the main program directory.
+        /// </summary>
+        /// <param name="vareListe"></param>
+        private void WriteProductsToTextFile(List<Vare> vareListe)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+
+            stringBuilder.Append("|=======================================================================|").AppendLine();
+            stringBuilder.Append("|\t\t\tVareliste Udskrift\t\t\t        |").AppendLine();
+            stringBuilder.Append("|\t\t\t\t\t\t\t\t        |").AppendLine();
+            stringBuilder.Append("|=======================================================================|").AppendLine();
+            stringBuilder.Append("|ID\tVarenavn\t\tVareGruppe\t\tPris\t\t|").AppendLine();
+            stringBuilder.Append("|=======================================================================|").AppendLine();
+
+            foreach (Vare vare in vareListe)
+            {
+                stringBuilder.Append("|").Append(vare.Product_ID.ToString()).Append("\t");
+
+                if (vare.ProductName.Length <= 7)
+                {
+                    stringBuilder.Append(vare.ProductName).Append("\t\t\t");
+                }
+                if (vare.ProductName.Length >= 8 && vare.ProductName.Length <= 15)
+                {
+                    stringBuilder.Append(vare.ProductName).Append("\t\t");
+                }
+                if (vare.ProductName.Length >= 16)
+                {
+                    stringBuilder.Append(vare.ProductName).Append("\t");
+                }
+                if (vare.ProductName.Length >= 24)
+                {
+                    stringBuilder.Append(vare.ProductName.Substring(0, 20)).Append("...\t");
+                }
+                if (vare.VaregruppeNavn.Length <= 7)
+                {
+                    stringBuilder.Append(vare.VaregruppeNavn).Append("\t\t\t");
+                }
+                if (vare.VaregruppeNavn.Length >= 8)
+                {
+                    stringBuilder.Append(vare.VaregruppeNavn).Append("\t\t");
+                }
+
+                stringBuilder.Append(vare.Price.ToString()).Append("\t\t|").AppendLine();
+            }
+            stringBuilder.Append("|=======================================================================|").AppendLine();
+            stringBuilder.Append("Total antal vare: ").Append(vareListe.Count.ToString());
+            File.WriteAllText("./VareListe " + DateTime.Now.ToString("dd-MM-yy") + ".txt", stringBuilder.ToString());
+            MessageBox.Show("Indholdet i nuværende vareliste er skrevet til text fil");
+        }
+
         //Click Events For Buttons.
         private void LukModulButton_Click(object sender, EventArgs e)
         {
@@ -429,5 +483,11 @@ namespace KF_UserInterface
         {
             SaveVareInfo();
         }
+
+        private void UdskrivTilTxtButton_Click(object sender, EventArgs e)
+        {
+            WriteProductsToTextFile(FiltreretVareListe);
+        }
+
     }
 }

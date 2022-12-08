@@ -21,6 +21,9 @@ namespace DataManagement.Model
         public DateTime CreatedDate { get; set; }
 
         public string AnsvarligEmployeeName { get { return this.Employee.FirstName + " " + this.Employee.LastName; } }
+        public string KundeName { get { return Kunde.FullName; } }
+
+        public int TotalPrice { get { return GetTotalPrice(); } }
 
         public List<Vare> OrderProducts { get; set; }
         public Kunde Kunde { get; set; }
