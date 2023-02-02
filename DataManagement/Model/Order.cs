@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
+//Order class model skrevet og vedligeholdt af Dennis Kempf
 namespace DataManagement.Model
 {
     public class Order
@@ -16,11 +17,13 @@ namespace DataManagement.Model
         public int To_ZipCode { get; set; }
         public string Order_Comment { get; set; }
 
-
         public DateTime DateOfSending { get; set; }
         public DateTime CreatedDate { get; set; }
 
         public string AnsvarligEmployeeName { get { return this.Employee.FirstName + " " + this.Employee.LastName; } }
+        public string KundeName { get { return Kunde.FullName; } }
+
+        public int TotalPrice { get { return GetTotalPrice(); } }
 
         public List<Vare> OrderProducts { get; set; }
         public Kunde Kunde { get; set; }
@@ -43,5 +46,3 @@ namespace DataManagement.Model
         }
     }
 }
-
-//Order class model skrevet og vedligeholdt af Dennis Kempf

@@ -56,5 +56,15 @@ namespace KF_UserInterface
             kundeAIform.ShowDialog();
             this.Show();
         }
+
+        private void SalesStatisticsButton_Click(object sender, EventArgs e)
+        {
+            Cursor = Cursors.WaitCursor;
+            SalgsStatistikForm salgsStatistikForm = new SalgsStatistikForm();
+            Cursor = Cursors.Default;
+            this.Hide();
+            salgsStatistikForm.ShowDialog();
+            this.Show();
+        }
     }
 }

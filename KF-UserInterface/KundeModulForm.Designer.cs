@@ -55,10 +55,6 @@
             this.RedigerKundeButton = new System.Windows.Forms.Button();
             this.OrdreGrpBox = new System.Windows.Forms.GroupBox();
             this.KundeOrdreGridView = new System.Windows.Forms.DataGridView();
-            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AntalVare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Afsendt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ansvarlig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KundeInfoGrpBox = new System.Windows.Forms.GroupBox();
             this.EmailTxtLbl = new System.Windows.Forms.Label();
             this.TlfTxtLbl = new System.Windows.Forms.Label();
@@ -89,6 +85,10 @@
             this.LastnameTxtLbl = new System.Windows.Forms.Label();
             this.FirstnameTxtLbl = new System.Windows.Forms.Label();
             this.ErrorLabelTimer = new System.Windows.Forms.Timer(this.components);
+            this.OrdreNr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AntalVare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Oprettet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ansvarlig = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HeaderPanel.SuspendLayout();
             this.BottomPanel.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -378,6 +378,7 @@
             this.OpretOrdreButton.TabIndex = 1;
             this.OpretOrdreButton.Text = "Opret Ordre";
             this.OpretOrdreButton.UseVisualStyleBackColor = false;
+            this.OpretOrdreButton.Click += new System.EventHandler(this.OpretOrdreButton_Click);
             // 
             // RedigerKundeButton
             // 
@@ -419,7 +420,7 @@
             this.KundeOrdreGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdreNr,
             this.AntalVare,
-            this.Afsendt,
+            this.Oprettet,
             this.Ansvarlig});
             this.KundeOrdreGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KundeOrdreGridView.GridColor = System.Drawing.Color.Black;
@@ -431,38 +432,6 @@
             this.KundeOrdreGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.KundeOrdreGridView.Size = new System.Drawing.Size(642, 451);
             this.KundeOrdreGridView.TabIndex = 3;
-            // 
-            // OrdreNr
-            // 
-            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.OrdreNr.DataPropertyName = "Id";
-            this.OrdreNr.HeaderText = "Ordre Nr.";
-            this.OrdreNr.Name = "OrdreNr";
-            this.OrdreNr.ReadOnly = true;
-            // 
-            // AntalVare
-            // 
-            this.AntalVare.DataPropertyName = "ProductCount";
-            this.AntalVare.HeaderText = "Antal Vare";
-            this.AntalVare.Name = "AntalVare";
-            this.AntalVare.ReadOnly = true;
-            // 
-            // Afsendt
-            // 
-            this.Afsendt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Afsendt.DataPropertyName = "DateOfSending";
-            this.Afsendt.FillWeight = 40F;
-            this.Afsendt.HeaderText = "Afsendt";
-            this.Afsendt.Name = "Afsendt";
-            this.Afsendt.ReadOnly = true;
-            // 
-            // Ansvarlig
-            // 
-            this.Ansvarlig.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Ansvarlig.DataPropertyName = "AnsvarligEmployeeName";
-            this.Ansvarlig.HeaderText = "Ansvarlig";
-            this.Ansvarlig.Name = "Ansvarlig";
-            this.Ansvarlig.ReadOnly = true;
             // 
             // KundeInfoGrpBox
             // 
@@ -780,6 +749,38 @@
             this.ErrorLabelTimer.Interval = 3000;
             this.ErrorLabelTimer.Tick += new System.EventHandler(this.ErrorLabelTimer_Tick);
             // 
+            // OrdreNr
+            // 
+            this.OrdreNr.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.OrdreNr.DataPropertyName = "Id";
+            this.OrdreNr.HeaderText = "Ordre Nr.";
+            this.OrdreNr.Name = "OrdreNr";
+            this.OrdreNr.ReadOnly = true;
+            // 
+            // AntalVare
+            // 
+            this.AntalVare.DataPropertyName = "ProductCount";
+            this.AntalVare.HeaderText = "Antal Vare";
+            this.AntalVare.Name = "AntalVare";
+            this.AntalVare.ReadOnly = true;
+            // 
+            // Oprettet
+            // 
+            this.Oprettet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Oprettet.DataPropertyName = "DateOfSending";
+            this.Oprettet.FillWeight = 40F;
+            this.Oprettet.HeaderText = "Oprettet";
+            this.Oprettet.Name = "Oprettet";
+            this.Oprettet.ReadOnly = true;
+            // 
+            // Ansvarlig
+            // 
+            this.Ansvarlig.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Ansvarlig.DataPropertyName = "AnsvarligEmployeeName";
+            this.Ansvarlig.HeaderText = "Ansvarlig";
+            this.Ansvarlig.Name = "Ansvarlig";
+            this.Ansvarlig.ReadOnly = true;
+            // 
             // KundeModulForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -854,10 +855,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TlfNr;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.Button VisOrdreButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AntalVare;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Afsendt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
         private System.Windows.Forms.Panel EditCustomerPanel;
         private System.Windows.Forms.GroupBox InformationGrpBox;
         private System.Windows.Forms.Label TelefoneTxtLbl;
@@ -879,6 +876,10 @@
         private System.Windows.Forms.Button SaveCustomerButton;
         private System.Windows.Forms.Label ErrorLabel;
         private System.Windows.Forms.Timer ErrorLabelTimer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdreNr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AntalVare;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Oprettet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ansvarlig;
     }
 }
 

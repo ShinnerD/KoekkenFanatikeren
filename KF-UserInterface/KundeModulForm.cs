@@ -271,5 +271,14 @@ namespace KF_UserInterface
         {
             VerifyFieldsAndUpdateCustomer();
         }
+
+        private void OpretOrdreButton_Click(object sender, EventArgs e)
+        {
+            NyOrdreForm newOrdreForm = new NyOrdreForm(ValgteKunde);
+            this.Hide();
+            newOrdreForm.ShowDialog();
+            this.Show();
+            UpdateCustomerInfo();
+        }
     }
 }

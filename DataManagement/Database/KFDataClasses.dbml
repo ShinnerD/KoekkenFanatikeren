@@ -116,9 +116,6 @@
       <Column Name="ProductGroup_Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ProductName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Material" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Colours" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="Grip" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Product_Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="Length" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
       <Column Name="Height" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />

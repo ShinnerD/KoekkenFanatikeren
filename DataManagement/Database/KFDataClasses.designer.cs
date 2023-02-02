@@ -2409,12 +2409,6 @@ namespace DataManagement.Database
 		
 		private int _Price;
 		
-		private string _Material;
-		
-		private string _Colours;
-		
-		private string _Grip;
-		
 		private string _Product_Description;
 		
 		private decimal _Length;
@@ -2445,12 +2439,6 @@ namespace DataManagement.Database
     partial void OnProductNameChanged();
     partial void OnPriceChanging(int value);
     partial void OnPriceChanged();
-    partial void OnMaterialChanging(string value);
-    partial void OnMaterialChanged();
-    partial void OnColoursChanging(string value);
-    partial void OnColoursChanged();
-    partial void OnGripChanging(string value);
-    partial void OnGripChanged();
     partial void OnProduct_DescriptionChanging(string value);
     partial void OnProduct_DescriptionChanged();
     partial void OnLengthChanging(decimal value);
@@ -2551,66 +2539,6 @@ namespace DataManagement.Database
 					this._Price = value;
 					this.SendPropertyChanged("Price");
 					this.OnPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Material", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Material
-		{
-			get
-			{
-				return this._Material;
-			}
-			set
-			{
-				if ((this._Material != value))
-				{
-					this.OnMaterialChanging(value);
-					this.SendPropertyChanging();
-					this._Material = value;
-					this.SendPropertyChanged("Material");
-					this.OnMaterialChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Colours", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Colours
-		{
-			get
-			{
-				return this._Colours;
-			}
-			set
-			{
-				if ((this._Colours != value))
-				{
-					this.OnColoursChanging(value);
-					this.SendPropertyChanging();
-					this._Colours = value;
-					this.SendPropertyChanged("Colours");
-					this.OnColoursChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Grip", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string Grip
-		{
-			get
-			{
-				return this._Grip;
-			}
-			set
-			{
-				if ((this._Grip != value))
-				{
-					this.OnGripChanging(value);
-					this.SendPropertyChanging();
-					this._Grip = value;
-					this.SendPropertyChanged("Grip");
-					this.OnGripChanged();
 				}
 			}
 		}
