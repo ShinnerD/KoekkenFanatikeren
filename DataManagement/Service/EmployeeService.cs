@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataManagement.Service
 {
-    /// <summary>
-    /// det skal indeholde EmployeeID, FirstName, LastName, Address, PhoneNumber, Salary 
-    /// </summary>
+    //Service for the Employee too make a response too the Repository where it retrieves and return new information
     public class EmployeeService
     {
         public List<Employee> GetEmployees()
