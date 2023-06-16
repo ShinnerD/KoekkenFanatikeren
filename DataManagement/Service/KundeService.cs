@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 //Service for the Customer too make a response too the Repository where it retrieves and return new information
 
-
 //Skrevet og vedligeholdt af Erik
 
 namespace DataManagement.Service

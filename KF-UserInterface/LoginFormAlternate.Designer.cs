@@ -35,6 +35,7 @@
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Controls.Add(this.label1);
             this.MainPanel.Controls.Add(this.PasswordTextBox);
             this.MainPanel.Controls.Add(this.PasswordLabel);
             this.MainPanel.Controls.Add(this.LoginButton);
@@ -110,6 +112,18 @@
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(296, 204);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(149, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Test Login: \"123\"";
+            // 
             // LoginFormAlternate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,6 +151,7 @@
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

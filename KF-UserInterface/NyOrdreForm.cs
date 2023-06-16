@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Management.Instrumentation;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -360,7 +359,7 @@ namespace KF_UserInterface
         {
             if (ProgressOrderButton.Text == "Gem Ordre" && WorkingOrder.OrderProducts.Count > 0 && EmployeeComboBox.SelectedIndex != -1
                 && int.TryParse(TelefonTextBox.Text, out int result) && int.TryParse(ZipCodeTextBox.Text, out int zipResult)
-                && FirstnameTextBox.Text != string.Empty && LastnameTextBox.Text != string.Empty && TelefonTextBox.Text != string.Empty 
+                && FirstnameTextBox.Text != string.Empty && LastnameTextBox.Text != string.Empty && TelefonTextBox.Text != string.Empty
                 && StreetNameTextBox.Text != string.Empty && CityTextBox.Text != string.Empty && ZipCodeTextBox.Text != string.Empty)
             {
                 SaveOrder();
@@ -370,6 +369,5 @@ namespace KF_UserInterface
                 GoToFinalOrderPanel();
             }
         }
-
     }
 }

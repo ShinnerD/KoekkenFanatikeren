@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DataManagement.Model
 {
@@ -17,7 +12,8 @@ namespace DataManagement.Model
 
         public string ProductName { get; set; }
         public string Description { get; set; }
-        public string VaregruppeNavn { get { return this.Varegruppe.ProductGroupName; } }
+        public string VaregruppeNavn
+        { get { return this.Varegruppe.ProductGroupName; } }
 
         public List<Material> AvailableMaterials { get; set; }
         public List<KitchenColor> AvailableColors { get; set; }
@@ -25,22 +21,26 @@ namespace DataManagement.Model
         public Varegruppe Varegruppe { get; set; }
 
         public Material ChosenMaterial { get; set; }
-        public string ChosenMaterialString { get { return ChosenMaterial.MaterialName; } }
+        public string ChosenMaterialString
+        { get { return ChosenMaterial.MaterialName; } }
 
         public KitchenColor ChosenColor { get; set; }
-        public string ChosenColorString { get { return ChosenColor.Color_Name; } }
+        public string ChosenColorString
+        { get { return ChosenColor.Color_Name; } }
 
         public Grip ChosenGrip { get; set; }
-        public string ChosenGripString { get { return ChosenGrip.Grip_Name; } }
+        public string ChosenGripString
+        { get { return ChosenGrip.Grip_Name; } }
 
         public decimal Length { get; set; }
         public decimal Height { get; set; }
         public decimal Width { get; set; }
 
-        public string SizeCategory 
-        { get 
+        public string SizeCategory
+        {
+            get
             {
-                if (Length*Height*Width < 100000)
+                if (Length * Height * Width < 100000)
                 {
                     return "small";
                 }
@@ -52,7 +52,7 @@ namespace DataManagement.Model
                 {
                     return "medium";
                 }
-            } 
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DataManagement.Model
 {
-    //Customer Model 
+    //Customer Model
     public class Kunde
     {
         public int KundeID { get; set; }
@@ -12,7 +12,8 @@
         public int Zipcode { get; set; }
         public string Email { get; set; }
 
-        public string FullName { get { return FirstName + " " + LastName; } }
-        //Skrevet af Erik og vedligholdt 
+        public string FullName
+        { get { return FirstName + " " + LastName; } }
+        //Skrevet af Erik og vedligholdt
     }
 }

@@ -1,10 +1,7 @@
-﻿using System;
+﻿using DataManagement.Database;
+using DataManagement.Model;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DataManagement.Database;
-using DataManagement.Model;
 
 namespace DataManagement.Repository
 {
@@ -16,6 +13,7 @@ namespace DataManagement.Repository
         {
             DataContext = new KFDataClassesDataContext();
         }
+
         public List<Varegruppe> FindAlleVaregruppe()
         {
             List<Varegruppe> result = new List<Varegruppe>();
@@ -27,8 +25,8 @@ namespace DataManagement.Repository
                 result.Add(FindEnVaregruppe(varegruppe.ProductGroup_Id));
             }
             return result;
-
         }
+
         public Varegruppe FindEnVaregruppe(int id)
         {
             var dtoVaregruppe = DataContext.ProductGroups.FirstOrDefault(i => i.ProductGroup_Id == id);
@@ -38,8 +36,6 @@ namespace DataManagement.Repository
             result.ProductGroupName = dtoVaregruppe.ProductGroupName;
 
             return result;
-           
         }
-         
     }
 }

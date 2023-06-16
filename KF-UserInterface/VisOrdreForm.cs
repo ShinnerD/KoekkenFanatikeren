@@ -1,9 +1,5 @@
 ﻿using DataManagement.Model;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Management.Instrumentation;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -81,6 +77,5 @@ namespace KF_UserInterface
         {
             SetOrderProductDetailLabels();
         }
-
     }
 }

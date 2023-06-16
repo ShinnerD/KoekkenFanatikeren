@@ -2,9 +2,7 @@
 using DataManagement.Service;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -129,10 +127,12 @@ namespace KF_UserInterface
         {
             this.Close();
         }
+
         private void WriteToTextButton_Click(object sender, EventArgs e)
         {
             WriteOrderListToTextFile();
         }
+
         private void SearchDatesButton_Click(object sender, EventArgs e)
         {
             FilterAndShowOrders();

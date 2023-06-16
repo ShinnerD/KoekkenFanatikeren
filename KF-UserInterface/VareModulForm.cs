@@ -488,6 +488,5 @@ namespace KF_UserInterface
         {
             WriteProductsToTextFile(FiltreretVareListe);
         }
-
     }
 }

@@ -8,8 +8,6 @@ using DataManagement.Model;
 
 namespace DataManagement.Repository
 {
-  
-
     public class VareRepository
     {
         public KFDataClassesDataContext DataContext { get; set; }
@@ -153,7 +151,7 @@ namespace DataManagement.Repository
                 DataContext.SubmitChanges();
 
                 //opretter nye referencer i junction tabellerne som relaterer til farver, materialer og greb.
-                foreach  (Model.KitchenColor color in vare.AvailableColors)
+                foreach (Model.KitchenColor color in vare.AvailableColors)
                 {
                     Database.Product_Colour colorReference = new Database.Product_Colour();
                     colorReference.Product_Id = targetProduct.Product_Id;
@@ -181,14 +179,14 @@ namespace DataManagement.Repository
                 }
             }
         }
-        
+
         public void DeleteVare(Model.Vare vare)
         {
             if (vare != null)
             {
                 var targetProduct = DataContext.Products.FirstOrDefault(i => i.Product_Id == vare.Product_ID);
 
-                if( targetProduct != null)
+                if (targetProduct != null)
                 {
                     DataContext.Products.DeleteOnSubmit(targetProduct);
                     DataContext.Product_Colours.DeleteAllOnSubmit(targetProduct.Product_Colours);

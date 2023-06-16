@@ -1,13 +1,8 @@
 ﻿using DataManagement.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KF_UserInterface
@@ -63,14 +58,21 @@ namespace KF_UserInterface
         /// </summary>
         private void SetupStartState()
         {
-            LandingPanel.BringToFront();
-            StartOverBtn.Visible = false;
-            VareListe = new DataManagement.Service.VareService().RetunererAlleVareService();
-            VareListe = VareListe.OrderBy(i => i.ProductName).ToList();
-            FiltreretVareListe = VareListe;
-            VareListeDataGrid.AutoGenerateColumns = false;
-            VareListeDataGrid.DataSource = FiltreretVareListe;
-            VareListeDataGrid.Rows[0].Selected = true;
+            try
+            {
+                LandingPanel.BringToFront();
+                StartOverBtn.Visible = false;
+                VareListe = new DataManagement.Service.VareService().RetunererAlleVareService();
+                VareListe = VareListe.OrderBy(i => i.ProductName).ToList();
+                FiltreretVareListe = VareListe;
+                VareListeDataGrid.AutoGenerateColumns = false;
+                VareListeDataGrid.DataSource = FiltreretVareListe;
+                VareListeDataGrid.Rows[0].Selected = true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         //Start Button Click
@@ -84,7 +86,6 @@ namespace KF_UserInterface
         {
             SetProductDetailLabels();
         }
-
 
         //Question 1 panel buttons
         private void SparerundeBtn_Click(object sender, EventArgs e)
@@ -107,7 +108,6 @@ namespace KF_UserInterface
             Question2Panel.BringToFront();
             StartOverBtn.Visible = true;
         }
-
 
         //Question 2 panel clicks.
         private void LightBtn_Click(object sender, EventArgs e)
@@ -182,7 +182,6 @@ namespace KF_UserInterface
             SeeResults();
         }
 
-
         private void MelaminBtn_Click(object sender, EventArgs e)
         {
             List<string> melaminMaterials = new List<string>();
@@ -224,7 +223,6 @@ namespace KF_UserInterface
 
         private void KundeAI_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

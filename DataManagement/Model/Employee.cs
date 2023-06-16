@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//Employee Model
-//Skrevet af Erik 
+﻿//Employee Model
+//Skrevet af Erik
 namespace DataManagement.Model
 {
     public class Employee
@@ -16,6 +11,7 @@ namespace DataManagement.Model
         public int PhoneNumber { get; set; }
         public int Salary { get; set; }
 
-        public string FullName { get { return FirstName + " " + LastName; } }
+        public string FullName
+        { get { return FirstName + " " + LastName; } }
     }
 }

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-//Skrevet af Erik og vedligholdt 
+//Skrevet af Erik og vedligholdt
 namespace DataManagement.Repository
 {
     public class EmployeeRepository
@@ -26,8 +26,6 @@ namespace DataManagement.Repository
             {
                 Model.Employee Employee = new Model.Employee();
 
-
-
                 Employee.EmployeeID = dbEmployee.Employee_Id;
                 Employee.FirstName = dbEmployee.FirstName;
                 Employee.LastName = dbEmployee.LastName;
@@ -39,6 +37,7 @@ namespace DataManagement.Repository
             }
             return result;
         }
+
         //Getting a Employee from Database
         public Model.Employee GetEmployee(int employeeId)
         {
@@ -55,6 +54,7 @@ namespace DataManagement.Repository
 
             return result;
         }
+
         //saving a new Employee in the database
         public void SaveNewEmployee(Model.Employee employee)
         {
@@ -69,6 +69,7 @@ namespace DataManagement.Repository
             DataContext.Employees.InsertOnSubmit(newEmployee);
             DataContext.SubmitChanges();
         }
+
         // making a edit function in the database
         public void EditEmployee(Model.Employee employee)
         {
@@ -76,17 +77,15 @@ namespace DataManagement.Repository
 
             if (targetEmployee != null)
             {
-            
                 targetEmployee.FirstName = employee.FirstName;
                 targetEmployee.LastName = employee.LastName;
-                targetEmployee.Phonenumber= employee.PhoneNumber;
+                targetEmployee.Phonenumber = employee.PhoneNumber;
                 targetEmployee.Address = employee.Address;
                 targetEmployee.Salary = employee.Salary;
                 DataContext.SubmitChanges();
-
             }
-        
         }
+
         //deleteting a Employee in the database
         public void DeleteEmployee(Model.Employee employee)
         {
@@ -105,6 +104,5 @@ namespace DataManagement.Repository
                 throw new ArgumentNullException(nameof(employee));
             }
         }
-
     }
 }
